@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Kurejš - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
+            </div>
+
+            <div id="sidebar-content">
+                <!-- Menu will be populated by js/menu.js -->
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">El-Kurejš</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="lead">
+                                1. Li ilafi Kurejš<br>
+                                2. Ilafihim rihleteš-šitai ves-sajf<br>
+                                3. Fel-ja'budu rabbe hazel-bejt<br>
+                                4. Ellezi at'amehum min džu'in ve amenehum min havf
+                            </p>
+                            <hr>
+                            <p>
+                                1. Zbog navike Kurejšija,<br>
+                                2. navike njihove da zimi i ljeti putuju,<br>
+                                3. neka se oni Gospodaru ove Kuće klanjaju,<br>
+                                4. koji ih gladne hrani i od straha brani.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitanja - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
+            </div>
+
+            <div id="sidebar-content">
+                <!-- Menu will be populated by js/menu.js -->
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Pitanja</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <i class="fas fa-question-circle me-2"></i> Pitanja iz predmeta 'Kur'an'
+                                </div>
+                                <div class="card-body">
+                                    <ol class="list-group list-group-numbered list-group-flush">
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Čime počinjemo svaki dobar posao?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Kako glasi Bismilla sa prevodom?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Kako glasi Euzubilla sa prevodom?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Kako glasi Rabbi jessir sa prevodom?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Kako glasi Subhaneke sa prevodom?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action">Kako glasi Fatiha sa prevodom?</li>
+                                    </ol>
+                                    
+                                    <div class="mt-4">
+                                        <div class="alert alert-light border-start border-success border-2" role="alert">
+                                            <p class="fw-bold mb-2 text-dark"><i class="far fa-star me-2 text-success"></i>Kako glase sure:</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>En-Nas,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Felek,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Ihlas,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Leheb,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>En-Nasr,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Kevser,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Kafirun,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Maun,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>Kurejš,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Fil,</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-Humezeh</li>
+                                                <li class="list-group-item border-0 py-1 bg-transparent"><i class="fas fa-check text-success me-2"></i>El-'Asr</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

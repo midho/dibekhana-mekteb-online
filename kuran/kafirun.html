@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Kafirun - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
+            </div>
+
+            <div id="sidebar-content">
+                <!-- Menu will be populated by js/menu.js -->
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">El-Kafirun</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="lead">
+                                1. Kul ja ejjuhel-kafirun<br>
+                                2. La a'budu ma ta'budun<br>
+                                3. Ve la entum 'abidune ma a'bud<br>
+                                4. Ve la ene 'abidun ma 'abedtum<br>
+                                5. Ve la entum 'abidune ma a'bud<br>
+                                6. Lekum dinukum ve lije din
+                            </p>
+                            <hr>
+                            <p>
+                                1. Reci: "O vi nevjernici,<br>
+                                2. ja se neću klanjati onima kojima se vi klanjate,<br>
+                                3. a ni vi se nećete klanjati Onome kome se ja klanjam;<br>
+                                4. ja se nisam klanjao onima kojima ste se vi klanjali,<br>
+                                5. a i vi se niste klanjali Onome kome se ja klanjam,<br>
+                                6. vama – vaša vjera, a meni – moja!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

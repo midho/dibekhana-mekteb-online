@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Fatiha - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
+            </div>
+
+            <div id="sidebar-content">
+                <!-- Menu will be populated by js/menu.js -->
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">El-Fatiha</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="lead">
+                                1. Bismillahir-rahmanir-rahim<br>
+                                2. El-hamdu lillahi rabbil-'alemin<br>
+                                3. Er-rahmanir-rahim<br>
+                                4. Maliki jevmid-din<br>
+                                5. Ijjake na'budu ve ijjake neste'in<br>
+                                6. Ihdines-siratal-mustekim<br>
+                                7. Siratallezine en'amte 'alejhim, gajril-magdubi 'alejhim veled-dallin. Amin.
+                            </p>
+                            <hr>
+                            <p>
+                                1. U ime Allaha, Milostivog, Samilosnog.<br>
+                                2. Hvala Allahu, Gospodaru svjetova,<br>
+                                3. Milostivom, Samilosnom,<br>
+                                4. Vladaru Dana sudnjeg!<br>
+                                5. Samo Tebe obožavamo i samo od Tebe pomoć tražimo.<br>
+                                6. Uputi nas na Pravi put,<br>
+                                7. na put onih kojima si blagodati podario, a ne na put onih na koje se srdžba izlila i koji su zalutali. Amin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

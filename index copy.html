@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
+            </div>
+
+            <div id="sidebar-content">
+                <!-- Menu will be populated by js/menu.js -->
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Dobrodošli</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <p class="lead">Dobrodošli na Dibekhana Mekteb - Nastavni plan i program mektebske nastave</p>
+                            <p>Za <span class="fst-italic">"Prvi stupanj"</span> kombinovanog odjeljenja, tj. prvu, drugu i treću mektebsku godinu.</p>
+                            <p>Ovaj program je rađen po <span class="fst-italic">"Nastavnom planu i programu mektebske nastave"</span> koji je 2004. godine izdala <span class="fst-italic fw-bold">ISLAMSKA ZAJEDNICA BOSNE I HERCEGOVINE</span>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Example Content Structure (Hidden by default, shown via JS or replaced) -->
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-header bg-success text-white">
+                                    <i class="fas fa-book-open me-2"></i> Lekcija
+                                </div>
+                                <div class="card-body">
+                                    <p>Ovdje će se prikazati tekst lekcije.</p>
+                                    <hr>
+                                    <h5>Video Materijal</h5>
+                                    <div class="video-container">
+                                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-success text-white">
+                                    <i class="fas fa-info-circle me-2"></i> Bilješke
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Važna napomena 1</li>
+                                        <li class="list-group-item">Važna napomena 2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="js/menu.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
