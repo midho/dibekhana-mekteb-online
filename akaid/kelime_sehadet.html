@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Amiri for Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -37,11 +41,150 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- Kelime i šehadet -->
                     <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-book-open me-2"></i> Kelime i šehadet
+                        </div>
                         <div class="card-body">
-                            <p class="lead">Ešhedu en la ilahe illallah, ve ešhedu enne Muhammeden 'abduhu ve resuluhu.</p>
-                            <hr>
-                            <p>Svjedočim da nema drugog boga osim Allaha, i svjedočim da je Muhammed Njegov rob i Njegov poslanik.</p>
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3">
+                                <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                    <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                </button>
+                                <div class="collapse" id="audioPlayerCollapse">
+                                    <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                        <div class="card-body p-2 bg-light">
+                                            <audio id="lessonAudio" preload="metadata" src="audio/akaid_lekcija_02.mp3"></audio>
+                                            
+                                            <div class="d-flex align-items-center">
+                                                <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                    <i class="fas fa-play fa-sm"></i>
+                                                </button>
+                                                
+                                                <div class="flex-grow-1 mx-2">
+                                                    <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                </div>
+                                                
+                                                <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 60px; text-align: center;">0:00/0:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title text-success mb-3">Kelime i šehadet</h3>
+                            <p><strong>Kako glasi 'kelime i šehadet'?</strong></p>
+                            <p>Kelime i šehadet glasi:</p>
+                            
+                            <div class="text-center my-4">
+                                <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                    أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ<br>
+                                    وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+                                </p>
+                                <p class="lead fst-italic" style="color: #2E7D32;">
+                                    Ešhedu en laa ilaahe illellaah<br>
+                                    ve ešhedu enne Muhammeden 'abduhu ve resuluh
+                                </p>
+                                
+                                <div class="mt-3">
+                                    <audio id="pronunciationAudio" src="audio/kelime_i_sehadet.mp3"></audio>
+                                    <button id="pronunciationBtn" class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                        <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <p><strong>Šta to znači?</strong></p>
+                            <p>To znači:</p>
+                            <p class="lead text-center my-3">
+                                "Vjerujem i očitujem da je samo Allah Bog,<br>
+                                i da je Muhammed, s.a.v.s., Allahov rob i Poslanik!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mirzin šehadet -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#mirzaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="mirzaCollapse">
+                            <span><i class="fas fa-feather-alt me-2"></i> Mirzin šehadet <small class="ms-2 text-white-50">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="mirzaCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="text-center my-4 fst-italic">
+                                    <p>
+                                        Naš je Mirza vrijedan bio,<br>
+                                        pa je brzo naučio,<br>
+                                        izgovarat šehade',<br>
+                                        srce vjere i nade.
+                                    </p>
+                                    <p>
+                                        Nema boga do Allaha,<br>
+                                        neka mu je vječna hvala,<br>
+                                        a Muhammed miljenik,<br>
+                                        Allahov je Poslanik.
+                                    </p>
+                                    <p>
+                                        To govori i vjeruje,<br>
+                                        svojim srcem potvrđuje,<br>
+                                        da će živjet' u islamu,<br>
+                                        i vjerovat' po Kur'anu.
+                                    </p>
+                                    <p class="text-end text-muted mt-3 fst-normal">- Rešad Kadić</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bisera -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#biseraCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="biseraCollapse">
+                            <span><i class="fas fa-book-reader me-2"></i> Bisera <small class="ms-2 text-white-50">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="biseraCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="mb-4 ps-3 border-start border-success border-3">
+                                    <p class="mb-2">— Bisera, zlato tetkino. Šta to tražiš cijelo jutro?</p>
+                                    <p class="mb-2">— Tetka, moram se lijepo obući. Danas postajem muslimanka.</p>
+                                    <p class="mb-2">— Šta to pričaš, ljepotice moja, ti si muslimanka od rođenja.</p>
+                                    <p class="mb-2">— Ma ne znam ja, tetka, vjeroučitelj kaže da ćemo danas učiti nešto čime očitujemo svoju pripadnost islamu.</p>
+                                    <p class="mb-0">— Uh, sada znam šta je, ljepotice moja.</p>
+                                </div>
+
+                                <div class="alert alert-success" role="alert">
+                                    <h5 class="alert-heading"><i class="fas fa-lightbulb me-2"></i>Zapamti!</h5>
+                                    <p>Kelime i šehadet glasi:</p>
+                                    <p class="fw-bold">“Ešhedu en la ilahe illellah, ve ešhedu enne Muhammeden 'abduhu ve resuluh!“</p>
+                                    <p>To znači:</p>
+                                    <p class="fw-bold">„Vjerujem i očitujem da nema drugog boga osim Allaha, dž.,š., i vjerujem i očitujem da je Muhammed, s.a.v.s., Allahov rob i Poslanik!“</p>
+                                </div>
+
+                                <h4 class="mt-4 text-success">Razgovor:</h4>
+                                <ol>
+                                    <li>Šta radi Bisera?</li>
+                                    <li>Zašto je ona uznemirena?</li>
+                                    <li>Kakva je Biserina tetka?</li>
+                                    <li>Zašto tetka kaže Biseri da je muslimanka od rođenja?</li>
+                                    <li>Ko može biti musliman, odnosno muslimanka?</li>
+                                    <li>Čime mi potvrđujemo svoju pripadnost islamu?</li>
+                                    <li>Da li znaš izgovoriti kelime i šehadet?</li>
+                                    <li>Ko zna šta znači kelime i šehadet?</li>
+                                </ol>
+                                
+                                <p class="text-muted small mt-4 text-end">Vjeronauka, za 1. razred osnovne škole, str. 24-25.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,6 +204,126 @@
     <!-- Menu Data and Logic -->
     <script src="../js/menu.js"></script>
     
+    <!-- Audio Player Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('lessonAudio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progress = document.getElementById('audioProgress');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const audioCollapse = document.getElementById('audioPlayerCollapse');
+            
+            // --- Global Audio Management ---
+            // Pause other audios when one starts playing
+            const allAudios = document.querySelectorAll('audio');
+            allAudios.forEach(media => {
+                media.addEventListener('play', function() {
+                    allAudios.forEach(other => {
+                        if (other !== media) {
+                            other.pause();
+                            // If it's the pronunciation audio, reset it to start
+                            if (other.id === 'pronunciationAudio') {
+                                other.currentTime = 0;
+                            }
+                        }
+                    });
+                });
+            });
+
+            // --- Lesson Audio Player ---
+            
+            // Auto-play when expanded
+            audioCollapse.addEventListener('shown.bs.collapse', function () {
+                audio.play().catch(e => console.log("Audio play failed:", e));
+            });
+
+            // Pause when collapsed
+            audioCollapse.addEventListener('hide.bs.collapse', function () {
+                audio.pause();
+            });
+
+            // Play/Pause toggle
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+            // Update button icon on play/pause
+            audio.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+
+            audio.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            });
+
+            // Update progress bar and time
+            audio.addEventListener('timeupdate', function() {
+                const current = audio.currentTime;
+                const duration = audio.duration || 0;
+                
+                progress.value = (current / duration) * 100 || 0;
+                
+                timeDisplay.textContent = formatTime(current) + '/' + formatTime(duration);
+            });
+
+            // Seek functionality
+            progress.addEventListener('input', function() {
+                const duration = audio.duration || 0;
+                audio.currentTime = (this.value / 100) * duration;
+            });
+
+            // Reset on end
+            audio.addEventListener('ended', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+                progress.value = 0;
+                audio.currentTime = 0;
+            });
+
+            // --- Pronunciation Audio Logic ---
+            const pronAudio = document.getElementById('pronunciationAudio');
+            const pronBtn = document.getElementById('pronunciationBtn');
+
+            if (pronAudio && pronBtn) {
+                // Toggle play/pause on click
+                pronBtn.addEventListener('click', function() {
+                    if (pronAudio.paused) {
+                        pronAudio.play();
+                    } else {
+                        pronAudio.pause();
+                        pronAudio.currentTime = 0; // Reset to start
+                    }
+                });
+
+                // Update UI on play
+                pronAudio.addEventListener('play', function() {
+                    pronBtn.innerHTML = '<i class="fas fa-stop me-2"></i> Zaustavi';
+                    pronBtn.classList.replace('btn-outline-success', 'btn-success');
+                });
+
+                // Update UI on pause (covers manual pause, end, and programmatic pause)
+                pronAudio.addEventListener('pause', function() {
+                    pronBtn.innerHTML = '<i class="fas fa-volume-up me-2"></i> Poslušaj izgovor';
+                    pronBtn.classList.replace('btn-success', 'btn-outline-success');
+                });
+            }
+
+            // Format time helper
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return m + ':' + (s < 10 ? '0' : '') + s;
+            }
+            
+            // Initialize duration display
+            audio.addEventListener('loadedmetadata', function() {
+                timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
+            });
+        });
+    </script>
 
 </body>
 </html>
