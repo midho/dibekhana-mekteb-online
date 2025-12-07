@@ -37,11 +37,72 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 4. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        </div>
                         <div class="card-body">
-                            <p class="lead">Ja vjerujem u Allahove poslanike.</p>
-                            <hr>
-                            <p>Poslanici su odabrani ljudi kojima je Allah dž.š. slao objavu da je prenesu ljudima. Prvi poslanik je bio Adem a.s., a posljednji Muhammed a.s.</p>
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper">
+                                <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                    <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                </button>
+                                <div class="collapse" id="audioPlayerCollapse">
+                                    <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                        <div class="card-body p-2 bg-light">
+                                            <audio id="lessonAudio" preload="metadata" src="../audio/akaid_lekcija_07.mp3"></audio>
+                                            
+                                            <div class="d-flex align-items-center">
+                                                <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                    <i class="fas fa-play fa-sm"></i>
+                                                </button>
+                                                
+                                                <div class="flex-grow-1 mx-2">
+                                                    <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                </div>
+                                                
+                                                <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 75px; text-align: center; white-space: nowrap;">0:00/0:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Kako glasi četvrti imanski šart?</p>
+                            <p>Četvrti imanski šart glasi: <span class="text-success fw-bold">VE RUSULIHI</span> (vjerujem u Božije poslanike).</p>
+
+                            <p class="fw-bold">Ko su bili Božiji poslanici?</p>
+                            <p>BOŽIJI POSLANICI su odabrani ljudi kojima je Allah slao svoje objave da ih dostave i objasne ljudima.</p>
+
+                            <p class="fw-bold">Koliko je bilo Božijih poslanika?</p>
+                            <p>Božijih poslanika je bilo mnogo, a u Kur'anu ih je spomenuto 25.</p>
+
+                            <p class="fw-bold">Koji su najpoznatiji Božiji poslanici?</p>
+                            <p>Najpoznatiji Božiji poslanici su:</p>
+                            <ul class="list-group mb-4">
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Adem a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Nuh a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Ibrahim a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Musa a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Isa a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-user-tie me-2 text-success"></i> Muhamed a.s.</li>
+                            </ul>
+
+                            <p class="fw-bold">Ko je bio prvi a ko posljednji Božiji poslanik?</p>
+                            <p>Prvi Božiji poslanik na Zemlji je bio <strong>Adem a.s.</strong> (a on je i prvi čovjek na Zemlji), a posljednji Božiji poslanik bio je <strong>Muhamed a.s.</strong></p>
+
+                            <h4 class="text-success border-bottom pb-2 mb-3 mt-4">Muhamed, s.a.v.s.</h4>
+
+                            <p>Muhamed, s.a.v.s., je rođen u Arabiji, u gradu Mekki, 571. godine. Ocu mu je bilo ime Abdullah a majci Amina. Pripadao je uglednoj porodici Hašimija iz plemena Kurejš.</p>
+                            
+                            <p>Roditelji su mu umrli još u njegovom ranom djetinjstvu, pa su brigu o njemu (a.s.) preuzeli njegov djed Abdul-Muttalib, a kasnije amidža Ebu Talib.</p>
+                            
+                            <p>Muhameda (a.s.) su mnogi stanovnici silno voljeli jer je bio uzornog vladanja i ponašanja. Zato su mu dali časni naziv <strong>El-Emin</strong>, što znači vjerni, pouzdani.</p>
+                            
+                            <p>U četrdesetoj godini života počeo je primati Božiju objavu - Kur'ani kerim i pozivati ljude u islam. To je trajalo dvadeset i tri godine. Za to vrijeme islam se proširio u cijeloj Arabiji a pročulo se za njega i mnogo dalje.</p>
+                            
+                            <p>Muhamed (a.s.) je u 63. godini života preselio na ahiret u gradu Medini, u Arabiji.</p>
                         </div>
                     </div>
                 </div>
@@ -61,6 +122,87 @@
     <!-- Menu Data and Logic -->
     <script src="../../js/menu.js"></script>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Audio Player Logic
+            const audio = document.getElementById('lessonAudio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progress = document.getElementById('audioProgress');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const audioCollapse = document.getElementById('audioPlayerCollapse');
+            const toggleBtn = document.getElementById('audioToggleBtn');
+            
+            // Auto-play when expanded
+            audioCollapse.addEventListener('show.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-outline-success');
+                toggleBtn.classList.add('btn-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Zatvori player';
+                audio.play().catch(e => console.log("Audio play failed:", e));
+                toggleBtn.blur();
+            });
 
+            // Pause when collapsed
+            audioCollapse.addEventListener('hide.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-success');
+                toggleBtn.classList.add('btn-outline-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju';
+                audio.pause();
+                toggleBtn.blur();
+            });
+
+            // Play/Pause toggle
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+            // Update button icon on play/pause
+            audio.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+
+            audio.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            });
+
+            // Update progress bar and time
+            audio.addEventListener('timeupdate', function() {
+                const current = audio.currentTime;
+                const duration = audio.duration || 0;
+                
+                progress.value = (current / duration) * 100 || 0;
+                
+                timeDisplay.textContent = formatTime(current) + '/' + formatTime(duration);
+            });
+
+            // Seek functionality
+            progress.addEventListener('input', function() {
+                const duration = audio.duration || 0;
+                audio.currentTime = (this.value / 100) * duration;
+            });
+
+            // Reset on end
+            audio.addEventListener('ended', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+                progress.value = 0;
+                audio.currentTime = 0;
+            });
+
+            // Format time helper
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return m + ':' + (s < 10 ? '0' : '') + s;
+            }
+            
+            // Initialize duration display
+            audio.addEventListener('loadedmetadata', function() {
+                timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
+            });
+        });
+    </script>
 </body>
 </html>
