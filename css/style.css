@@ -266,3 +266,18 @@ ul ul ul a {
         padding: 10px !important; /* Reduce padding on mobile */
     }
 }
+
+/* Fix for sticky hover on mobile devices for outline buttons */
+@media (hover: none) {
+    .btn-outline-success:hover {
+        color: #198754; /* Bootstrap success color */
+        background-color: transparent;
+        border-color: #198754;
+    }
+    
+    .btn-outline-success:active {
+        color: #fff;
+        background-color: #198754;
+        border-color: #198754;
+    }
+}
