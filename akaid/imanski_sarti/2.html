@@ -75,9 +75,9 @@
                                     Utječem se Uzvišenom Allahu da me sačuva od prokletog šejtana!
                                 </p>
                                 
-                                <div class="mt-3">
-                                    <audio id="pronunciationAudio" src="../audio/euzubilla.mp3"></audio>
-                                    <button id="pronunciationBtn" class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                <div class="mt-3 pronunciation-player-container">
+                                    <audio src="../audio/euzubilla.mp3"></audio>
+                                    <button class="btn btn-outline-success btn-sm rounded-pill px-3">
                                         <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
                                     </button>
                                 </div>
@@ -102,38 +102,7 @@
     <script src="../../js/menu.js"></script>
     
     <!-- Audio Player Logic -->
-    <script src="../../js/audio-player.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- Pronunciation Audio Logic ---
-            const pronAudio = document.getElementById('pronunciationAudio');
-            const pronBtn = document.getElementById('pronunciationBtn');
-
-            if (pronAudio && pronBtn) {
-                // Toggle play/pause on click
-                pronBtn.addEventListener('click', function() {
-                    if (pronAudio.paused) {
-                        pronAudio.play();
-                    } else {
-                        pronAudio.pause();
-                        pronAudio.currentTime = 0; // Reset to start
-                    }
-                });
-
-                // Update UI on play
-                pronAudio.addEventListener('play', function() {
-                    pronBtn.innerHTML = '<i class="fas fa-stop me-2"></i> Zaustavi';
-                    pronBtn.classList.replace('btn-outline-success', 'btn-success');
-                });
-
-                // Update UI on pause (covers manual pause, end, and programmatic pause)
-                pronAudio.addEventListener('pause', function() {
-                    pronBtn.innerHTML = '<i class="fas fa-volume-up me-2"></i> Poslušaj izgovor';
-                    pronBtn.classList.replace('btn-success', 'btn-outline-success');
-                });
-            }
-        });
-    </script>
+    <script src="../../js/lesson-player.js"></script>
+    <script src="../../js/pronunciation-player.js"></script>
 </body>
 </html>

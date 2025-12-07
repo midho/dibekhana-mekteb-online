@@ -71,6 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update button icon on play/pause
     audio.addEventListener('play', function() {
         playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+        
+        // Pause other audios
+        document.querySelectorAll('audio').forEach(other => {
+            if (other !== audio) {
+                other.pause();
+                // If it's a pronunciation audio (identified by class), reset it
+                if (other.classList.contains('pronunciation-audio')) {
+                    other.currentTime = 0;
+                }
+            }
+        });
     });
 
     audio.addEventListener('pause', function() {
