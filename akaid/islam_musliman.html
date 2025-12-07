@@ -251,6 +251,7 @@
                 audio.play();
                 playIcon.classList.remove('fa-play');
                 playIcon.classList.add('fa-pause');
+                toggleBtn.blur();
             });
 
             playerCollapse.addEventListener('hide.bs.collapse', () => {
@@ -262,6 +263,7 @@
                 audio.pause();
                 playIcon.classList.remove('fa-pause');
                 playIcon.classList.add('fa-play');
+                toggleBtn.blur();
             });
         });
     </script>

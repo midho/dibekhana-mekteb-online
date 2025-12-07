@@ -157,7 +157,9 @@
                                     Biva s voljom Svemogućeg,<br>
                                     Boga, koga nestat neće.
                                 </p>
-                                <p class="text-end text-muted mt-3 fst-normal">- Ilahija</p>
+                                <div class="mt-3 text-end text-muted small">
+                                    <small>- Ilahija</small>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,6 +188,7 @@
             const progress = document.getElementById('audioProgress');
             const timeDisplay = document.getElementById('timeDisplay');
             const audioCollapse = document.getElementById('audioPlayerCollapse');
+            const toggleBtn = document.getElementById('audioToggleBtn');
             
             // --- Global Audio Management ---
             // Pause other audios when one starts playing
@@ -203,13 +206,21 @@
             // --- Lesson Audio Player ---
             
             // Auto-play when expanded
-            audioCollapse.addEventListener('shown.bs.collapse', function () {
+            audioCollapse.addEventListener('show.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-outline-success');
+                toggleBtn.classList.add('btn-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Zatvori player';
                 audio.play().catch(e => console.log("Audio play failed:", e));
+                toggleBtn.blur();
             });
 
             // Pause when collapsed
             audioCollapse.addEventListener('hide.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-success');
+                toggleBtn.classList.add('btn-outline-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju';
                 audio.pause();
+                toggleBtn.blur();
             });
 
             // Play/Pause toggle

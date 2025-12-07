@@ -475,11 +475,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 isSidebarVisible = !isActive;
             }
 
-            // If sidebar is visible, hide hamburger. If hidden, show hamburger.
+            // Reset styles first
+            sidebarCollapse.style.visibility = '';
+            sidebarCollapse.style.display = '';
+
+            // If sidebar is visible, hide hamburger.
             if (isSidebarVisible) {
-                sidebarCollapse.style.display = 'none';
-            } else {
-                sidebarCollapse.style.display = 'block'; // or inline-block depending on bootstrap btn
+                if (isMobile) {
+                    // Mobile: Use visibility:hidden to keep space and prevent layout shift
+                    sidebarCollapse.style.visibility = 'hidden';
+                } else {
+                    // Desktop: Use display:none to remove space completely
+                    sidebarCollapse.style.display = 'none';
+                }
             }
         };
 
