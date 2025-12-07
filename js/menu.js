@@ -150,8 +150,9 @@ const menuData = [
     {
         title: "Historija islama",
         id: "historija",
+        url: "historija/index.html",
         children: [
-            { title: "Adem, a.s.", id: "adem" },
+            { title: "Adem, a.s.", id: "adem", url: "historija/adem.html" },
             { title: "Nuh , a.s.", id: "nuh" },
             { title: "Arabija", id: "arabija" },
             { title: "Rođenje", id: "rodjenje" },
