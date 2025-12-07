@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="UTF-8">
@@ -37,11 +37,47 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 6. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        </div>
                         <div class="card-body">
-                            <p class="lead">Ja vjerujem da sve što se događa, biva Božijom voljom i određenjem.</p>
-                            <hr>
-                            <p>Kader je Božije određenje svega što će se desiti. Mi vjerujemo da Allah zna sve što je bilo i što će biti, i da se ništa ne dešava bez Njegove volje.</p>
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper">
+                                <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                    <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                </button>
+                                <div class="collapse" id="audioPlayerCollapse">
+                                    <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                        <div class="card-body p-2 bg-light">
+                                            <audio id="lessonAudio" preload="metadata" src="../audio/akaid_lekcija_09.mp3"></audio>
+                                            
+                                            <div class="d-flex align-items-center">
+                                                <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                    <i class="fas fa-play fa-sm"></i>
+                                                </button>
+                                                
+                                                <div class="flex-grow-1 mx-2">
+                                                    <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                </div>
+                                                
+                                                <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 75px; text-align: center; white-space: nowrap;">0:00/0:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Kako glasi šesti imanski šart?</p>
+                            <p>Šesti imanski šart glasi: <span class="text-success fw-bold">VE BIL KADERI HAJRIHI VE ŠERRIHI MINALLAHI TE'ALA</span> (Vjerujem da sve što se događa biva s Božijom voljom i Božijim određenjem).</p>
+
+                            <p class="fw-bold">Šta to znači?</p>
+                            <p>To znači da sve što se događa nastaje s Božijom voljom i Božijim određenjem, odnosno po zakonima koje je uzvišeni Allah stvorio i uredio.</p>
+
+                            <p class="fw-bold">Da li je Allahu poznato sve što će se dogoditi?</p>
+                            <p>Allahu, dž.š., je poznato sve što je bilo, šta biva i šta će biti. On je Svemoguć i Sveznajuć.</p>
+
                         </div>
                     </div>
                 </div>
@@ -58,9 +94,89 @@
     <script>
         window.projectRoot = "../../";
     </script>
-    <!-- Menu Data and Logic -->
+    <!-- Custom JS -->
     <script src="../../js/menu.js"></script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Audio Player Logic
+            const audio = document.getElementById('lessonAudio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progress = document.getElementById('audioProgress');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const audioCollapse = document.getElementById('audioPlayerCollapse');
+            const toggleBtn = document.getElementById('audioToggleBtn');
 
+            // Auto-play when expanded
+            audioCollapse.addEventListener('show.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-outline-success');
+                toggleBtn.classList.add('btn-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Zatvori player';
+                audio.play().catch(e => console.log("Audio play failed:", e));
+                toggleBtn.blur();
+            });
+
+            // Pause when collapsed
+            audioCollapse.addEventListener('hide.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-success');
+                toggleBtn.classList.add('btn-outline-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju';
+                audio.pause();
+                toggleBtn.blur();
+            });
+
+            // Play/Pause toggle
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+            // Update button icon on play/pause
+            audio.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+
+            audio.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            });
+
+            // Update progress bar and time
+            audio.addEventListener('timeupdate', function() {
+                const current = audio.currentTime;
+                const duration = audio.duration || 0;
+                
+                progress.value = (current / duration) * 100 || 0;
+                
+                timeDisplay.textContent = formatTime(current) + '/' + formatTime(duration);
+            });
+
+            // Seek functionality
+            progress.addEventListener('input', function() {
+                const duration = audio.duration || 0;
+                audio.currentTime = (this.value / 100) * duration;
+            });
+
+            // Reset on end
+            audio.addEventListener('ended', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+                progress.value = 0;
+                audio.currentTime = 0;
+            });
+
+            // Format time helper
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return m + ':' + (s < 10 ? '0' : '') + s;
+            }
+            
+            // Initialize duration display
+            audio.addEventListener('loadedmetadata', function() {
+                timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
+            });
+        });
+    </script>
 </body>
 </html>
