@@ -420,4 +420,48 @@ document.addEventListener('DOMContentLoaded', () => {
             //    ...
             // }
         }
+
+    // Mobile Sidebar Enhancements
+    // 1. Inject Overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+
+    // 2. Inject Dismiss Button into Sidebar
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) {
+        const dismissBtn = document.createElement('div');
+        dismissBtn.id = 'dismiss';
+        dismissBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
+        // Insert as first child or append? CSS absolute positioning handles it.
+        sidebar.appendChild(dismissBtn); 
+
+        // 3. Event Handlers
+        const dismissSidebar = () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+
+        dismissBtn.addEventListener('click', dismissSidebar);
+        overlay.addEventListener('click', dismissSidebar);
+
+        // Hook into existing toggle button to sync overlay
+        const sidebarCollapse = document.getElementById('sidebarCollapse');
+        if (sidebarCollapse) {
+            sidebarCollapse.addEventListener('click', () => {
+                // Toggle overlay to match sidebar behavior
+                // Note: Sidebar toggling is handled by inline jQuery in HTML files
+                // We just need to ensure overlay visibility matches
+                
+                // Small delay to let jQuery toggle happen first if needed, 
+                // or just toggle overlay immediately.
+                // Since we want to be in sync:
+                if (overlay.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                } else {
+                    overlay.classList.add('active');
+                }
+            });
+        }
+    }
 });

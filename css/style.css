@@ -56,7 +56,7 @@ body {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
+    padding: 22px 20px 20px 20px;
     background: var(--primary-green);
     color: #fff;
     flex-shrink: 0;
@@ -82,6 +82,12 @@ body {
 }
 
 #sidebar ul li a:hover {
+    color: var(--primary-green);
+    background: #fff;
+}
+
+/* Highlight chevron when main link is hovered */
+#sidebar ul li a:hover + a {
     color: var(--primary-green);
     background: #fff;
 }
@@ -176,5 +182,79 @@ ul ul ul a {
     }
     #sidebarCollapse span {
         display: none;
+    }
+}
+
+/* Mobile Sidebar Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #2E7D32; /* primary-green */
+    color: #fff;
+    position: absolute;
+    top: 20px; /* Adjusted to align with header text */
+    right: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 5px;
+    z-index: 1001;
+    display: none; /* Hidden on desktop */
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #2E7D32;
+}
+
+@media (max-width: 991px) {
+    #sidebar {
+        margin-left: -320px; /* Ensure it's hidden initially */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        transition: all 0.3s;
+        /* Remove shadow when hidden to prevent bleeding */
+        box-shadow: none; 
+    }
+    
+    #sidebar.active {
+        margin-left: 0;
+        /* Add shadow only when active */
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    #dismiss {
+        display: block; /* Show on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        padding: 0;
+    }
+    #content > .container-fluid {
+        padding: 10px !important; /* Reduce padding on mobile */
     }
 }
