@@ -429,39 +429,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Inject Dismiss Button into Sidebar
     const sidebar = document.getElementById('sidebar');
+    const sidebarCollapse = document.getElementById('sidebarCollapse');
+
     if (sidebar) {
         const dismissBtn = document.createElement('div');
         dismissBtn.id = 'dismiss';
         dismissBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
-        // Insert as first child or append? CSS absolute positioning handles it.
         sidebar.appendChild(dismissBtn); 
 
-        // 3. Event Handlers
-        const dismissSidebar = () => {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
+        // Unified Toggle Logic
+        const toggleSidebar = () => {
+            sidebar.classList.toggle('active');
+            
+            // Handle Overlay (Mobile only logic mostly, but safe to toggle)
+            // On mobile: active = visible. On desktop: active = hidden.
+            // Overlay should be visible only when sidebar is visible AND we are on mobile.
+            // But simpler: just toggle overlay class if we are on mobile.
+            if (window.innerWidth <= 991) {
+                if (sidebar.classList.contains('active')) {
+                    overlay.classList.add('active');
+                } else {
+                    overlay.classList.remove('active');
+                }
+            } else {
+                overlay.classList.remove('active');
+            }
+
+            updateHamburgerVisibility();
         };
 
-        dismissBtn.addEventListener('click', dismissSidebar);
-        overlay.addEventListener('click', dismissSidebar);
+        // Hamburger Visibility Logic
+        const updateHamburgerVisibility = () => {
+            if (!sidebarCollapse) return;
 
-        // Hook into existing toggle button to sync overlay
-        const sidebarCollapse = document.getElementById('sidebarCollapse');
+            const isMobile = window.innerWidth <= 991;
+            const isActive = sidebar.classList.contains('active');
+            
+            // Determine if sidebar is currently visible to the user
+            let isSidebarVisible;
+            if (isMobile) {
+                // Mobile: .active means visible
+                isSidebarVisible = isActive;
+            } else {
+                // Desktop: .active means hidden
+                isSidebarVisible = !isActive;
+            }
+
+            // If sidebar is visible, hide hamburger. If hidden, show hamburger.
+            if (isSidebarVisible) {
+                sidebarCollapse.style.display = 'none';
+            } else {
+                sidebarCollapse.style.display = 'block'; // or inline-block depending on bootstrap btn
+            }
+        };
+
+        // Event Listeners
+        dismissBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar); // Overlay click always closes (toggles)
+        
         if (sidebarCollapse) {
-            sidebarCollapse.addEventListener('click', () => {
-                // Toggle overlay to match sidebar behavior
-                // Note: Sidebar toggling is handled by inline jQuery in HTML files
-                // We just need to ensure overlay visibility matches
-                
-                // Small delay to let jQuery toggle happen first if needed, 
-                // or just toggle overlay immediately.
-                // Since we want to be in sync:
-                if (overlay.classList.contains('active')) {
-                    overlay.classList.remove('active');
-                } else {
-                    overlay.classList.add('active');
-                }
-            });
+            // Remove any existing listeners if possible (hard with vanilla JS without reference)
+            // But we will remove the inline script from HTML files.
+            sidebarCollapse.addEventListener('click', toggleSidebar);
         }
+
+        // Initial check
+        updateHamburgerVisibility();
+
+        // Handle Resize
+        window.addEventListener('resize', () => {
+            // Reset overlay on resize to avoid weird states
+            if (window.innerWidth > 991) {
+                overlay.classList.remove('active');
+            }
+            updateHamburgerVisibility();
+        });
     }
 });

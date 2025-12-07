@@ -182,10 +182,8 @@
     
     <script>
         $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-            
+            // Sidebar toggle logic moved to menu.js
+
             const audio = document.getElementById('lessonAudio');
             const playBtn = document.getElementById('playPauseBtn');
             const playIcon = playBtn.querySelector('i');

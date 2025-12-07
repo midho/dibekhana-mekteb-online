@@ -218,12 +218,24 @@ ul ul ul a {
     transition: all 0.3s;
     border-radius: 5px;
     z-index: 1001;
-    display: none; /* Hidden on desktop */
+    display: block; /* Always visible */
 }
 
 #dismiss:hover {
     background: #fff;
     color: #2E7D32;
+}
+
+/* Desktop adjustments for dismiss button */
+@media (min-width: 992px) {
+    #dismiss {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        top: 2px;
+        right: 2px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -243,10 +255,6 @@ ul ul ul a {
         margin-left: 0;
         /* Add shadow only when active */
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    }
-    
-    #dismiss {
-        display: block; /* Show on mobile */
     }
 }
 
