@@ -9,6 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Amiri for Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -37,17 +41,123 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- Imanski šarti -->
                     <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-book-open me-2"></i> Imanski šarti
+                        </div>
                         <div class="card-body">
-                            <p class="lead">Imanskih šarta ima šest:</p>
-                            <ol>
-                                <li>Amentu billahi (Vjerujem u Allaha)</li>
-                                <li>Ve melaiketihi (I u Njegove meleke)</li>
-                                <li>Ve kutubihi (I u Njegove knjige)</li>
-                                <li>Ve rusulihi (I u Njegove poslanike)</li>
-                                <li>Vel-jevmil-ahiri (I u Sudnji dan)</li>
-                                <li>Ve bil-kaderi hajrihi ve šerrihi minallahi teala (I da sve što se događa, biva Božijom voljom i određenjem)</li>
-                            </ol>
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3">
+                                <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                    <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                </button>
+                                <div class="collapse" id="audioPlayerCollapse">
+                                    <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                        <div class="card-body p-2 bg-light">
+                                            <audio id="lessonAudio" preload="metadata" src="../audio/akaid_lekcija_03.mp3"></audio>
+                                            
+                                            <div class="d-flex align-items-center">
+                                                <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                    <i class="fas fa-play fa-sm"></i>
+                                                </button>
+                                                
+                                                <div class="flex-grow-1 mx-2">
+                                                    <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                </div>
+                                                
+                                                <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 60px; text-align: center;">0:00/0:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="table-responsive">
+                                <table class="table table-borderless mx-auto w-auto mb-0">
+                                    <tbody>
+                                        <tr class="border-bottom">
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">1. Amentu billahi</td>
+                                            <td class="text-start ps-4 py-3">Ja vjerujem u <strong>Allaha</strong></td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">2. Ve melaiketihi</td>
+                                            <td class="text-start ps-4 py-3">i Njegove <strong>meleke</strong></td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">3. Ve kutubihi</td>
+                                            <td class="text-start ps-4 py-3">i Njegove <strong>Knjige</strong></td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">4. Ve Rusulihi</td>
+                                            <td class="text-start ps-4 py-3">i Njegove <strong>Poslanike</strong></td>
+                                        </tr>
+                                        <tr class="border-bottom">
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">5. Vel jevmi-l-ahiri</td>
+                                            <td class="text-start ps-4 py-3">i <strong>Sudnji dan</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end pe-4 py-3 border-end fw-bold text-success">6. Ve bi-l-kaderi hajrihi ve šerrihi minellahi te'aala</td>
+                                            <td class="text-start ps-4 py-3">i da se <strong>sve događa</strong> po Njegovoj volji i određenju</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ja vjerujem jednog Boga (ilahija) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#poemCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="poemCollapse">
+                            <span><i class="fas fa-music me-2"></i> Ja vjerujem jednog Boga (ilahija) <small class="ms-2 text-white-50">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="poemCollapse" class="collapse">
+                            <div class="card-body text-center fst-italic">
+                                <p>
+                                    Ja vjerujem jednog Boga<br>
+                                    Koji vječno stalno živi<br>
+                                    Koji stvara i rastvara<br>
+                                    I kome se čovjek divi.
+                                </p>
+                                <p>
+                                    I vjerujem sve meleke<br>
+                                    Za čovjeka nevidljive,<br>
+                                    Koji Bogu vječno služe<br>
+                                    Vječno mole vječno slave.
+                                </p>
+                                <p>
+                                    I vjerujem Božije knjige,<br>
+                                    U njima su mudre riječi<br>
+                                    I istine jednog Boga,<br>
+                                    što nas vodi vječnoj sreći.
+                                </p>
+                                <p>
+                                    I vjerujem poslanike,<br>
+                                    Koje posla Svemogući<br>
+                                    Cijelome čovječanstvu,<br>
+                                    Da se pravoj vjeri uči.
+                                </p>
+                                <p>
+                                    I vjerujem Dan suđenja<br>
+                                    Kad će griješni čovjek stati<br>
+                                    Pred Svevišnjeg Suca Boga<br>
+                                    Koji će mu sudbu dati.
+                                </p>
+                                <p>
+                                    I vjerujem isto tako<br>
+                                    Da sve što se zbiva, kreće,<br>
+                                    Biva s voljom Svemogućeg,<br>
+                                    Boga, koga nestat neće.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +177,94 @@
     <!-- Menu Data and Logic -->
     <script src="../../js/menu.js"></script>
     
+    <!-- Audio Player Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('lessonAudio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progress = document.getElementById('audioProgress');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const audioCollapse = document.getElementById('audioPlayerCollapse');
+            
+            // --- Global Audio Management ---
+            // Pause other audios when one starts playing
+            const allAudios = document.querySelectorAll('audio');
+            allAudios.forEach(media => {
+                media.addEventListener('play', function() {
+                    allAudios.forEach(other => {
+                        if (other !== media) {
+                            other.pause();
+                        }
+                    });
+                });
+            });
+
+            // --- Lesson Audio Player ---
+            
+            // Auto-play when expanded
+            audioCollapse.addEventListener('shown.bs.collapse', function () {
+                audio.play().catch(e => console.log("Audio play failed:", e));
+            });
+
+            // Pause when collapsed
+            audioCollapse.addEventListener('hide.bs.collapse', function () {
+                audio.pause();
+            });
+
+            // Play/Pause toggle
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+            // Update button icon on play/pause
+            audio.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+
+            audio.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            });
+
+            // Update progress bar and time
+            audio.addEventListener('timeupdate', function() {
+                const current = audio.currentTime;
+                const duration = audio.duration || 0;
+                
+                progress.value = (current / duration) * 100 || 0;
+                
+                timeDisplay.textContent = formatTime(current) + '/' + formatTime(duration);
+            });
+
+            // Seek functionality
+            progress.addEventListener('input', function() {
+                const duration = audio.duration || 0;
+                audio.currentTime = (this.value / 100) * duration;
+            });
+
+            // Reset on end
+            audio.addEventListener('ended', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+                progress.value = 0;
+                audio.currentTime = 0;
+            });
+
+            // Format time helper
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return m + ':' + (s < 10 ? '0' : '') + s;
+            }
+            
+            // Initialize duration display
+            audio.addEventListener('loadedmetadata', function() {
+                timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
+            });
+        });
+    </script>
 
 </body>
 </html>
