@@ -304,3 +304,19 @@ ul ul ul a {
         margin-top: 2px; /* Minimal gap */
     }
 }
+
+/* Custom hover effect for list items */
+.list-group-item-action.hover-success:hover,
+.list-group-item-action.hover-success:focus {
+    background-color: var(--light-green);
+    color: var(--text-dark);
+    border-color: #c8e6c9;
+    z-index: 1;
+}
+
+/* Custom hover effect for table rows */
+.table-hover-success tbody tr:hover > * {
+    background-color: var(--light-green);
+    color: var(--text-dark);
+    transition: background-color 0.2s ease;
+}

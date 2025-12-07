@@ -37,17 +37,84 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 3. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        </div>
                         <div class="card-body">
-                            <p class="lead">Ja vjerujem u Allahove knjige (kitabe).</p>
-                            <hr>
-                            <p>Allah dž.š. je slao knjige poslanicima da upute ljude na pravi put. Četiri su velike Božije knjige:</p>
-                            <ul>
-                                <li>Tevrat - Musau a.s.</li>
-                                <li>Zebur - Davudu a.s.</li>
-                                <li>Indžil - Isau a.s.</li>
-                                <li>Kur'an - Muhammedu a.s.</li>
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper">
+                                <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                    <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                </button>
+                                <div class="collapse" id="audioPlayerCollapse">
+                                    <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                        <div class="card-body p-2 bg-light">
+                                            <audio id="lessonAudio" preload="metadata" src="../audio/akaid_lekcija_06.mp3"></audio>
+                                            
+                                            <div class="d-flex align-items-center">
+                                                <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                    <i class="fas fa-play fa-sm"></i>
+                                                </button>
+                                                
+                                                <div class="flex-grow-1 mx-2">
+                                                    <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                </div>
+                                                
+                                                <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 75px; text-align: center; white-space: nowrap;">0:00/0:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Kako glasi treći imanski šart?</p>
+                            <p>Treći imanski šart glasi: <span class="text-success fw-bold">VE KUTUBIHI</span> (vjerujem u Allahove Knjige).</p>
+
+                            <p class="fw-bold">Šta su to Allahovi Kitabi (Knjige)?</p>
+                            <p>Allahovi kitabi su Njegove objave koje su ljudima prenosili Allahovi poslanici.</p>
+
+                            <p class="fw-bold">Ko je donosio Allahove Objave Allahovim Poslanicima?</p>
+                            <p>Objave od Allaha donosio je melek Džebrail a.s. i davao im je potporu u njihovoj poslaničkoj misiji po Allahovoj naredbi i odobrenju.</p>
+
+                            <p class="fw-bold">Šta sadrže Allahovi Kitabi?</p>
+                            <p>Allahove Knjige sadrže upute, savjete, dove i propise o životu ljudi na ovom i budućem svijetu. U njima su istinita kazivanja o prošlim narodima, propisi o sadašnjem životu i o budućem svijetu.</p>
+
+                            <p class="fw-bold">Koliko je bilo Allahovih Kitaba?</p>
+                            <p>Allahovih kitaba ima 104, i to 100 SUHUFA (stranica) malih i 4 velika kitaba, a to su:</p>
+                            <ul class="list-group mb-4">
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-book me-2 text-success"></i> <strong>TEVRAT</strong> - dostavljen Musa a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-book me-2 text-success"></i> <strong>ZEBUR</strong> - dostavljen Davud a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-book me-2 text-success"></i> <strong>INDŽIL</strong> - dostavljen Isa a.s.</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-quran me-2 text-success"></i> <strong>KUR'AN</strong> - dostavljen Muhammed a.s.</li>
                             </ul>
+
+                            <h4 class="text-success border-bottom pb-2 mb-3">KUR'AN</h4>
+
+                            <p class="fw-bold">Šta je to Kur'an?</p>
+                            <p>Kur'an je posljednja Allahova objava dostavljena Muhammedu a.s.</p>
+
+                            <p class="fw-bold">Kada je počelo objavljivanje Kur'ana?</p>
+                            <p>Objava Kur'ana počela je u noći Lejletu-l-kadr, tj. 27. noći ramazana 610. godine.</p>
+
+                            <p class="fw-bold">Šta je prvo objavljeno od Kur'ana?</p>
+                            <p>Prve riječi Objave su bile: "IKRE' BISMI RABBIKELEZI HALEK", što znači: "UČI, ČITAJ U IME GOSPODARA KOJI STVARA".</p>
+                            <p>Od ove riječi je i naziv Kur'ana, a znači - knjiga za učenje, recitovanje, čitanje.</p>
+
+                            <p class="fw-bold">Koliko je trajalo objavljivanje Kur'ana?</p>
+                            <p>Objava Kur'ana je trajala 23 godine, i to 13 u Mekki i 10 u Medini. Kur'an je Allahov govor. U njemu je 114 sura (poglavlja) i 6236 ajeta (rečenica). Svaka sura ima svoj naziv uzet po riječi, ličnosti ili događaju iz te sure. Kur'an je sabran u jednu knjigu koja se naziva MUSHAF, koji je podijeljen na 30 džuzova (poglavlja), a svaki džuz se sastoji iz 10 listova.</p>
+
+                            <p class="fw-bold">Šta sadrži Kur'an?</p>
+                            <p>Kur'an sadrži upute, savjete, propise i zakone o životu na ovom svijetu. Mi smo dužni upoznati i proučavati Kur'an kako bismo uskladili svoj život prema njegovim propisima.</p>
+                            <p>U Kur'anu su vijesti:</p>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-history me-2 text-success"></i> o prijašnjim narodima i poslanicima</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-hourglass-half me-2 text-success"></i> o onome što će doći poslije nas</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-skull me-2 text-success"></i> o smrti i Sudnjem danu</li>
+                                <li class="list-group-item list-group-item-action hover-success"><i class="fas fa-infinity me-2 text-success"></i> o vječnom životu na ahiretu, Džennetu i Džehennemu</li>
+                            </ul>
+                            <p class="fw-bold text-center mt-4">Kur'an je istina, uputa i najveća mudrost.</p>
                         </div>
                     </div>
                 </div>
@@ -67,6 +134,87 @@
     <!-- Menu Data and Logic -->
     <script src="../../js/menu.js"></script>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Audio Player Logic
+            const audio = document.getElementById('lessonAudio');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const progress = document.getElementById('audioProgress');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const audioCollapse = document.getElementById('audioPlayerCollapse');
+            const toggleBtn = document.getElementById('audioToggleBtn');
+            
+            // Auto-play when expanded
+            audioCollapse.addEventListener('show.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-outline-success');
+                toggleBtn.classList.add('btn-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Zatvori player';
+                audio.play().catch(e => console.log("Audio play failed:", e));
+                toggleBtn.blur();
+            });
 
+            // Pause when collapsed
+            audioCollapse.addEventListener('hide.bs.collapse', function () {
+                toggleBtn.classList.remove('btn-success');
+                toggleBtn.classList.add('btn-outline-success');
+                toggleBtn.innerHTML = '<i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju';
+                audio.pause();
+                toggleBtn.blur();
+            });
+
+            // Play/Pause toggle
+            playPauseBtn.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+            // Update button icon on play/pause
+            audio.addEventListener('play', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+
+            audio.addEventListener('pause', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            });
+
+            // Update progress bar and time
+            audio.addEventListener('timeupdate', function() {
+                const current = audio.currentTime;
+                const duration = audio.duration || 0;
+                
+                progress.value = (current / duration) * 100 || 0;
+                
+                timeDisplay.textContent = formatTime(current) + '/' + formatTime(duration);
+            });
+
+            // Seek functionality
+            progress.addEventListener('input', function() {
+                const duration = audio.duration || 0;
+                audio.currentTime = (this.value / 100) * duration;
+            });
+
+            // Reset on end
+            audio.addEventListener('ended', function() {
+                playPauseBtn.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+                progress.value = 0;
+                audio.currentTime = 0;
+            });
+
+            // Format time helper
+            function formatTime(seconds) {
+                const m = Math.floor(seconds / 60);
+                const s = Math.floor(seconds % 60);
+                return m + ':' + (s < 10 ? '0' : '') + s;
+            }
+            
+            // Initialize duration display
+            audio.addEventListener('loadedmetadata', function() {
+                timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
+            });
+        });
+    </script>
 </body>
 </html>
