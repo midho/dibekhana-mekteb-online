@@ -281,3 +281,26 @@ ul ul ul a {
         border-color: #198754;
     }
 }
+
+/* Audio Player Overlay on Desktop */
+@media (min-width: 992px) {
+    .audio-player-wrapper {
+        position: relative;
+        z-index: 100;
+        width: 150px; /* Tighter fixed width */
+    }
+
+    /* Remove bottom margin from button on desktop */
+    .audio-player-wrapper .btn {
+        margin-bottom: 0 !important;
+    }
+    
+    .audio-player-wrapper .collapse,
+    .audio-player-wrapper .collapsing {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 340px; /* Slightly wider to fit time display */
+        margin-top: 2px; /* Minimal gap */
+    }
+}
