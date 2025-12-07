@@ -53,25 +53,27 @@
                                 </div>
                                 <div class="card-body">
                                     <!-- Custom Audio Player Section -->
-                                    <div class="float-lg-end ms-lg-3 mb-3">
-                                        <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
-                                            <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
-                                        </button>
-                                        <div class="collapse" id="audioPlayerCollapse">
-                                            <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
-                                                <div class="card-body p-2 bg-light">
-                                                    <audio id="lessonAudio" preload="metadata" src="audio/akaid_lekcija_01.mp3"></audio>
-                                                    
-                                                    <div class="d-flex align-items-center">
-                                                        <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
-                                                            <i class="fas fa-play fa-sm"></i>
-                                                        </button>
+                                    <div class="mb-3 d-flex flex-column align-items-lg-end">
+                                        <div style="width: 100%; max-width: 400px;">
+                                            <button id="audioToggleBtn" class="btn btn-outline-success btn-sm w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlayerCollapse" aria-expanded="false">
+                                                <i class="fas fa-headphones-alt me-2"></i> Poslušaj lekciju
+                                            </button>
+                                            <div class="collapse" id="audioPlayerCollapse">
+                                                <div class="card border-success shadow-sm" style="width: 100%; min-width: 300px;">
+                                                    <div class="card-body p-2 bg-light">
+                                                        <audio id="lessonAudio" preload="metadata" src="audio/akaid_lekcija_01.mp3"></audio>
                                                         
-                                                        <div class="flex-grow-1 mx-2">
-                                                            <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                        <div class="d-flex align-items-center">
+                                                            <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                                                                <i class="fas fa-play fa-sm"></i>
+                                                            </button>
+                                                            
+                                                            <div class="flex-grow-1 mx-2">
+                                                                <input type="range" class="form-range" id="audioProgress" value="0" min="0" step="0.1" style="accent-color: #2E7D32;">
+                                                            </div>
+                                                            
+                                                            <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 60px; text-align: center;">0:00/0:00</span>
                                                         </div>
-                                                        
-                                                        <span class="small text-success fw-bold" id="timeDisplay" style="min-width: 60px; text-align: center;">0:00/0:00</span>
                                                     </div>
                                                 </div>
                                             </div>
