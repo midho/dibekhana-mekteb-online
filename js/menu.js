@@ -46,7 +46,7 @@ const menuData = [
             { title: "Islamski šarti", id: "islamski_sarti_akaid", url: "akaid/islamski_sarti.html" },
             { title: "Kur'an", id: "akaid_kuran", url: "akaid/kuran.html" },
             { title: "Hadis", id: "hadis", url: "akaid/hadis.html" },
-            { title: "Šeriat (ukratko)", id: "seriat", url: "akaid/seriat.html" },
+            { title: "Šerijat (ukratko)", id: "seriat", url: "akaid/seriat.html" },
             { title: "Pitanja", id: "akaid_pitanja", url: "akaid/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
