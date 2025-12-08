@@ -153,15 +153,15 @@ const menuData = [
         url: "historija/index.html",
         children: [
             { title: "Adem, a.s.", id: "adem", url: "historija/adem.html" },
-            { title: "Nuh , a.s.", id: "nuh" },
-            { title: "Arabija", id: "arabija" },
-            { title: "Rođenje", id: "rodjenje" },
-            { title: "U Benu Said-u", id: "benu_said" },
-            { title: "Siroče", id: "siroce" },
-            { title: "Ženidba", id: "zenidba" },
-            { title: "Prva Objava", id: "prva_objava" },
-            { title: "Poslanikova Hidžra", id: "hidzra" },
-            { title: "Pitanja", id: "historija_pitanja", icon: "far fa-question-circle" }
+            { title: "Nuh , a.s.", id: "nuh", url: "historija/nuh.html" },
+            { title: "Arabija", id: "arabija", url: "historija/arabija.html" },
+            { title: "Rođenje", id: "rodjenje", url: "historija/rodjenje.html" },
+            { title: "U Benu Said-u", id: "benu_said", url: "historija/benu_said.html" },
+            { title: "Siroče", id: "siroce", url: "historija/siroce.html" },
+            { title: "Ženidba", id: "zenidba", url: "historija/zenidba.html" },
+            { title: "Prva Objava", id: "prva_objava", url: "historija/prva_objava.html" },
+            { title: "Poslanikova Hidžra", id: "hidzra", url: "historija/hidzra.html" },
+            { title: "Pitanja", id: "historija_pitanja", url: "historija/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
