@@ -22,17 +22,7 @@
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <!-- Note the ../ to go back to root index -->
-                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -132,7 +122,7 @@
                                                 On korača smjelo.</p>
                                             </div>
                                         </div>
-                                        <div class="mt-3 text-end text-muted small">
+                                        <div class="mt-3 text-end text-muted small fst-italic">
                                             <small>Vjeronauka, za 3. razred osnovne škole, str. 114.</small>
                                         </div>
                                     </div>
@@ -154,6 +144,8 @@
     <script>
         window.projectRoot = "../";
     </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
     <!-- Menu Data and Logic (Note the ../) -->
     <script src="../js/menu.js"></script>
     

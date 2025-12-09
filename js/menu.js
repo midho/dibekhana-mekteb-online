@@ -329,7 +329,101 @@ function renderMenu(items, parentId = 'sidebar-menu') {
     return ul;
 }
 
+function findActiveItem(items, currentPath, breadcrumb = []) {
+    for (const item of items) {
+        const newBreadcrumb = [...breadcrumb, item];
+        
+        // Check if this item matches
+        let match = false;
+        if (item.url) {
+            const normalizedUrl = item.url.replace(/^\.\//, '');
+            if (currentPath.endsWith(normalizedUrl)) {
+                match = true;
+            }
+        } else if (item.id) {
+             const urlParams = new URLSearchParams(window.location.search);
+             if (urlParams.get('page') === item.id) {
+                 match = true;
+             }
+        }
+
+        if (match) {
+            return { item, breadcrumb: newBreadcrumb };
+        }
+
+        if (item.children) {
+            const result = findActiveItem(item.children, currentPath, newBreadcrumb);
+            if (result) return result;
+        }
+    }
+    return null;
+}
+
+function initializeLayout() {
+    const wrapper = document.getElementById('wrapper');
+    if (!wrapper) return;
+
+    // 1. Inject Sidebar if missing
+    let sidebar = document.getElementById('sidebar');
+    if (!sidebar) {
+        sidebar = document.createElement('nav');
+        sidebar.id = 'sidebar';
+        
+        // Header
+        const header = document.createElement('div');
+        header.className = 'sidebar-header';
+        const root = window.projectRoot || "";
+        
+        // Use config if available, else fallback
+        const title = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.text : "Dibekhana Mekteb";
+        const iconClass = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.icon : "fas fa-mosque";
+        const url = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.url : "index.html";
+
+        header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none"><i class="${iconClass} me-2"></i>${title}</a></h3>`;
+        sidebar.appendChild(header);
+
+        // Content Container
+        const contentDiv = document.createElement('div');
+        contentDiv.id = 'sidebar-content';
+        sidebar.appendChild(contentDiv);
+
+        wrapper.insertBefore(sidebar, wrapper.firstChild);
+    }
+}
+
+function updatePageTitle() {
+    const currentPath = decodeURIComponent(window.location.pathname);
+    const result = findActiveItem(menuData, currentPath);
+    
+    if (result) {
+        const { item, breadcrumb } = result;
+        // breadcrumb is [Grandparent, Parent, Item]
+        // We want: Item Title - Parent Title - Site Title
+        
+        const parts = [];
+        
+        // Reverse breadcrumb to get specific -> general
+        const reversed = [...breadcrumb].reverse();
+        
+        reversed.forEach(p => parts.push(p.title));
+        
+        if (typeof siteConfig !== 'undefined') {
+            parts.push(siteConfig.siteTitle);
+        } else {
+            parts.push("Dibekhana Mekteb");
+        }
+        
+        document.title = parts.join(' - ');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Layout (Sidebar structure)
+    initializeLayout();
+    
+    // Update Page Title
+    updatePageTitle();
+
     const sidebarContent = document.getElementById('sidebar-content');
     if (sidebarContent) {
         sidebarContent.appendChild(renderMenu(menuData));
