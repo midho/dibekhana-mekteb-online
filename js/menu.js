@@ -376,10 +376,9 @@ function initializeLayout() {
         
         // Use config if available, else fallback
         const title = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.text : "Dibekhana Mekteb";
-        const iconClass = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.icon : "fas fa-mosque";
         const url = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.url : "index.html";
 
-        header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none"><i class="${iconClass} me-2"></i>${title}</a></h3>`;
+        header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none d-flex align-items-center"><img src="${root}logo.png" alt="Logo" style="height: 100px;" class="me-2">${title}</a></h3>`;
         sidebar.appendChild(header);
 
         // Content Container
