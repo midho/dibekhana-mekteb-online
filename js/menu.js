@@ -606,5 +606,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             updateHamburgerVisibility();
         });
+
+        // Auto-expand cards on mobile
+        if (window.innerWidth <= 768) {
+            const collapses = document.querySelectorAll('.card .collapse');
+            collapses.forEach(el => {
+                // Skip if it's the audio player (optional, but usually good to keep closed)
+                if (el.id === 'audioPlayerCollapse') return;
+
+                if (!el.classList.contains('show')) {
+                    // Add show class to expand
+                    el.classList.add('show');
+                    
+                    // Update toggler state
+                    const id = el.id;
+                    if (id) {
+                        const toggler = document.querySelector(`[data-bs-target="#${id}"], [href="#${id}"]`);
+                        if (toggler) {
+                            toggler.setAttribute('aria-expanded', 'true');
+                            toggler.classList.remove('collapsed');
+                        }
+                    }
+                }
+            });
+        }
     }
 });
