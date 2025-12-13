@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <audio id="lessonAudio" preload="metadata" src="${audioSrc}"></audio>
                     
                     <div class="d-flex align-items-center">
-                        <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px;">
+                        <button id="playPauseBtn" class="btn btn-success rounded-circle p-0 d-flex align-items-center justify-content-center me-2" style="width: 35px; height: 35px; flex-shrink: 0;">
                             <i class="fas fa-play fa-sm"></i>
                         </button>
                         
