@@ -32,10 +32,17 @@
                 <div id="main-content">
                     <!-- 4. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="card-body">
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
                             <!-- Custom Audio Player Section -->
                             <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_07.mp3"></div>
 
@@ -91,6 +98,7 @@
                             <p>U četrdesetoj godini života počeo je primati Božiju objavu - Kur'ani kerim i pozivati ljude u islam. To je trajalo dvadeset i tri godine. Za to vrijeme islam se proširio u cijeloj Arabiji a pročulo se za njega i mnogo dalje.</p>
                             
                             <p>Muhamed (a.s.) je u 63. godini života preselio na ahiret u gradu Medini, u Arabiji.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -122,4 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
     audio.addEventListener('loadedmetadata', function() {
         timeDisplay.textContent = "0:00/" + formatTime(audio.duration);
     });
+
+    // Pause audio when the main lesson card is collapsed
+    const lekcijaCollapse = document.getElementById('lekcijaCollapse');
+    if (lekcijaCollapse) {
+        lekcijaCollapse.addEventListener('hide.bs.collapse', function () {
+            if (!audio.paused) {
+                audio.pause();
+            }
+        });
+    }
 });

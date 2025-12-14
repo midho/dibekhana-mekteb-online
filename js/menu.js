@@ -116,9 +116,10 @@ const menuData = [
     {
         title: "Ahlak",
         id: "ahlak",
+        url: "ahlak/index.html",
         children: [
-            { title: "Islamski bonton", id: "bonton" },
-            { title: "Selam - islamski pozdrav", id: "selam" },
+            { title: "Islamski bonton", id: "bonton", url: "ahlak/bonton.html" },
+            { title: "Selam - islamski pozdrav", id: "selam", url: "ahlak/selam.html" },
             { title: "Desna strana", id: "desna_strana" },
             { title: "Lična higijena i urednost", id: "higijena" },
             { title: "Kuća: ulazak i izlazak", id: "kuca" },

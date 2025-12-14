@@ -32,10 +32,17 @@
                 <div id="main-content">
                     <!-- Nuh, a.s. -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="card-body">
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
                             <!-- Custom Audio Player Section -->
                             <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/historija_lekcija_02.mp3"></div>
 
@@ -48,6 +55,7 @@
                             <p>Kad je Nuh, a.s., po zapovijedi Allahovoj, počeo graditi lađu, i to na kopnu i daleko od mora, počeše ga nevjernici još više izazivati i ismijavati.</p>
 
                             <p>Pošto je lađa bila gotova, Nuh, a.s., uze u nju sve što mu je bilo naređeno. Ubrzo se počeše pojavljivati i znaci potopa. Udariše velike i strašne kiše. Voda izbi na sve strane. Ogromni valovi prekriše zemlju. Svi koji se ne skloniše u njegovu lađu, padoše žrtvom tog strašnog potopa. Među nastradalim bijaše i Nuhov sin Jam, koji ne htjede poći s ocem u lađu. Potop potraja duže vremena. Po njegovu prelasku lađa se zaustavi na Džudij-planini i vjernici se tu iskrcaše.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -59,13 +67,15 @@
                              data-bs-target="#pitanjaCollapse" 
                              aria-expanded="false" 
                              aria-controls="pitanjaCollapse">
-                            <span><i class="fas fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50">(Klikni za prikaz)</small></span>
+                            <span><i class="fas fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div id="pitanjaCollapse" class="collapse">
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Opiši prilike za vrijeme Nuha, a.s.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kako su se spasili Nuh, a.s., i njegovi sljedbenici od potopa?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Ko se iz Nuhove, a.s., porodice nije spasio od potopa?</li>
                                     <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Zašto je Nuh, a.s., gradio lađu daleko od vode?</li>
                                 </ul>
                             </div>

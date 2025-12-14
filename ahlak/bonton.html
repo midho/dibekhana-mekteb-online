@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamski bonton - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Islamski bonton</h2>
+                </div>
+                
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_01.mp3"></div>
+
+                                <p class="fw-bold">Šta je to ahlak?</p>
+                                <p>Ahlak, islamsko vladanje, moral i etika je skup islamskih pravila kojima se izgrađuju plemenita svojstva muslimana i muslimanki i koja uređuju njihov život.</p>
+
+                                <p class="fw-bold">Kako se zove nauka koja se bavi izučavanjem ovih pravila?</p>
+                                <p>Nauka koja se bavi izučavanjem ovih pravila i njihovom primjenom zove se ahlak, tj. nauka o islamskom vladanju i islamskoj etici.</p>
+
+                                <p class="fw-bold">Šta je cilj ahlaka?</p>
+                                <p>Ova nauka ima dva cilja:</p>
+                                <ol>
+                                    <li class="mb-3">
+                                        Kod pripadnika islama razviti plemenita svojstva kao što su:
+                                        <ul class="list-unstyled mt-2 ms-3">
+                                            <li class="mb-1"><i class="fas fa-check text-success me-2"></i> ljubav prema Allahu, čovjeku i prirodi,</li>
+                                            <li class="mb-1"><i class="fas fa-check text-success me-2"></i> pravednost, darežljivost i milosrđe prema ljudima,</li>
+                                        </ul>
+                                        <div class="mt-2">te otklanjati njihova negativna svojstva, kao što su:</div>
+                                        <ul class="list-unstyled mt-2 ms-3">
+                                            <li class="mb-1"><i class="fas fa-times text-danger me-2"></i> negiranje i nepoštovanje Allaha, dž.š.,</li>
+                                            <li class="mb-1"><i class="fas fa-times text-danger me-2"></i> nepravda, škrtost i nasilje,</li>
+                                            <li class="mb-1"><i class="fas fa-times text-danger me-2"></i> mržnja, zavist, oholost i sl.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Poučiti muslimane kako će biti čestiti vjernici kako bi bili sretni na oba svijeta.</li>
+                                </ol>
+
+                                <p>Poslanik, s.a.v.s., je rekao:</p>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Poslan sam da usavršim plemenita svojstva (ljudi)."</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>Allah, dž.š., u Kur'anu kaže za Svog Poslanika, s.a.v.s.:</p>
+                                <div class="quote-box quote-quran">
+                                    <div class="d-flex">
+                                        <i class="fas fa-quran quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Ti si (Muhammede) na najvišem stupnju morala."</p>
+                                            <div class="quote-footer">
+                                                — El-Kalem, 4.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koje dužnosti uređuje ahlak?</p>
+                                <p>Ahlak uređuje sljedeće dužnosti:</p>
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <span class="badge bg-success rounded-pill me-3">1</span>
+                                        <span>Dužnosti prema Allahu</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <span class="badge bg-success rounded-pill me-3">2</span>
+                                        <span>Dužnosti prema sebi</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <span class="badge bg-success rounded-pill me-3">3</span>
+                                        <span>Dužnosti prema drugim ljudima</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>

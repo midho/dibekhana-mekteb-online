@@ -32,10 +32,17 @@
                 <div id="main-content">
                     <!-- Lekcija -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="card-body">
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
                             <!-- Custom Audio Player Section -->
                             <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/historija_lekcija_09.mp3"></div>
 
@@ -62,6 +69,35 @@
 
                             <p class="fw-bold">Od kojeg datuma muslimani računaju svoje vrijeme?</p>
                             <p>Hidžret je za početak muslimanske ere uzeo hazreti Omer u sporazumu sa ostalim Alejhisselamovim drugovima. To se dogodilo 17. godine po hidžri. Hidžra je najvažnija tačka u istoriji Islama, jer od tada počinje brzo širenje Islama.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja (Collapsed) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="fas fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta je to hidžra?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kada se desila hidžra?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Zašto se Poslanik, s.a.v.s., sa ashabima odselio u Jesrib?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Ko je najduže od muslimana ostao u Meki?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Da li je Poslanik, s.a.v.s., mogao u miru napustiti Meku i s kim je putovao?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Gdje se Poslanik, s.a.v.s., s Ebu Bekrom sklonuo?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kada su i kako napustili pećinu?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Od kojeg datuma muslimani računaju svoje vrijeme?</li>
+                                        <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kada, u kojoj godini života i kojem mjestu je umro Allahov Poslanik, s.a.v.s.?</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

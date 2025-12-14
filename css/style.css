@@ -440,3 +440,16 @@ ul ul ul a {
         min-width: 23px;
     }
 }
+/* Rotate chevron when expanded */
+[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Hide toggle hint when expanded */
+[aria-expanded="true"] .toggle-hint {
+    display: none;
+}
+
+.fa-chevron-down {
+    transition: transform 0.3s ease;
+}

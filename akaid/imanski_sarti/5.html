@@ -32,10 +32,17 @@
                 <div id="main-content">
                     <!-- 5. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-header bg-success text-white">
-                            <i class="fas fa-book-open me-2"></i> Lekcija
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="card-body">
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
                             <!-- Custom Audio Player Section -->
                             <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_08.mp3"></div>
 
@@ -51,6 +58,7 @@
                             <p class="fw-bold">Kada će biti Sudnji dan?</p>
                             <p>Samo Allah zna i određuje kada će biti Sudnji dan.</p>
 
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -40,10 +40,17 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card mb-4 shadow-sm">
-                                <div class="card-header bg-success text-white">
-                                    <i class="fas fa-book-open me-2"></i> Lekcija
+                                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                                     style="cursor: pointer;" 
+                                     data-bs-toggle="collapse" 
+                                     data-bs-target="#lekcijaCollapse" 
+                                     aria-expanded="true" 
+                                     aria-controls="lekcijaCollapse">
+                                    <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                                    <i class="fas fa-chevron-down"></i>
                                 </div>
-                                <div class="card-body">
+                                <div id="lekcijaCollapse" class="collapse show">
+                                    <div class="card-body">
                                     <!-- Custom Audio Player Section -->
                                     <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/akaid_lekcija_01.mp3"></div>
 
@@ -66,6 +73,7 @@
                                     
                                     <p class="fw-bold">Koliko je vjera objavio Allah?</p>
                                     <p>Allaj je objavio samo jednu vjeru, kao što je i On jedan i kod Njega je priznata samo jedna vjera. Sve druge vjere su nastale tako što su ljudi iskrivili vjeru koju je On objavio</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -76,7 +84,7 @@
                                      data-bs-target="#poemCollapse" 
                                      aria-expanded="false" 
                                      aria-controls="poemCollapse">
-                                    <span><i class="fas fa-feather-alt me-2"></i> Hiljadu ljeta <small class="ms-2 text-white-50">(Klikni za prikaz)</small></span>
+                                    <span><i class="fas fa-feather-alt me-2"></i> Hiljadu ljeta <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
                                     <i class="fas fa-chevron-down"></i>
                                 </div>
                                 <div id="poemCollapse" class="collapse">
