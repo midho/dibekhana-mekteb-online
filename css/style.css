@@ -425,3 +425,18 @@ ul ul ul a {
     font-weight: bold;
     color: var(--primary-green);
 }
+
+/* Sifati List Number Styling */
+.sifat-number {
+    min-width: 30px;
+    margin: 0 1rem; /* Equivalent to mx-3 */
+    font-weight: bold;
+    text-align: center; /* Optional but looks better */
+}
+
+@media (max-width: 576px) {
+    .sifat-number {
+        margin: 0 0.5rem 0 0; /* Remove left margin */
+        min-width: 23px;
+    }
+}
