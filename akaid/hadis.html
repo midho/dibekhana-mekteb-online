@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,11 +30,92 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- Hadis -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Hadis je sve ono što je Poslanik a.s. rekao, uradio ili šutnjom odobrio.</p>
-                            <hr>
-                            <p>Hadisi su drugi izvor šerijata, odmah nakon Kur'ana.</p>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/akaid_lekcija_12.mp3"></div>
+
+                            <p class="fw-bold">Da li se vjera uzima iz Sunneta?</p>
+                            <p>Da. Sunnet (Poslanikova, s.a.v.s., tradicija) je drugi izvor šeriatskog prava i iz njega se uzima vjera.</p>
+
+                            <p class="fw-bold">Šta je to Sunnet?</p>
+                            <p>Pod Sunnetom ili hadisom mislimo na:</p>
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-comment-dots text-success fa-lg mx-3"></i>
+                                    <span>Poslanikove, s.a.v.s., riječi,</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-walking text-success fa-lg mx-3"></i>
+                                    <span>njegov način života, i</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-check-double text-success fa-lg mx-3"></i>
+                                    <span>ono što je prećutno odobrio.</span>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Može li se vjera pravilno razumjeti bez Sunneta?</p>
+                            <p>Ne. Bez Sunneta se ne može pravilno razumjeti islam. Onaj ko je objavio Kur'an, poslao je i Poslanika da bude živi tumač Kur'ana i islama. Oko 80 % vjere je objašnjeno Sunnetom. Bez Sunneta ne bismo znali namaz obaviti, zekat obračunati niti hadž izvršiti.</p>
+
+                            <p class="fw-bold">Ko je do nas prenio Sunnet?</p>
+                            <p>Sunnet su nam prenijeli ashabi i generacije koje su poslije njih došle. Od halife Omera b. Abdu-l-Aziza (vladao od 99-101. h.g.), Sunnet je razvrstavan u posebna djela.</p>
+
+                            <p class="fw-bold">Ko se posebno istakao u sakupljanju Sunneta?</p>
+                            <p>U sakupljanju Sunneta su se posebno istakli:</p>
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success mx-3" style="min-width: 20px;">Drugo</div>
+                                    <span>stoljeće: <strong>Malik</strong></span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success mx-3" style="min-width: 20px;">Treće</div>
+                                    <span>stoljeće: <strong>Buharija, Muslim, Ebu Davud, Tirmizija, Nesaija i Ibn Madže</strong></span>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Ko su najistaknutiji sakupljači Sunneta?</p>
+                            <p>Najistaknutiji sakupljači Sunneta su:</p>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded bg-success text-white shadow-sm text-center h-100 hover-scale">
+                                        <div class="fw-bold fs-5 mb-1">Buharija</div>
+                                        <div class="small text-white-50">Sakupio 600.000 hadisa</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded bg-success text-white shadow-sm text-center h-100 hover-scale">
+                                        <div class="fw-bold fs-5 mb-1">Muslim</div>
+                                        <div class="small text-white-50">Sakupio 300.000 hadisa</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Kakve hadise su zabilježili Buharija i Muslim?</p>
+                            <p>U ove dvije zbirke se nalaze samo vjerodostojni hadisi, tj. samo oni hadisi za koje se posigurno zna da potiču od Poslanika, s.a.v.s.</p>
+
+                            <!-- Zapamti -->
+                            <div class="alert alert-success mt-4" role="alert">
+                                <h5 class="alert-heading border-bottom border-success-subtle pb-2 mb-3"><i class="fas fa-lightbulb me-2"></i>Zapamti!</h5>
+                                <div class="d-flex align-items-center p-2 ps-3 border-start border-success border-3 bg-white bg-opacity-25 rounded-end">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 border border-success border-opacity-50 me-3" style="width: 32px; height: 32px; min-width: 32px;">
+                                        <i class="fas fa-exclamation-circle text-success"></i>
+                                    </div>
+                                    <span class="fw-medium">Nikada ne stavljaj svoje mišljenje iznad Poslanikovog, s.a.v.s.</span>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,9 +132,10 @@
     <script>
         window.projectRoot = "../";
     </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
     <!-- Menu Data and Logic -->
     <script src="../js/menu.js"></script>
-    
-
+    <script src="../js/lesson-player.js"></script>
 </body>
 </html>

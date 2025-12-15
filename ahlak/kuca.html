@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuća: ulazak i izlazak - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Kuća: ulazak i izlazak</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_05.mp3"></div>
+
+                                <p>U kuću se ulazi desnom nogom. Pri ulasku se uči bismilla.</p>
+                                
+                                <p>Allahov Poslanik, s.a.v.s., je rekao:</p>
+                                <div class="quote-box quote-hadith mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Kada čovjek uđe u svoju kuću i spomene ime Uzvišenog Allaha pri ulasku i jelu, šejtan kaže: 'Ovdje nama nema ni konaka ni jela.' A kada uđe bez pomena Allahovog imena, šejtan kaže: 'Našli smo konak'. A ako ne spomene Allahovo ime pri jelu, šejtan kaže: 'Našli smo i večeru i konak'."</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-danger d-flex align-items-center shadow-sm" role="alert">
+                                    <div class="me-3" style="font-size: 3rem; line-height: 1;">😈</div>
+                                    <div>
+                                        <p class="mb-0 fw-bold text-danger">Šejtan kaže:</p>
+                                        <p class="mb-0 fst-italic">"Ako ne proučiš bismillu, s tobom ću na konak!"</p>
+                                    </div>
+                                </div>
+
+                                <div class="text-center my-4">
+                                    <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                                    </p>
+                                    <p class="lead fst-italic text-success mb-2">
+                                        "Bismillahirrahmanirrahim"
+                                    </p>
+                                    <p class="text-muted">
+                                        (U ime Allaha, Milostivog, Samilosnog)
+                                    </p>
+                                </div>
+
+                                <p>Iz kuće se izlazi lijevom nogom i uči se ova dova:</p>
+
+                                <div class="text-center my-4">
+                                    <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                        بِاسْمِ اللهِ تـَوَكَّـلْتُ عَلىَ اللهِ وَ لاَ حَوْلَ وَ لاَ قـُوَّةَ إِلاَّ بِاللهِ
+                                    </p>
+                                    <p class="lead fst-italic text-success mb-2">
+                                        "Bismillahi, tevekkeltu 'alellahi, ve la havle ve la kuvvete illa billah"
+                                    </p>
+                                    <p class="text-muted">
+                                        (U ime Allaha, oslanjam se na Allaha, nema moći niti snage osim kod Allaha)
+                                    </p>
+                                </div>
+
+                                <p>Kuća se, po izlasku, bismillom zatvara.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kojom nogom se izlazi iz kuće a kojom ulazi?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta treba učiti pri ulasku u kuću?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta treba proučiti kada se izlazi iz kuće?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> U kojoj kući šejtan nalazi konak i večeru?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>

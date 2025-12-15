@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,12 +30,59 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 2. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Ja vjerujem u Allahove meleke.</p>
-                            <hr>
-                            <p>Meleki su duhovna bića stvorena od svjetlosti (nura). Oni ne jedu, ne piju, nisu muško ni žensko i ne griješe. Oni izvršavaju Allahove naredbe.</p>
-                            <p>Najpoznatiji meleki su: Džebrail, Mikail, Israfil i Azrail.</p>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_05.mp3"></div>
+
+                            <p class="fw-bold">Kako glasi drugi imanski šart?</p>
+                            <p>Drugi imanski šart glasi: <span class="text-success fw-bold">VE MELAIKETIHI</span> (vjerujem u meleke).</p>
+
+                            <p class="fw-bold">Ko su Allahovi meleki?</p>
+                            <p>Meleki su živa, razumna duhovna bića koja su stalno u službi Uzvišenog Allaha.</p>
+
+                            <p class="fw-bold">Kakve dužnosti imaju meleki?</p>
+                            <p>Meleki prenose Allahove objave ljudima, pišu njihova djela, donose im dobre misli i izvršavaju ostale Allahove odredbe.</p>
+
+                            <p class="fw-bold">Koji su najpoznatiji meleki?</p>
+                            <p>Najpoznatiji meleki su Džebrail, Mikail, Israfil, kiramen-katibin, Munker i Nekir.</p>
+
+                            <p class="fw-bold">Ko su šejtani?</p>
+                            <p>Šejtani su duhovna bića koja čovjeka navraćaju na zlo.</p>
+
+                            <p class="fw-bold">Kako se utječemo uzvišenom Allahu od šejtana?</p>
+                            <p>Uzvišenom Allahu se od šejtana utječemo riječima:</p>
+
+                            <div class="text-center my-4">
+                                <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                    أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+                                </p>
+                                <p class="lead fst-italic" style="color: #2E7D32;">
+                                    E'UZU BIL'LAHI MINE ŠŠEJTANI RRADŽIM
+                                </p>
+                                <p>
+                                    Utječem se Uzvišenom Allahu da me sačuva od prokletog šejtana!
+                                </p>
+                                
+                                <div class="mt-3 pronunciation-player-container">
+                                    <audio src="../audio/euzubilla.mp3"></audio>
+                                    <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                        <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,9 +99,13 @@
     <script>
         window.projectRoot = "../../";
     </script>
+    <!-- Config JS -->
+    <script src="../../js/config.js"></script>
     <!-- Menu Data and Logic -->
     <script src="../../js/menu.js"></script>
     
-
+    <!-- Audio Player Logic -->
+    <script src="../../js/lesson-player.js"></script>
+    <script src="../../js/pronunciation-player.js"></script>
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adem, a.s. - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Adem, a.s.</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Adem, a.s. -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/historija_lekcija_01.mp3"></div>
+
+                                <p class="fw-bold">Ko su prvi čovjek i prva žena na Zemlji?</p>
+                                <p>Prvi čovjek na Zemlji je Adem, a.s., a prva žena je Hava.</p>
+
+                                <p class="fw-bold">Otkuda Adem i Hava na Zemlji?</p>
+                                <p>Njih je stvorio Uzvišeni Allah, a od njih je, putem rađanja, nastao sav ljudski rod. Prema tome, svi su ljudi braća jer potiču od jednog praoca Adema i pramajke Have.</p>
+
+                                <p class="fw-bold">Šta o stvaranju Adema i Have kaže Kur'an?</p>
+                                <p>Kur'an kaže:</p>
+                                <div class="quote-box quote-quran">
+                                    <div class="d-flex">
+                                        <i class="fas fa-quran quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"O ljudi, Mi smo vas stvorili od jednog oca (Adema) i majke (Have) i podijelili smo vas na narode i plemena da se upoznajete i pomažete, a ne da jedni druge mrzite, napadate i tlačite."</p>
+                                            <div class="quote-footer">
+                                                — El-Hudžurat, 13.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="fas fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Ko je prvi čovjek a ko prva žena na Zemlji?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Otkuda Adem i Hava na Zemlji?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta o stvaranju Adema i Have kaže Kur'an?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Custom JS -->
+    <script src="../js/config.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>

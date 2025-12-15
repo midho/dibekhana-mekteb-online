@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -33,15 +26,39 @@
                     <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">5. imanski šart: Vel-jevmil-ahiri</h2>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">5. imanski šart: Vel jevmi-l-ahiri</h2>
                 </div>
                 
                 <div id="main-content">
+                    <!-- 5. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Ja vjerujem u Sudnji dan.</p>
-                            <hr>
-                            <p>Sudnji dan je dan kada će Allah dž.š. oživjeti sve ljude i suditi im za njihova djela. Dobri će ući u Džennet, a loši u Džehennem.</p>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_08.mp3"></div>
+
+                            <p class="fw-bold">Kako glasi peti imanski šart?</p>
+                            <p>Peti imanski šart glasi: <span class="text-success fw-bold">VEL JEVMIL AHIRI</span> (vjerujem u Sudnji dan).</p>
+
+                            <p class="fw-bold">Šta je to Sudnji dan?</p>
+                            <p><span class="text-success fw-bold">SUDNJI DAN</span> je Kijametski dan, kada će Allah sve ljude i džine ponovo proživjeti i pozvati ih da odgovaraju za sve što su činili.</p>
+
+                            <p class="fw-bold">Ko će biti nagrađen a ko kažnjen na Sudnjem danu?</p>
+                            <p>Ko bude vjerovao u Allaha i činio dobra djela biće nagrađen Dženetom, a ko bude činio zlo biće kažnjen Džehenemom.</p>
+
+                            <p class="fw-bold">Kada će biti Sudnji dan?</p>
+                            <p>Samo Allah zna i određuje kada će biti Sudnji dan.</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,9 +75,10 @@
     <script>
         window.projectRoot = "../../";
     </script>
-    <!-- Menu Data and Logic -->
+    <!-- Config JS -->
+    <script src="../../js/config.js"></script>
+    <!-- Custom JS -->
     <script src="../../js/menu.js"></script>
-    
-
+    <script src="../../js/lesson-player.js"></script>
 </body>
 </html>

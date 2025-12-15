@@ -46,7 +46,7 @@ const menuData = [
             { title: "Islamski šarti", id: "islamski_sarti_akaid", url: "akaid/islamski_sarti.html" },
             { title: "Kur'an", id: "akaid_kuran", url: "akaid/kuran.html" },
             { title: "Hadis", id: "hadis", url: "akaid/hadis.html" },
-            { title: "Šeriat (ukratko)", id: "seriat", url: "akaid/seriat.html" },
+            { title: "Šerijat (ukratko)", id: "seriat", url: "akaid/seriat.html" },
             { title: "Pitanja", id: "akaid_pitanja", url: "akaid/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
@@ -116,16 +116,17 @@ const menuData = [
     {
         title: "Ahlak",
         id: "ahlak",
+        url: "ahlak/index.html",
         children: [
-            { title: "Islamski bonton", id: "bonton" },
-            { title: "Selam - islamski pozdrav", id: "selam" },
-            { title: "Desna strana", id: "desna_strana" },
-            { title: "Lična higijena i urednost", id: "higijena" },
-            { title: "Kuća: ulazak i izlazak", id: "kuca" },
-            { title: "Dova za kupatilo", id: "dova_kupatilo" },
-            { title: "Ponašanje za sofrom", id: "sofra" },
-            { title: "Dug prema roditeljima", id: "roditelji" },
-            { title: "Laž, prevara i krađa", id: "laz" },
+            { title: "Islamski bonton", id: "bonton", url: "ahlak/bonton.html" },
+            { title: "Selam - Islamski pozdrav", id: "selam", url: "ahlak/selam.html" },
+            { title: "Desna strana", id: "desna_strana", url: "ahlak/desna_strana.html" },
+            { title: "Lična higijena i urednost", id: "higijena", url: "ahlak/higijena.html" },
+            { title: "Kuća: ulazak i izlazak", id: "kuca", url: "ahlak/kuca.html" },
+            { title: "Dova za kupatilo", id: "dova_kupatilo", url: "ahlak/dova_kupatilo.html" },
+            { title: "Ponašanje za sofrom", id: "sofra", url: "ahlak/sofra.html" },
+            { title: "Dužnosti prema roditeljima", id: "roditelji", url: "ahlak/roditelji.html" },
+            { title: "Laž, prevara i krađa", id: "laz", url: "ahlak/laz.html" },
             { title: "Akšamsko vrijeme", id: "aksamsko_vrijeme" },
             { title: "Braća i sestre", id: "braca_sestre" },
             { title: "Ramazan", id: "ramazan" },
@@ -150,17 +151,18 @@ const menuData = [
     {
         title: "Historija islama",
         id: "historija",
+        url: "historija/index.html",
         children: [
-            { title: "Adem, a.s.", id: "adem" },
-            { title: "Nuh , a.s.", id: "nuh" },
-            { title: "Arabija", id: "arabija" },
-            { title: "Rođenje", id: "rodjenje" },
-            { title: "U Benu Said-u", id: "benu_said" },
-            { title: "Siroče", id: "siroce" },
-            { title: "Ženidba", id: "zenidba" },
-            { title: "Prva Objava", id: "prva_objava" },
-            { title: "Poslanikova Hidžra", id: "hidzra" },
-            { title: "Pitanja", id: "historija_pitanja", icon: "far fa-question-circle" }
+            { title: "Adem, a.s.", id: "adem", url: "historija/adem.html" },
+            { title: "Nuh , a.s.", id: "nuh", url: "historija/nuh.html" },
+            { title: "Arabija", id: "arabija", url: "historija/arabija.html" },
+            { title: "Rođenje", id: "rodjenje", url: "historija/rodjenje.html" },
+            { title: "U Benu Said-u", id: "benu_said", url: "historija/benu_said.html" },
+            { title: "Siroče", id: "siroce", url: "historija/siroce.html" },
+            { title: "Ženidba", id: "zenidba", url: "historija/zenidba.html" },
+            { title: "Prva Objava", id: "prva_objava", url: "historija/prva_objava.html" },
+            { title: "Poslanikova Hidžra", id: "hidzra", url: "historija/hidzra.html" },
+            { title: "Pitanja", id: "historija_pitanja", url: "historija/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
@@ -328,7 +330,100 @@ function renderMenu(items, parentId = 'sidebar-menu') {
     return ul;
 }
 
+function findActiveItem(items, currentPath, breadcrumb = []) {
+    for (const item of items) {
+        const newBreadcrumb = [...breadcrumb, item];
+        
+        // Check if this item matches
+        let match = false;
+        if (item.url) {
+            const normalizedUrl = item.url.replace(/^\.\//, '');
+            if (currentPath.endsWith(normalizedUrl)) {
+                match = true;
+            }
+        } else if (item.id) {
+             const urlParams = new URLSearchParams(window.location.search);
+             if (urlParams.get('page') === item.id) {
+                 match = true;
+             }
+        }
+
+        if (match) {
+            return { item, breadcrumb: newBreadcrumb };
+        }
+
+        if (item.children) {
+            const result = findActiveItem(item.children, currentPath, newBreadcrumb);
+            if (result) return result;
+        }
+    }
+    return null;
+}
+
+function initializeLayout() {
+    const wrapper = document.getElementById('wrapper');
+    if (!wrapper) return;
+
+    // 1. Inject Sidebar if missing
+    let sidebar = document.getElementById('sidebar');
+    if (!sidebar) {
+        sidebar = document.createElement('nav');
+        sidebar.id = 'sidebar';
+        
+        // Header
+        const header = document.createElement('div');
+        header.className = 'sidebar-header';
+        const root = window.projectRoot || "";
+        
+        // Use config if available, else fallback
+        const title = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.text : "Dibekhana Mekteb";
+        const url = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.url : "index.html";
+
+        header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none d-flex align-items-center"><img src="${root}logo.png" alt="Logo" style="height: 100px;" class="me-2">${title}</a></h3>`;
+        sidebar.appendChild(header);
+
+        // Content Container
+        const contentDiv = document.createElement('div');
+        contentDiv.id = 'sidebar-content';
+        sidebar.appendChild(contentDiv);
+
+        wrapper.insertBefore(sidebar, wrapper.firstChild);
+    }
+}
+
+function updatePageTitle() {
+    const currentPath = decodeURIComponent(window.location.pathname);
+    const result = findActiveItem(menuData, currentPath);
+    
+    if (result) {
+        const { item, breadcrumb } = result;
+        // breadcrumb is [Grandparent, Parent, Item]
+        // We want: Item Title - Parent Title - Site Title
+        
+        const parts = [];
+        
+        // Reverse breadcrumb to get specific -> general
+        const reversed = [...breadcrumb].reverse();
+        
+        reversed.forEach(p => parts.push(p.title));
+        
+        if (typeof siteConfig !== 'undefined') {
+            parts.push(siteConfig.siteTitle);
+        } else {
+            parts.push("Dibekhana Mekteb");
+        }
+        
+        document.title = parts.join(' - ');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Layout (Sidebar structure)
+    initializeLayout();
+    
+    // Update Page Title
+    updatePageTitle();
+
     const sidebarContent = document.getElementById('sidebar-content');
     if (sidebarContent) {
         sidebarContent.appendChild(renderMenu(menuData));
@@ -512,5 +607,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             updateHamburgerVisibility();
         });
+
+        // Auto-expand cards on mobile
+        if (window.innerWidth <= 768) {
+            const collapses = document.querySelectorAll('.card .collapse');
+            collapses.forEach(el => {
+                // Skip if it's the audio player (optional, but usually good to keep closed)
+                if (el.id === 'audioPlayerCollapse') return;
+
+                if (!el.classList.contains('show')) {
+                    // Add show class to expand
+                    el.classList.add('show');
+                    
+                    // Update toggler state
+                    const id = el.id;
+                    if (id) {
+                        const toggler = document.querySelector(`[data-bs-target="#${id}"], [href="#${id}"]`);
+                        if (toggler) {
+                            toggler.setAttribute('aria-expanded', 'true');
+                            toggler.classList.remove('collapsed');
+                        }
+                    }
+                }
+            });
+        }
     }
 });

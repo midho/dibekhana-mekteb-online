@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,17 +30,102 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 3. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Ja vjerujem u Allahove knjige (kitabe).</p>
-                            <hr>
-                            <p>Allah dž.š. je slao knjige poslanicima da upute ljude na pravi put. Četiri su velike Božije knjige:</p>
-                            <ul>
-                                <li>Tevrat - Musau a.s.</li>
-                                <li>Zebur - Davudu a.s.</li>
-                                <li>Indžil - Isau a.s.</li>
-                                <li>Kur'an - Muhammedu a.s.</li>
-                            </ul>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_06.mp3"></div>
+
+                            <p class="fw-bold">Kako glasi treći imanski šart?</p>
+                            <p>Treći imanski šart glasi: <span class="text-success fw-bold">VE KUTUBIHI</span> (vjerujem u Allahove Knjige).</p>
+
+                            <p class="fw-bold">Šta su to Allahovi Kitabi (Knjige)?</p>
+                            <p>Allahovi kitabi su Njegove objave koje su ljudima prenosili Allahovi poslanici.</p>
+
+                            <p class="fw-bold">Ko je donosio Allahove Objave Allahovim Poslanicima?</p>
+                            <p>Objave od Allaha donosio je melek Džebrail a.s. i davao im je potporu u njihovoj poslaničkoj misiji po Allahovoj naredbi i odobrenju.</p>
+
+                            <p class="fw-bold">Šta sadrže Allahovi Kitabi?</p>
+                            <p>Allahove Knjige sadrže upute, savjete, dove i propise o životu ljudi na ovom i budućem svijetu. U njima su istinita kazivanja o prošlim narodima, propisi o sadašnjem životu i o budućem svijetu.</p>
+
+                            <p class="fw-bold">Koliko je bilo Allahovih Kitaba?</p>
+                            <p>Allahovih kitaba ima 104, i to 100 SUHUFA (stranica) malih i 4 velika kitaba, a to su:</p>
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-book text-success fa-lg mx-3"></i>
+                                    <span><strong>TEVRAT</strong> - dostavljen Musa a.s.</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-book text-success fa-lg mx-3"></i>
+                                    <span><strong>ZEBUR</strong> - dostavljen Davud a.s.</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-book text-success fa-lg mx-3"></i>
+                                    <span><strong>INDŽIL</strong> - dostavljen Isa a.s.</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-book-quran text-success fa-lg mx-3"></i>
+                                    <span><strong>KUR'AN</strong> - dostavljen Muhammed a.s.</span>
+                                </div>
+                            </div>
+
+                            <h4 class="text-success border-bottom pb-2 mb-3">KUR'AN</h4>
+
+                            <p class="fw-bold">Šta je to Kur'an?</p>
+                            <p>Kur'an je posljednja Allahova objava dostavljena Muhammedu a.s.</p>
+
+                            <p class="fw-bold">Kada je počelo objavljivanje Kur'ana?</p>
+                            <p>Objava Kur'ana počela je u noći Lejletu-l-kadr, tj. 27. noći ramazana 610. godine.</p>
+
+                            <p class="fw-bold">Šta je prvo objavljeno od Kur'ana?</p>
+                            <p>Prve riječi Objave su bile: "IKRE' BISMI RABBIKELEZI HALEK", što znači: "UČI, ČITAJ U IME GOSPODARA KOJI STVARA".</p>
+                            <p>Od ove riječi je i naziv Kur'ana, a znači - knjiga za učenje, recitovanje, čitanje.</p>
+
+                            <p class="fw-bold">Koliko je trajalo objavljivanje Kur'ana?</p>
+                            <p>Objava Kur'ana je trajala 23 godine, i to 13 u Mekki i 10 u Medini. Kur'an je Allahov govor. U njemu je 114 sura (poglavlja) i 6236 ajeta (rečenica). Svaka sura ima svoj naziv uzet po riječi, ličnosti ili događaju iz te sure. Kur'an je sabran u jednu knjigu koja se naziva MUSHAF, koji je podijeljen na 30 džuzova (poglavlja), a svaki džuz se sastoji iz 10 listova.</p>
+
+                            <p class="fw-bold">Šta sadrži Kur'an?</p>
+                            <p>Kur'an sadrži upute, savjete, propise i zakone o životu na ovom svijetu. Mi smo dužni upoznati i proučavati Kur'an kako bismo uskladili svoj život prema njegovim propisima.</p>
+                            <p>U Kur'anu su vijesti:</p>
+                            <div class="d-flex flex-column gap-2 mb-3">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-history text-success fa-lg mx-3"></i>
+                                    <span>o prijašnjim narodima i poslanicima</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-hourglass-half text-success fa-lg mx-3"></i>
+                                    <span>o onome što će doći poslije nas</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-skull text-success fa-lg mx-3"></i>
+                                    <span>o smrti i Sudnjem danu</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-infinity text-success fa-lg mx-3"></i>
+                                    <span>o vječnom životu na ahiretu, Džennetu i Džehennemu</span>
+                                </div>
+                            </div>
+                            <!-- Zapamti -->
+                            <div class="alert alert-success mt-4" role="alert">
+                                <h5 class="alert-heading border-bottom border-success-subtle pb-2 mb-3"><i class="fas fa-lightbulb me-2"></i>Zapamti!</h5>
+                                <div class="d-flex align-items-center p-2 ps-3 border-start border-success border-3 bg-white bg-opacity-25 rounded-end">
+                                    <div class="d-flex align-items-center justify-content-center rounded-3 border border-success border-opacity-50 me-3" style="width: 32px; height: 32px; min-width: 32px;">
+                                        <i class="fas fa-quran text-success"></i>
+                                    </div>
+                                    <span class="fw-medium">Kur'an je istina, uputa i najveća mudrost.</span>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,9 +142,11 @@
     <script>
         window.projectRoot = "../../";
     </script>
+    <!-- Config JS -->
+    <script src="../../js/config.js"></script>
     <!-- Menu Data and Logic -->
     <script src="../../js/menu.js"></script>
     
-
+    <script src="../../js/lesson-player.js"></script>
 </body>
 </html>

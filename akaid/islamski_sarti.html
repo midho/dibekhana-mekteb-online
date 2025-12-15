@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,16 +30,57 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- Islamski šarti -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Islamskih šarta ima pet:</p>
-                            <ol>
-                                <li>Kelime-i šehadet izgovoriti (Očitovati pripadnost islamu)</li>
-                                <li>Namaz klanjati (Obavljati molitvu pet puta dnevno)</li>
-                                <li>Ramazan postiti (Postiti mjesec Ramazan)</li>
-                                <li>Zekat davati (Izdvajati dio imovine za potrebne)</li>
-                                <li>Hadž obaviti (Hodočastiti Kabu u Mekki)</li>
-                            </ol>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/akaid_lekcija_10.mp3"></div>
+
+                            <p class="fw-bold">Koliko ima glavnih islamskih dužnosti?</p>
+                            <p>Islamskih šarta ima pet, a to su:</p>
+                            
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">1.</div>
+                                    <i class="fas fa-hand-point-up text-success fa-lg me-3"></i>
+                                    <span>Očitovati pripadnost islamu (kelime i šehadet)</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">2.</div>
+                                    <i class="fas fa-person-praying text-success fa-lg me-3"></i>
+                                    <span>Klanjati propisane namaze</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">3.</div>
+                                    <i class="fas fa-moon text-success fa-lg me-3"></i>
+                                    <span>Postiti mjesec Ramazan</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">4.</div>
+                                    <i class="fas fa-hand-holding-heart text-success fa-lg me-3"></i>
+                                    <span>Davati zekat</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">5.</div>
+                                    <i class="fas fa-kaaba text-success fa-lg me-3"></i>
+                                    <span>Hadž obaviti</span>
+                                </div>
+                            </div>
+
+                            <p class="fw-bold">Gdje su naređene glavne islamske dužnosti ili šarti?</p>
+                            <p>Glavne islamske dužnosti su naređene u Kur'anu te smo dužni da ih vjerujemo, poštujemo i izvršavamo.</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,9 +97,10 @@
     <script>
         window.projectRoot = "../";
     </script>
-    <!-- Menu Data and Logic -->
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Custom JS -->
     <script src="../js/menu.js"></script>
-    
-
+    <script src="../js/lesson-player.js"></script>
 </body>
 </html>

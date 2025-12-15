@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desna i lijeva strana - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Desna i lijeva strana</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_03.mp3"></div>
+
+                                <p class="fw-bold">U čemu se prednost daje desnoj strani?</p>
+                                <p>Desnoj strani se prednost daje kod čistih i hajirli poslova.</p>
+
+                                <p class="fw-bold">Navedi primjere gdje se prednost daje desnoj strani:</p>
+                                <p>Desnoj strani prednost dajemo u sljedećim slučajevima:</p>
+                                
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-shoe-prints text-success fa-lg mx-3"></i>
+                                        <span>Kada se obuvamo, počinjemo desnom nogom</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-tshirt text-success fa-lg mx-3"></i>
+                                        <span>Kada oblačimo odjeću, počinjemo desnom stranom</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-utensils text-success fa-lg mx-3"></i>
+                                        <span>Jedemo i pijemo desnom rukom</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-mosque text-success fa-lg mx-3"></i>
+                                        <span>U džamiju i kuću ulazimo desnom nogom</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-handshake text-success fa-lg mx-3"></i>
+                                        <span>Rukujemo se desnom rukom</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-bed text-success fa-lg mx-3"></i>
+                                        <span>Na desnu stranu liježemo kada hoćemo spavati</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Lijevoj strani prednost dajemo u sljedećim slučajevima:</p>
+                                
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-secondary border-4 shadow-sm hover-card">
+                                        <i class="fas fa-shoe-prints text-secondary fa-lg mx-3" style="transform: scaleX(-1);"></i>
+                                        <span>Lijevom nogom izlazimo iz džamije i kuće</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-secondary border-4 shadow-sm hover-card">
+                                        <i class="fas fa-restroom text-secondary fa-lg mx-3"></i>
+                                        <span>Lijevom nogom ulazimo u toalet</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-secondary border-4 shadow-sm hover-card">
+                                        <i class="fas fa-hand-sparkles text-secondary fa-lg mx-3"></i>
+                                        <span>Lijevom rukom se peremo poslije obavljene nužde</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>

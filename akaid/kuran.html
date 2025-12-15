@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,11 +30,130 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- Kur'an -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Kur'an je posljednja Božija objava, objavljena poslaniku Muhammedu a.s.</p>
-                            <hr>
-                            <p>Kur'an je uputa svim ljudima, putokaz pravog puta i milost svjetovima.</p>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/akaid_lekcija_11.mp3"></div>
+
+                            <p class="fw-bold">Šta je to Kur'an?</p>
+                            <p>Kur'an je posljednja Allahova objava upućena preko Muhammmeda, s.a.v.s., cijelom čovječanstvu.</p>
+
+                            <p class="fw-bold">Šta Kur'an sadrži?</p>
+                            <p>Kur'an sadrži Allahove mudrosti, propise o vjerovanju i ponašanju ljudi.</p>
+
+                            <p class="fw-bold">Na kojem jeziku je objavljen Kur'an?</p>
+                            <p>Kur'an je objavljen na arapskom jeziku.</p>
+
+                            <p class="fw-bold">Šta su muslimani dužni prema Kur'anu?</p>
+                            <p>Muslimani su dužni:</p>
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-book-reader text-success fa-lg mx-3"></i>
+                                    <span>učiti i proučavati Kur'an</span>
+                                </div>
+                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <i class="fas fa-hands-holding-circle text-success fa-lg mx-3"></i>
+                                    <span>pridržavati se njegovih propisa i uputa.</span>
+                                </div>
+                            </div>                            </div>                        </div>
+                    </div>
+
+                    <!-- Bonus Material Card -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#bonusCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="bonusCollapse">
+                            <span><i class="fas fa-book-reader me-2"></i> Neki od pojmova vezanih za Kur'an (za viši uzrast) <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="bonusCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                <table class="table table-hover table-hover-success mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="text-success" style="width: 1%; white-space: nowrap;">Harf</th>
+                                            <td>Slovo arapske abecede.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Ajet</th>
+                                            <td>Rečenica ili misao izrečena u Kur'anu.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Sura</th>
+                                            <td>Poglavlje Kur'ana. U Kur'anu ima 114 sura. Ajeti u Kur'anu nisu poredani redoslijedom kojim su objavljeni, nego po redoslijedu koji je objavom naređen. Muhammed, s.a.v.s, je govorio: "Upišite ovaj ajet ili suru iza tog i tog ili ispred tog i tog ajeta."</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Džuz</th>
+                                            <td>Dio nečega, a kada se pomene u vezi s Kur'anom odnosi se na 20 kur'anskih stranica. Kur'an je sastavljen od 30 džuzova.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Hizb</th>
+                                            <td>Pola džuza, tj. 10 stranica i u Kur'anu ima 60 hizbova.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Rub'u</th>
+                                            <td>U arapskom jeziku znači četvrtina, a u Kur'anu označava četvrtinu hizba.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Mufessir</th>
+                                            <td>Čovjek koji tumači Kur'an.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Tedžvid</th>
+                                            <td>Nauka koja se bavi pravilnim izgovorom harfova i učenja Kur'ana.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-success">Kiraet</th>
+                                            <td>Način učenja Kur'ana. Kur'an je objavljen na više narječja arapskog jezika, odnosno na narječjima najpoznatijih arapskih plemena kao što su Kurejš i Temim. Kiraeti su razlike u učenju Kur'ana, bilo u izgovaranju pojedinih riječi ili u različitosti tedžvidskih pravila.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h5 class="text-success mt-4 mb-3">Tefsir</h5>
+                            <p>U arapskom jeziku znači pojašnjenje, komentar i objašnjenje, a u terminologiji označava nauku koja se bavi tumačenjem Kur'ana. Ova naučna disciplina se pojavila veoma rano jer Kur'an, ljepotom svoga izraza i mogućnosti da jedna te ista riječ ili pak ajet u sebi nose više značenja koja nisu u potpunosti razumjeli svi ashabi iako su govorili jezikom Kur'ana i bili svjedoci njegovog objavljivanja i povoda objave.</p>
+                            
+                            <p>Prvi mufessir kojem su se obraćali bio je Allahov Poslanik koji im je Kur'an objašnjavao riječima i postupcima. Nakon Poslanika, s.a.v.s, u poznavanju Kur'ana i njegovog tumačenja najviše se ističu četvorica pravednih halifa: Ebu Bekr, Omer, Osman i Alija r.a., te Ibn Abbas, amidžić Allahovog Poslanika za kojeg je on molio Allaha: "Allahu, poduči ga propisima vjere i tumačenju Kur'ana''.</p>
+                            
+                            <p>Takođe, Abdullah bin Mes'ud, Ubejj bin Ka'b, Zejd bin Sabit i mnogi drugi ashabi čija imena ne možemo pominjati zbog ograničenosti prostora. U početku se ova nauka prenosila usmeno. Pojavom bilježenja i zapisivanja hadisa u zbirke učenjaci hadisa prave posebna poglavlja u kojima navode one hadise koji pojašnjavaju kur'anske ajete. Prvi zasebni tefsiri Kur'ana, napisani su u trećem stoljeću poslije hidžre.</p>
+                            
+                            <p>Najpoznatiji tefsiri su: Tefsir Ibn Džerira Et-Taberija, Tefsir Begavije, Tefsir Ibn Kesira, Tefsir Bejdavije, Tefsir Ševkanije i mnogi drugi tefsiri kojih ima na stotine i hiljade a koji se i dan danas pišu.</p>
+
+                            <p class="fw-bold mt-3">Svi ti tefsiri se mogu svrstati u dvije osnovne vrste:</p>
+                            
+                            <div class="d-flex flex-column gap-2 mb-4">
+                                <div class="p-3 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-scroll text-success fa-lg me-3"></i>
+                                        <h5 class="mb-0 text-success">1. Tefsir El-Me'sur - Tradicionalni tefsir</h5>
+                                    </div>
+                                    <p class="mb-0 ms-4 ps-2">Temelji se isključivo na tradiciji, odnosno tumačenju i izrekama Allahovog Poslanika, s.a.v.s, i izrekama njegovih ashaba. Najbolji primjer takvog tefsira je <strong>Tefsir Ibn Kesira</strong> koji je Kur'an protumačio na sljedeći način: Prvo je tumačio Kur'an Kur'anom. Ono što je ukratko spomenuto na jednom, pojašnjeno je na drugom mjestu. Ako nema ajeta koji objašnjavaju drugi ajeti, naveo je hadise koji govore na tu temu. Ako nije našao ni hadis o tome, naveo bi mišljenje ashaba, a ako ne bi ni to našao onda bi navodio svoje mišljenje.</p>
+                                </div>
+                                <div class="p-3 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-brain text-success fa-lg me-3"></i>
+                                        <h5 class="mb-0 text-success">2. Racionalni tefsir (Tefsir bi-r-Re'ji)</h5>
+                                    </div>
+                                    <p class="mb-0 ms-4 ps-2">Zasniva se više na onom što mufessir sam zaključi nego na predajama. Primjer takvog tefsira je <strong>Tefsir Fahru-d-Dina Er-Razija</strong> kojeg je on nazvao "Mefatihu-l-Gajb" (Ključevi skrivenog). Ova vrsta tefsira je pokuđena.</p>
+                                </div>
+                            </div>
+
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -58,9 +170,10 @@
     <script>
         window.projectRoot = "../";
     </script>
-    <!-- Menu Data and Logic -->
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Custom JS -->
     <script src="../js/menu.js"></script>
-    
-
+    <script src="../js/lesson-player.js"></script>
 </body>
 </html>

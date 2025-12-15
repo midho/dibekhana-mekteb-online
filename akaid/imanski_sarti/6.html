@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="bs">
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.ico">
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><a href="../../index.html" class="text-white text-decoration-none"><i class="fas fa-mosque me-2"></i>Dibekhana Mekteb</a></h3>
-            </div>
-
-            <div id="sidebar-content">
-                <!-- Menu will be populated by js/menu.js -->
-            </div>
-        </nav>
+        <!-- Sidebar will be injected by js/menu.js -->
 
         <!-- Page Content -->
         <div id="content">
@@ -37,11 +30,31 @@
                 </div>
                 
                 <div id="main-content">
+                    <!-- 6. Imanski šart -->
                     <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <p class="lead">Ja vjerujem da sve što se događa, biva Božijom voljom i određenjem.</p>
-                            <hr>
-                            <p>Kader je Božije određenje svega što će se desiti. Mi vjerujemo da Allah zna sve što je bilo i što će biti, i da se ništa ne dešava bez Njegove volje.</p>
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                            <!-- Custom Audio Player Section -->
+                            <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="../audio/akaid_lekcija_09.mp3"></div>
+
+                            <p class="fw-bold">Kako glasi šesti imanski šart?</p>
+                            <p>Šesti imanski šart glasi: <span class="text-success fw-bold">VE BIL KADERI HAJRIHI VE ŠERRIHI MINALLAHI TE'ALA</span> (Vjerujem da sve što se događa biva s Božijom voljom i Božijim određenjem).</p>
+
+                            <p class="fw-bold">Šta to znači?</p>
+                            <p>To znači da sve što se događa nastaje s Božijom voljom i Božijim određenjem, odnosno po zakonima koje je uzvišeni Allah stvorio i uredio.</p>
+
+                            <p class="fw-bold">Da li je Allahu poznato sve što će se dogoditi?</p>
+                            <p>Allahu, dž.š., je poznato sve što je bilo, šta biva i šta će biti. On je Svemoguć i Sveznajuć.</p>
+
                         </div>
                     </div>
                 </div>
@@ -58,9 +71,10 @@
     <script>
         window.projectRoot = "../../";
     </script>
-    <!-- Menu Data and Logic -->
+    <!-- Config JS -->
+    <script src="../../js/config.js"></script>
+    <!-- Custom JS -->
     <script src="../../js/menu.js"></script>
-    
-
+    <script src="../../js/lesson-player.js"></script>
 </body>
 </html>
