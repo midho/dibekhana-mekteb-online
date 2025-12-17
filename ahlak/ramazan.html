@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramazan - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Ramazan</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_12.mp3"></div>
+
+                                <p class="fw-bold">Šta je Ramazan?</p>
+                                <p class="mb-3">Ramazan je mjesec u kojem je počela objava Kur'ana i u kojem svi muslimani poste.</p>
+
+                                <p class="fw-bold">Šta nam je naređeno da radimo u Ramazanu?</p>
+                                <p class="mb-3">Allah nam je naredio da postimo: od zore do zalaska sunca uzdržavamo se od jela, pića, pušenja i drugih tjelesnih prohtjeva.</p>
+
+                                <p class="fw-bold">Šta još treba da znamo o Ramazanu?</p>
+                                <p class="mb-3">Ramazan je mjesec ibadeta i dobročinstva. Tada se više uči Kur'an, slušaju vazovi i daje sadekatu-l-fitr (ramazanska milostinja).</p>
+
+                                <p class="fw-bold">Koji je namaz posebno propisan za Ramazan?</p>
+                                <p class="mb-3">Tokom Ramazana se, pored ostalog, u džematu klanja teravih-namaz.</p>
+
+                                <p class="fw-bold">Čega se posebno mora čuvati u Ramazanu?</p>
+                                <p class="mb-3">U Ramazanu se treba čuvati ružnih djela, riječi i misli jer je to mjesec Allahove milosti i oprosta.</p>
+
+                                <p class="fw-bold">Šta će raditi osoba koja ne može da posti u Ramazanu?</p>
+                                <p class="mb-3">Ko ne može postiti u Ramazanu, dužan je da naposti propuštene dane čim bude mogao.</p>
+
+                                <p class="fw-bold">Šta će raditi osoba koja se nenamjerno omrsi u ramazanskom danu?</p>
+                                <p class="mb-4">Ako se neko u Ramazanu nenamjerno omrsi, post mu neće biti pokvaren i nastavit će da posti.</p>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-moon text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Ramazan je mjesec posta, Kur'ana i milosti.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-comment-slash text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Post čuva i jezik: kloni se ružnih riječi, djela i misli.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ramazan se primakao (pjesma) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pjesmaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pjesmaCollapse">
+                            <span><i class="fas fa-feather-alt me-2"></i> Ramazan se primakao <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pjesmaCollapse" class="collapse">
+                            <div class="card-body text-center fst-italic">
+                                <p>
+                                    Ramazan se primakao<br>
+                                    i na vrata zakucao,<br>
+                                    mjesec posta i milosti,<br>
+                                    dobrih djela i radosti.
+                                </p>
+                                <p>
+                                    Na noć prije ramazana,<br>
+                                    planu svjetlo sa munara,<br>
+                                    kandilji se upališe,<br>
+                                    i Ramazan najaviše.
+                                </p>
+                                <p>
+                                    A mahale tihe, stare,<br>
+                                    kao da se probudiše,<br>
+                                    kanati se oćutiše,<br>
+                                    i ezani zaučiše.
+                                </p>
+                                <p class="mb-0">
+                                    Žure ljudi u džamiju,<br>
+                                    da klanjaju teraviju,<br>
+                                    idu momci, idu starci,<br>
+                                    idu cure i dječaci.
+                                </p>
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>— Rešad Kadić</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Harunov prvi ramazan (priča) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pricaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pricaCollapse">
+                            <span><i class="fas fa-book-reader me-2"></i> Harunov prvi ramazan <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pricaCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="mb-4 ps-3 border-start border-success border-3">
+                                    <p class="mb-2">Harun je osmogodišnji dječak koji ide u drugi razred osnovne škole. Ove godine odlučio je postiti cijeli Ramazan. Otac ga je jutros rano probudio na prvi sehur. Uzeli su abdest i ručali. Majka je Harunu objasnila kako će zanijetiti i zapostiti.</p>
+                                    <p class="mb-2">Harun je danas u prvoj smjeni u školi. Časovi traju do pred podne. U njegovom odjeljenju posti još nekoliko dječaka i djevojčica. S nestrpljenjem očekuju završetak četvrtog časa kako bi otišli kući, stigli na podne-namaz u džamiju i slušali mukabelu. Danas je prvi dan Ramazana. Danas hafizi uče prvi džuz iz Allahove Knjige.</p>
+                                    <p class="mb-2">Akšam je blizu. Harun jedva čeka da se na munari upale kandilji i da zauči ezan za iftar. Hrana na siniji je već postavljena, čaše napunjene limunadom. Ramazanski somuni koje je Harun maloprije donio iz pekare mame mirisom. Hurme, nabavljene pred Ramazan, čekaju da se s njima prvo omrsi, jer je tako preporučio Allahov Poslanik, s.a.v.s. Kada se kandilji upališe, ezan zauči.</p>
+                                    <p class="mb-2">Otac poče učiti, polahko da ga i djeca mogu pratiti, dovu za iftar: „Allahumme leke sumtu, ve bike amentu, ve 'alejke tevekkeltu, ve 'ala rizkike eftartu!“ (Allahu dragi, u Tvoje ime sam postio, u Tebe vjerujem, na Tebe se oslanjam i Tvojom opskrbom se mrsim!) Harun je pobožno ponavljao dovu za ocem. Zatim otac uze desnom rukom hurmu, prouči Euzubillu i Bismillu i omrsi se. Ostali učiniše isto.</p>
+                                    <p class="mb-2">Otac reče: „Hvala Allahu, dž.š., ispostismo hajirli prvi dan ovogodišnjeg Ramazana. Daj, Bože, da ga svega ispostimo u zdravlju i rahatluku i da nam ga dragi Allah ukabuli i u sevap upiše.“ Harun, koji je pažljivo pratio očeve riječi, prvi reče: „Amin!“ Mama, koja je uvijek donosila nešto na siniju, dodade: „Bujrum! Šta ko voli neka jede. Sve je taze. Harune, sine, uzmi prvo malo supe, dobro je za stomak.“</p>
+                                    <p class="mb-2">Na iftar je došao i mamin brat, Harunov daidža. Na okupu je bila čitava porodica. Svi su sa apetitom jeli hranu koju je mama mahsuz spremila. Svi su bili radosni što su ispostili prvi dan ovogodišnjeg Ramazana, a Harun najviše, jer će ga, inša-Allah, u cijelosti postiti.</p>
+                                    <p class="mb-2">Na kraju jela otac je učio dovu, prvo na arapskom, a zatim na bosanskom kako bi i djeca razumjela. Učio je polahko, naglašavajući svaku riječ:
+                                    „U ime Allaha, Milostivog, Samilosnog! Hvala Allahu, dž.š., Gospodaru svih svjetova. Neka je salavat i selam našem Poslaniku, s.a.v.s., njegovim vrijednim ashabima i svim onima koji ga budu slijedili do Sudnjeg dana.
+                                    Hvala Allahu, dž.š., koji je u Kur'anu rekao: 'Jedite i pijte ali ne pretjerujte, jer Allah ne voli one koji pretjeruju.' Hvala Allahu, dž.š., koji nas je nahranio i napojio i koji nas je učinio muslimanima.
+                                    Neka je Allahova milost i blagoslov na vlasnika ove hrane i na sve koji su je jeli, na prisutne i odsutne. Bože, povećaj, a ne umanji, tako Ti milosti Tvoje. Amin!“</p>
+                                    <p class="mb-2">Prisutni su glasno izgovorili: „Amin!“ Poslije dove djeca su se spremila za akšam-namaz, a stariji su prvo popili kahvu. Imam je bio Harunov otac, a Harun mujezin. Dajdža ga je pohvalio kako je lijepo mujezinio i šapnuo mu da će ga sutra voditi na teraviju, ako obnovi klanjanje teravih-namaza.</p>
+                                    <p class="mb-2">Harun se veoma obradovao. Poslije teravije planirao je da sa porodicom nastavi ustrajno na postu i namazu tokom cijelog Ramazana.</p>
+                                </div>
+
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>Vjeronauka, za 3. razred osnovne škole, str. 115-118.</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Razmisli i dopuni -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#razmisliCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="razmisliCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Razmisli i dopuni <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="razmisliCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Uz Ramazan je počela ___________ Kur'ana.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Učači uče uz Ramazan ___________.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Haruna je otac probudio na ___________.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kandilji se pale na vrijeme za ___________.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Poslije iftara ljudi idu u džamiju da klanjaju ___________ namaz.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Postite pa ćete biti ___________. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braća i sestre - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Braća i sestre</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_11.mp3"></div>
+
+                                <p class="fw-bold">Kako treba da se odnosimo prema svojoj braći i sestrama?</p>
+                                <p class="mb-4">Prema braći i sestrama trebamo biti pažljivi i obzirni, kao i prema roditeljima.</p>
+
+                                <p class="fw-bold">Kako treba da se ponašaju braća međusobno?</p>
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-people-roof text-success fa-lg mx-3"></i>
+                                        <span>Mlađa braća i sestre prema starijoj trebaju iskazivati poštovanje, slično kao prema roditeljima.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-people-group text-success fa-lg mx-3"></i>
+                                        <span>Starija braća i sestre trebaju brinuti o mlađima, štititi ih i biti im oslonac.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Šta je o tome rekao Poslanik, s.a.v.s.?</p>
+                                <p>Allahov Poslanik, s.a.v.s., je rekao:</p>
+                                <div class="quote-box quote-hadith mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Budi dobar prema svojoj majci i svom ocu, zatim prema svojoj sestri i svom bratu, a zatim prema svojim bližnjim i bližnjem."</p>
+                                            <div class="quote-footer">— Hadis bilježi Hakim; osnova je i u sahih i sunen zbirkama.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-people-arrows text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Poštovanje i briga za braću i sestre čuva porodičnu harmoniju.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-hand-holding-heart text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Stariji paze mlađe, mlađi uvažavaju starije — tako porodica ostaje jaka.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>
