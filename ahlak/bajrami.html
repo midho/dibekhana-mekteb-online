@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajrami - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Bajrami</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_13.mp3"></div>
+
+                                <p class="fw-bold">Koliko praznika imaju muslimani?</p>
+                                <p class="mb-3">Muslimani imaju dva bajrama: jedan po završetku mjeseca Ramazana, a drugi u mjesecu Zu-l-hidžetu, u danima hadždža.</p>
+
+                                <p class="fw-bold">Zašto se muslimani u tim danima vesele?</p>
+                                <p class="mb-3">Vesele se jer su obavili propisane ibadete: na ramazanski bajram jer su ispostili Ramazan, a na hadži bajram jer su zaklali kurban ili obavili hadž.</p>
+
+                                <p class="fw-bold">Kada nastupa Kurban-bajram i koliko traje?</p>
+                                <p class="mb-3">Kurban-bajram (Hadži-bajram) nastupa 10. zul-hidžeta i traje četiri dana.</p>
+
+                                <p class="fw-bold">Koji su značajniji događaji iz historije islama vezani za Kurban-bajram?</p>
+                                <p class="mb-3">Za Kurban-bajram vežu se: završetak objave Kur'ana, hadž i kurban.</p>
+
+                                <p class="fw-bold">Kada i gdje je prvi put svečano obilježen Kurban-bajram?</p>
+                                <p class="mb-3">Prvi Kurban-bajram obilježen je na Arefatu i u Meki 10. godine po Hidžri.</p>
+
+                                <p class="fw-bold">U kom vremenskom periodu se kolje kurban?</p>
+                                <p class="mb-3">Vrijeme klanja kurbana je od bajram-namaza do akšama trećeg dana Kurban-bajrama. Ono što se zakolje izvan tog vremena ne ubraja se u kurban.</p>
+
+                                <p class="fw-bold">Kaži nešto o običajima uz Kurban-bajram.</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-ban text-success fa-lg mx-3"></i>
+                                        <span>Prije klanjanja bajram-namaza ne treba ništa jesti.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-volume-low text-success fa-lg mx-3"></i>
+                                        <span>Na putu do džamije uče se tekbiri tiho.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-user-check text-success fa-lg mx-3"></i>
+                                        <span>Lijepo je da vlasnik kurbana lično zakolje kurban.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <svg aria-hidden="true" focusable="false" class="text-success mx-3" width="24" height="24" viewBox="0 0 193 177" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" opacity="1.000000" d="M93.399597,156.420746 C73.905205,167.645782 53.257851,171.757553 31.360950,169.315186 C24.884230,168.592758 18.461975,167.120407 12.115892,165.576111 C7.528577,164.459793 6.336688,159.759277 9.361725,156.052933 C9.991076,155.281830 10.751950,154.617340 11.458860,153.910370 C36.087414,129.279724 60.764439,104.697113 85.287689,79.962067 C88.472237,76.750008 90.118149,76.078064 93.774170,79.877563 C105.774200,92.348526 118.560249,104.060814 130.640518,116.458038 C135.535110,121.481056 137.719467,122.334007 131.019516,128.785782 C119.777023,139.611816 107.930214,149.495834 93.399597,156.420746 z"/>
+                                            <path fill="currentColor" opacity="1.000000" d="M171.761230,53.761215 C166.092957,59.429359 160.380630,64.594101 155.392654,70.382996 C153.221786,72.902443 152.111298,76.601463 151.310120,79.953781 C150.629974,82.799744 151.208649,85.925507 151.009933,88.912804 C150.750748,92.809357 149.635696,96.263466 145.837875,98.353279 C142.942184,99.946686 140.111237,101.705849 137.444778,103.655602 C134.048859,106.138733 131.345963,105.379189 128.737473,102.491707 C124.437759,97.732079 120.229965,92.874489 115.698677,88.342926 C110.570763,83.214691 105.197083,78.324379 99.796471,73.479752 C96.839066,70.826813 96.512878,68.725952 99.569336,65.705009 C117.339569,48.141235 134.938446,30.404203 152.630753,12.761333 C155.994080,9.407403 162.491577,8.412579 165.836151,11.411354 C172.124878,17.049891 178.283005,22.919420 183.824249,29.277828 C187.860107,33.908844 186.968216,38.570072 182.615479,42.913860 C179.078247,46.443821 175.545761,49.978542 171.761230,53.761215 M161.891556,30.306929 C161.221146,30.774986 160.160919,31.114199 159.955414,31.735918 C159.399124,33.419041 158.678253,35.343189 159.043930,36.937500 C159.312561,38.108665 161.309341,39.807472 162.329178,39.675312 C164.048294,39.452518 166.070541,38.319439 167.126678,36.931194 C169.103821,34.332333 167.231522,31.736866 161.891556,30.306929 M140.122818,51.560356 C138.036255,54.006676 137.532013,56.867996 140.111832,58.844120 C141.263000,59.725918 144.393417,59.406979 145.625961,58.404263 C146.821167,57.431900 147.613129,54.510700 147.017471,53.111477 C145.976852,50.667027 143.672699,48.946011 140.122818,51.560356 z"/>
+                                        </svg>
+                                        <span>Kada se povede životinja koja će biti kurban tiho se uče tekbiri, zatim se žrtva položi i prouči "Bismillahi, Allahu ekber", a zatim se oštrim nožem prikolje.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Kako se dijeli kurbansko meso?</p>
+                                <p class="mb-3">Meso se dijeli rodbini, komšijama i siromasima, a do trećine ostavlja se za svoje potrebe.</p>
+
+                                <p class="fw-bold">Koji su običaji zajednički za oba bajrama?</p>
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-people-line text-success fa-lg mx-3"></i>
+                                        <span>Raduju se svi muslimani: stari i mladi, bogati i siromašni.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="far fa-lightbulb text-success fa-lg mx-3"></i>
+                                        <span>Uoči bajrama pale se kandilji na munarama, a poslije jacije uče se salavati.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-shower text-success fa-lg mx-3"></i>
+                                        <span>Uzima se gusul, oblače se nova ili najljepša odijela i spremaju se ukusna jela.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-comments text-success fa-lg mx-3"></i>
+                                        <span>Razmjenjuju se čestitke: "Bajram mubarek olsun!" i slične.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-people-arrows text-success fa-lg mx-3"></i>
+                                        <span>Obilaze se rodbina, komšije i prijatelji.</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-star-and-crescent text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Dva su bajrama muslimana: Ramazanski i Kurban-bajram.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-mosque text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Bajram je radost, ali i vrijeme ibadeta, zahvalnosti i dijeljenja s drugima.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kasida o bajramu -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#kasidaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="kasidaCollapse">
+                            <span><i class="fas fa-music me-2"></i> Kasida o bajramu <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="kasidaCollapse" class="collapse">
+                            <div class="card-body text-center fst-italic">
+                                <p>
+                                    Nije bajram onome tko oblači nove<br>
+                                    i gizdave haljine.<br>
+                                    Bajram je samo onome tko je siguran<br>
+                                    od prijetnje (Allahove).
+                                </p>
+                                <p>
+                                    Nije bajram onome tko se nakadi na<br>
+                                    mirišljavo drvo,<br>
+                                    Bajram je samo onome tko se pokaje<br>
+                                    i ne vraća se više na grijeh.
+                                </p>
+                                <p>
+                                    Nije bajram onome tko se gizda<br>
+                                    i kiti ovozemaljskim nakitom,<br>
+                                    Bajram je samo onome tko se<br>
+                                    bogobojaznošću opskrbi i osigura.
+                                </p>
+                                <p class="mb-0">
+                                    Nije bajram onome tko se prođe<br>
+                                    poroka i grijeha,<br>
+                                    Nije bajram onome tko stere skupocjene tepihe,<br>
+                                    Bajram je samo onome tko sretno<br>
+                                    prebrodi svoj put životni.
+                                </p>
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>— Ebu Vuhejba Behlul</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bajrami (priča) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pricaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pricaCollapse">
+                            <span><i class="fas fa-book-reader me-2"></i> Bajrami <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pricaCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="mb-4 ps-3 border-start border-success border-3">
+                                    <p class="mb-2">Munira, kćeri! Ustani, srce moje! Skoro će svanuti. Valja braću opremiti. Danas je Bajram.</p>
+                                    <p class="mb-2">Mala glavica otvori dva modra oka i zagleda se u svijetli, ugrijani prostor.</p>
+                                    <p class="mb-2">— Je li hladno, majko?</p>
+                                    <p class="mb-2">— Zar ne čuješ kako vatra gori?</p>
+                                    <p class="mb-2">Munira se diže iz postelje, a rumena joj se usta otvoriše, kao makove čašice.</p>
+                                    <p class="mb-2">— Hoćeš li braću buditi, majko?</p>
+                                    <p class="mb-2">— Još je za njih rano, djevojke moraju prve ustati.</p>
+                                    <p class="mb-2">Munira priđe leđenu, obli lice vodom iz ibrika i uze abdest. Skupi prstima raspletene kose i sakri ih pod mahramu.</p>
+                                    <p class="mb-2">Vani je svitalo. Kroz otvorena vrata navali svjež jutarnji zrak, ptičiji cvrkut i pjenušava pjesma nemirnog vjetra. Munira se vrati u kuću i zatvori vrata.</p>
+                                    <p class="mb-2">— Kako je lijepo napolju.</p>
+                                    <p class="mb-2">Munira zasta na sredini sobe, zgužva prstima nabore na haljini i pogleda majku kao da joj želi nešto kazati.</p>
+                                    <p class="mb-2">— Šta hoćeš, kćeri?</p>
+                                    <p class="mb-2">— Smijem li ja, majko, danas obući svoje nove haljine? Ismet kaže da su njegove čakšire ljepše od mojih dimija.</p>
+                                    <p class="mb-2">— Ah, šta zna Ismet! Tvoje su dimije od svile, a svila je ljepša od čohe.</p>
+                                    <p class="mb-2">— Samo nemoj da mu to rekneš, znaš kakav je. Podignut će viku zbog toga.</p>
+                                </div>
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>— Ahmed Muradbegović</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Razmisli i dopuni -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#razmisliCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="razmisliCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Razmisli i dopuni <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="razmisliCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Ramazanski bajram je islamski blagdan koji nastupa odmah po završetku posta. Njemu se muslimani raduju što su ispostili Ramazan. Prvi dan Ramazanskog bajrama zabranjeno je _____________. </li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Dok je Ramazanski bajram vezan za post, Kurban-bajram je vezan za _____________ i klanje _____________. </li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Za početak računanja vremena, narodi biraju najvažnije događaje iz svoje historije. Kod muslimana se historija računa od _____________, odnosno od preseljenja Poslanika, s.a.v.s., i muslimana iz _____________ u _____________, a to je bilo _____________ godine po Isau, a.s. </li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Lejletu-l-kadr je u Ramazanu, najvjerovatnije 27. noć. U toj noći je počela objava _____________. Kur'an je objavljen Poslaniku _____________, s.a.v.s., preko meleka _____________. </li>
+                                </ul>
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>Vjeronauka, za 2. razred osnovne škole, str. 83.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> O čemu se govori u ovoj priči?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Zašto majka budi Muniru da rano ustane?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kakva treba biti kuća u osvit bajramskog jutra?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kako se ukućani ponašaju za Bajram?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kako se oblače i kakva jela pripremaju?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>
