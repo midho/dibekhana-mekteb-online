@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dova poslije ezana - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <!-- Google Fonts (Amiri for Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Dova poslije ezana</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_25.mp3"></div>
+
+                                <p class="fw-bold">Kako trebamo pratiti učenje ezana?</p>
+                                <div class="d-flex flex-column gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-ear-listen text-success fa-lg mx-3"></i>
+                                        <span>Kada mujezin uči ezan, prekini razgovor i posao, slušaj pažljivo i ponavljaj riječi ezana za njim.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-ellipsis text-success fa-lg mx-3"></i>
+                                        <span>Na svaki tekbir i izjavu ezana tiho ponovi isto što izgovara mujezin.</span>
+                                    </div>
+                                    <div class="p-3 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fas fa-hand-point-right text-success fa-lg mx-3"></i>
+                                            <div>
+                                                <div class="fw-bold">Odgovor na "Hayye 'alessalah" i "Hayye 'ale-l-felah"</div>
+                                                <div class="fst-italic">La hawle vela kuvvete illa billahi-l-'Alijji-l-Azim!</div>
+                                                <div class="text-muted small">(Nema stanja ni snage osim s Allahovom pomoći.)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Šta treba učiti poslije ezana?</p>
+                                <p class="mb-2">Poslije ezana donesemo salavat na Poslanika, s.a.v.s., i proučimo ovu dovu:</p>
+
+                                <div class="text-center my-4">
+                                    <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                        اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ<br>
+                                        آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ<br>
+                                        وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+                                    </p>
+                                    <p class="lead fst-italic text-success mb-2">
+                                        Allahumme Rabbe hazihi-d-da'veti-t-tammeti ves-salati-l-kaimeti<br>
+                                        aati Muhammedeni-l-vesilete ve-l-fadilete<br>
+                                        veb'ashu mekamen mahmudenillezi ve'atteh
+                                    </p>
+                                    <p class="text-muted">
+                                        (Bože, Gospodaru ovog savršenog ezana i namaza koji slijedi, podari Muhammedu, s.a.v.s., poseban stepen i počast, i podigni ga na hvaljeno mjesto koje si mu obećao.)
+                                    </p>
+                                    <div class="mt-3 pronunciation-player-container">
+                                        <audio src="audio/dova_ezan.mp3"></audio>
+                                        <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                            <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Kakva je korist ove dove?</p>
+                                <div class="quote-box quote-hadith mb-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">Onaj ko poslije ezana prouči ovu dovu imat će pravo na moj šefa'at (zagovorništvo) na Sudnjem danu.</p>
+                                            <div class="quote-footer">— Hadis (Buharija)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-ear-listen text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Slušaj ezan pažljivo i ponavljaj za mujezinom.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-hands-praying text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Na "Hayye 'alessalah" i "Hayye 'ale-l-felah" odgovori dovom <em>La hawle vela kuvvete...</em></span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-star text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Nakon salavata prouči dovu poslije ezana i traži Poslanikov, s.a.v.s., šefa'at.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kako trebamo pratiti učenje ezana?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta treba učiti poslije ezana?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kakva je korist dove poslije ezana?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kakvo je značenje dove poslije ezana?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+    <script src="../js/pronunciation-player.js"></script>
+
+</body>
+</html>
