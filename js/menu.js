@@ -141,7 +141,7 @@ const menuData = [
             { title: "Islam i nauka", id: "nauka", url: "ahlak/nauka.html" },
             { title: "Vjera i smisao života", id: "smisao", url: "ahlak/smisao.html" },
             { title: "Halal i haram ishrana", id: "ishrana", url: "ahlak/ishrana.html" },
-            { title: "Islamska imena", id: "imena" },
+            { title: "Islamska imena", id: "imena", url: "ahlak/islamska_imena.html" },
             { title: "Dova poslije ezana", id: "dova_ezan" },
             { title: "Druženje", id: "druzenje" },
             { title: "Islamski kalendar", id: "kalendar" },
