@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grijesi - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Grijesi</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_28.mp3"></div>
+
+                                <p class="fw-bold">Šta je grijeh?</p>
+                                <p>Grijeh je učiniti djelo koje je Allah zabranio. Ogriješiti se može o Allaha, sebe, druge ljude ili životinje. Za neke grijehe će čovjek odgovarati i pred ljudima i biti kažnjen za njih. To su veliki grijesi za koje je propisana dunjalučka kazna. A za neke će odgovarati samo pred Allahom, dž.š.</p>
+
+                                <p class="fw-bold">Kako se dijele grijesi?</p>
+                                <p>Grijesi se dijele na teške, velike i male.</p>
+
+                                <p class="fw-bold">Šta su teški, šta veliki, a šta mali grijesi?</p>
+                                <div class="d-grid gap-3 mb-4">
+                                    <div class="p-3 bg-light rounded-3 border-start border-4 border-danger">
+                                        <h6 class="mb-2 text-danger fw-bold">Teški grijesi</h6>
+                                        <p class="mb-2">Teški grijesi su oni koji izvode iz vjere. Osoba koja ih počini prestaje biti musliman, a čeka je vječni džehennem ako se ne pokaje i svoju vjeru ne obnovi.</p>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-ban text-danger me-2"></i><span>Kufr: nevjerovanje u Allaha i osnovne istine vjere: meleke, kitabe, poslanike, Sudnji dan i sudbinu.</span></li>
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-equals text-danger me-2"></i><span>Širk: smatrati Allahu nekoga ravnim.</span></li>
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-exclamation-circle text-danger me-2"></i><span>Psovanje Allaha.</span></li>
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-exclamation-circle text-danger me-2"></i><span>Vrijeđanje nekog od poslanika.</span></li>
+                                            <li class="d-flex align-items-start"><i class="fas fa-exclamation-circle text-danger me-2"></i><span>Ponižavanje bilo koje islamske svetinje: Kur'ana, Kabe, džamije, ezana, namaza, posta i slično.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="p-3 bg-light rounded-3 border-start border-4 border-warning">
+                                        <h6 class="mb-2 text-warning fw-bold">Veliki grijesi</h6>
+                                        <p class="mb-2">Veliki grijesi su djela za koja je predviđena oštra kazna, na ovom ili na onom svijetu.</p>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-gavel text-warning me-2"></i><span>Krađa.</span></li>
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-skull text-warning me-2"></i><span>Ubistvo na pravdi Boga.</span></li>
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-bacon text-warning me-2"></i><span>Jedenje svinjskog mesa.</span></li>
+                                            <li class="d-flex align-items-start"><i class="fas fa-mask text-warning me-2"></i><span>Dvoličnost i slični postupci.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <h6 class="mb-2 text-success fw-bold">Mali grijesi</h6>
+                                        <p class="mb-2">Mali grijesi su sitni prestupi koji ne spadaju ni u teške ni u velike.</p>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="d-flex align-items-start mb-2"><i class="fas fa-comments text-success me-2"></i><span>Razgovarati u vrijeme ezana.</span></li>
+                                            <li class="d-flex align-items-start"><i class="fas fa-trash text-success me-2"></i><span>Bacanje papira po putu i slično.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pjesma / Tevba i nesuh -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#poemCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="poemCollapse">
+                            <span><i class="fas fa-feather-alt me-2"></i> Tevba i nesuh <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="poemCollapse" class="collapse">
+                            <div class="card-body text-center fst-italic">
+                                <p>Gospode, evo, na sedždu Ti padam,<br>
+                                Pred vječnom Tvojom klanjam se dobrotom<br>
+                                I molitve Ti u stihove skladam,<br>
+                                Proseć: "Oh, daj mi smisao za ljepotom!"<br>
+                                Gospode, evo, na sedždu Ti padam.</p>
+
+                                <p>Ti znaš da bijah nevin poput rose<br>
+                                I poput lijera u proljeću ranom;<br>
+                                Al' ljudi, med što pod jezikom nose,<br>
+                                Otrov mi dadoše u bokalu p'janom,<br>
+                                Mada sam bio nevin poput rose.</p>
+
+                                <p>I tada s tvoga skrenuo sam puta<br>
+                                I zatrtao kroz pustoš i tamu<br>
+                                Ah, strast mi razum u okove sputa,<br>
+                                Da ropski dvori njenu crnom plamu -<br>
+                                I s tvoga ja sam zabasao puta.</p>
+
+                                <p>Vjeru i nadu iz srca izgubih,<br>
+                                I moju ljubav pomrčo je grijeh -<br>
+                                Postadoh sarhoš oholi i grubi,<br>
+                                Sav ideal mu što je vinski mijeh ...<br>
+                                Ah, svoju vjeru i nadu izgubih!</p>
+
+                                <p>I slavih Bakha kao sveto biće,<br>
+                                Veneri pete jezikom sam lizo<br>
+                                Vlastitim zubom ja sam svoje žice<br>
+                                Komad po komad kao zvijer grizo<br>
+                                Slaveći Bakha ko božansko biće.</p>
+
+                                <p>Svačiji prezir pratio je mene,<br>
+                                Od sjene moje druzi mi bježahu<br>
+                                I sve me čiste klonile se žene ...<br>
+                                Vaj, teško je bilo meni siromahu,<br>
+                                Jer ljudski prezir pratio je mene.</p>
+
+                                <p>Ja sada bježim pod okrilje Tvoje<br>
+                                I Tvog Kur'ana, Tvoje vječne riječi<br>
+                                Gospode, grijehe odriješi moje<br>
+                                I bolesnu mi dušu izliječi -<br>
+                                Ta ja se sklanjam pod okrilje Tvoje.</p>
+
+                                <p>Gospode, razum prosvijetli mi sada<br>
+                                I daj mi snage, daj mi volju jaku,<br>
+                                Demone sve što može da savlada ...<br>
+                                Nek Tvoja milost svijetli mi u mraku,<br>
+                                Gospode, razum prosvijetli mi sada!</p>
+
+                                <p>Raspiri moje stare vjere plamen,<br>
+                                Vrati mi ljubav i sve stare dare,<br>
+                                Da tresnem čašom o ledeni kamen<br>
+                                I noktom zgrebem Venerine čare -<br>
+                                O raspiri, mi stare vjere plamen!</p>
+
+                                <p>Gospode, evo na sedždu Ti padam,<br>
+                                I kajem grijehe pod Tvojom dobrotom -<br>
+                                I molitvu Ti u stihove skladam,<br>
+                                Proseć: "Ah, daj mi smisao za ljepotom!" -<br>
+                                Gospode, evo, na sedždu Ti padam!</p>
+
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>— Musa Ćazim Ćatić</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta je grijeh i koga sve možeš ogriješiti?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Kako se dijele grijesi?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Nabroj nekoliko teških grijeha.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Navedi primjere velikih grijeha i kazne koje ih prate.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Šta su mali grijesi i kako ih izbjegavati?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>

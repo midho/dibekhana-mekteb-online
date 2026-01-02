@@ -141,12 +141,12 @@ const menuData = [
             { title: "Islam i nauka", id: "nauka", url: "ahlak/nauka.html" },
             { title: "Vjera i smisao života", id: "smisao", url: "ahlak/smisao.html" },
             { title: "Halal i haram ishrana", id: "ishrana", url: "ahlak/ishrana.html" },
-            { title: "Islamska imena", id: "imena" },
-            { title: "Dova poslije ezana", id: "dova_ezan" },
-            { title: "Druženje", id: "druzenje" },
-            { title: "Islamski kalendar", id: "kalendar" },
-            { title: "Grijesi", id: "grijesi" },
-            { title: "Pitanja", id: "ahlak_pitanja", icon: "far fa-question-circle" }
+            { title: "Islamska imena", id: "imena", url: "ahlak/islamska_imena.html" },
+            { title: "Dova poslije ezana", id: "dova_ezan", url: "ahlak/dova_ezan.html" },
+            { title: "Druženje", id: "druzenje", url: "ahlak/druzenje.html" },
+            { title: "Islamski kalendar", id: "kalendar", url: "ahlak/islamski_kalendar.html" },
+            { title: "Grijesi", id: "grijesi", url: "ahlak/grijesi.html" },
+            { title: "Pitanja", id: "ahlak_pitanja", url: "ahlak/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
