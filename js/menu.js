@@ -53,6 +53,7 @@ const menuData = [
     {
         title: "Ibadat",
         id: "ibadat",
+        url: "ibadat/index.html",
         children: [
             { title: "Ettehijat", id: "ettehijat" },
             { title: "Abdest", id: "abdest" },
