@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamski kalendar - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Islamski kalendar</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ahlak_lekcija_27.mp3"></div>
+
+                                <p class="fw-bold">Koji je najznačajniji događaj u historiji islama?</p>
+                                <p>Najznačajniji događaj u historiji islama je Hidžra, seoba Muhammeda, a.s., iz Meke u Medinu. Bilo je to 622. godine po Isa, a.s.</p>
+
+                                <p class="fw-bold">Šta je to hidžretska godina?</p>
+                                <p>Hidžretska godina je mjesečeva godina. Ima 354 ili 355 dana i oko 10 dana je kraća od sunčeve.</p>
+
+                                <p class="fw-bold mb-1">Koji su mjeseci hidžretske godine?</p>
+                                <p class="mb-0">Mjeseci hidžretske godine su:</p>
+                                <div class="row row-cols-1 row-cols-md-2 g-3 mt-0 mb-4">
+                                    <div class="col">
+                                        <ol class="list-unstyled mb-0">
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">1</span><span>Muharrem</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">2</span><span>Safer</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">3</span><span>Rebi'ul-evvel</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">4</span><span>Rebi'ul-ahir</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">5</span><span>Džumadel-ula</span></li>
+                                            <li class="d-flex align-items-center"><span class="badge bg-success me-2">6</span><span>Džumadel-uhra</span></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col">
+                                        <ol start="7" class="list-unstyled mb-0">
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">7</span><span>Redžeb</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">8</span><span>Šaban</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">9</span><span>Ramazan</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">10</span><span>Ševval</span></li>
+                                            <li class="d-flex align-items-center mb-2"><span class="badge bg-success me-2">11</span><span>Zul-ka'de</span></li>
+                                            <li class="d-flex align-items-center"><span class="badge bg-success me-2">12</span><span>Zul-hidže</span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koliki su hidžretski mjeseci?</p>
+                                <p>Pojedini mjeseci hidžretske godine imaju 30, a neki 29 dana.</p>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25 my-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-moon text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Hidžretska godina prati mjesečeve mjene, pa se ramazan i bajrami svake godine pomjeraju kroz godišnja doba.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-calendar-week text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Nova hidžretska godina počinje s Muharremom, a vraća nas na Hidžru kao početak računanja vremena u islamu.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koji su najvažniji praznici u hidžretskoj godini?</p>
+                                <div class="d-grid gap-2 mb-4">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <i class="fas fa-star-and-crescent text-success fa-lg me-3"></i>
+                                        <div>
+                                            Ramazanski bajram: 1., 2. i 3. dan Ševvala.
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <i class="fas fa-kaaba text-success fa-lg me-3"></i>
+                                        <div>
+                                            Kurban bajram: 10., 11., 12. i 13. dan Zul-hidžeta.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koji su mjeseci, noći i dani najodabraniji u hidžretskoj godini?</p>
+                                <div class="d-grid gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <i class="fas fa-mosque text-success fa-lg me-3"></i>
+                                        <div>Najodabraniji mjesec je ramazan.</div>
+                                    </div>
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <i class="fas fa-cloud-moon text-success fa-lg me-3"></i>
+                                        <div>Najodabranija noć je Lejletul-kadr u ramazanu; vrjednija je od 1000 mjeseci.</div>
+                                    </div>
+                                    <div class="d-flex align-items-center p-3 bg-light rounded-3 border-start border-4 border-success">
+                                        <i class="fas fa-sun text-success fa-lg me-3"></i>
+                                        <div>Najodabraniji dani su petak i ponedjeljak.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pitanja -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pitanjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pitanjaCollapse">
+                            <span><i class="far fa-question-circle me-2"></i> Pitanja <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pitanjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Zašto Hidžra označava početak računanja islamske godine?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Koliko dana ima hidžretska godina i koliko je kraća od sunčeve?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Nabroj mjeseci hidžretske godine.</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Koji su najvažniji praznici u hidžretskoj godini?</li>
+                                    <li class="list-group-item border-0 py-2 list-group-item-action hover-success"><i class="fas fa-angle-right text-success me-2"></i> Koji mjesec, noć i dani se smatraju najodabranijim?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+
+</body>
+</html>
