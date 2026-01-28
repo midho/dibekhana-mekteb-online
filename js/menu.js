@@ -3,37 +3,41 @@ const menuData = [
         title: "Kur'an",
         id: "kuran",
         url: "kuran/index.html",
+        icon: "fas fa-quran",
+        comingSoon: true,
         children: [
-            { title: "Euzubilla i bismilla", id: "euzubilla", url: "kuran/euzubilla.html" },
-            { title: "Rabbi jessir", id: "rabbi_jessir", url: "kuran/rabbi_jessir.html" },
-            { title: "Subhaneke", id: "subhaneke", url: "kuran/subhaneke.html" },
-            { title: "El-Fatiha", id: "fatiha", url: "kuran/fatiha.html" },
-            { title: "En-Nas", id: "nas", url: "kuran/nas.html" },
-            { title: "El-Felek", id: "felek", url: "kuran/felek.html" },
-            { title: "El-Ihlas", id: "ihlas", url: "kuran/ihlas.html" },
-            { title: "El-Leheb", id: "leheb", url: "kuran/leheb.html" },
-            { title: "En-Nasr", id: "nasr", url: "kuran/nasr.html" },
-            { title: "El-Kafirun", id: "kafirun", url: "kuran/kafirun.html" },
-            { title: "El-Kevser", id: "kevser", url: "kuran/kevser.html" },
-            { title: "El-Maun", id: "maun", url: "kuran/maun.html" },
-            { title: "El-Kurejš", id: "kurejs", url: "kuran/kurejs.html" },
-            { title: "El-Fil", id: "fil", url: "kuran/fil.html" },
-            { title: "El-Humezeh", id: "humezeh", url: "kuran/humezeh.html" },
-            { title: "El-'Asr", id: "asr", url: "kuran/asr.html" },
-            { title: "Pitanja", id: "kuran_pitanja", url: "kuran/pitanja.html", icon: "far fa-question-circle" }
+            { title: "Euzubilla i bismilla", id: "euzubilla", url: "kuran/euzubilla.html", icon: "fas fa-play", comingSoon: true },
+            { title: "Rabbi jessir", id: "rabbi_jessir", url: "kuran/rabbi_jessir.html", icon: "fas fa-play", comingSoon: true },
+            { title: "Subhaneke", id: "subhaneke", url: "kuran/subhaneke.html", comingSoon: true },
+            { title: "El-Fatiha", id: "fatiha", url: "kuran/fatiha.html", comingSoon: true },
+            { title: "En-Nas", id: "nas", url: "kuran/nas.html", comingSoon: true },
+            { title: "El-Felek", id: "felek", url: "kuran/felek.html", comingSoon: true },
+            { title: "El-Ihlas", id: "ihlas", url: "kuran/ihlas.html", comingSoon: true },
+            { title: "El-Leheb", id: "leheb", url: "kuran/leheb.html", comingSoon: true },
+            { title: "En-Nasr", id: "nasr", url: "kuran/nasr.html", comingSoon: true },
+            { title: "El-Kafirun", id: "kafirun", url: "kuran/kafirun.html", comingSoon: true },
+            { title: "El-Kevser", id: "kevser", url: "kuran/kevser.html", comingSoon: true },
+            { title: "El-Maun", id: "maun", url: "kuran/maun.html", comingSoon: true },
+            { title: "El-Kurejš", id: "kurejs", url: "kuran/kurejs.html", comingSoon: true },
+            { title: "El-Fil", id: "fil", url: "kuran/fil.html", comingSoon: true },
+            { title: "El-Humezeh", id: "humezeh", url: "kuran/humezeh.html", comingSoon: true },
+            { title: "El-'Asr", id: "asr", url: "kuran/asr.html", comingSoon: true },
+            { title: "Pitanja", id: "kuran_pitanja", url: "kuran/pitanja.html", icon: "far fa-question-circle", comingSoon: true }
         ]
     },
     {
         title: "Akaid",
         id: "akaid",
         url: "akaid/index.html",
+        icon: "fas fa-mosque",
         children: [
-            { title: "Islam i musliman", id: "islam_musliman", url: "akaid/islam_musliman.html" },
-            { title: "Kelime i šehadet", id: "kelime_sehadet", url: "akaid/kelime_sehadet.html" },
+            { title: "Islam i musliman", id: "islam_musliman", url: "akaid/islam_musliman.html", icon: "fas fa-users" },
+            { title: "Kelime i šehadet", id: "kelime_sehadet", url: "akaid/kelime_sehadet.html", icon: "fas fa-fingerprint" },
             {
                 title: "Imanski šarti",
                 id: "imanski_sarti",
                 url: "akaid/imanski_sarti/index.html",
+                icon: "fas fa-list-ol",
                 children: [
                     { title: "1. imanski šart", id: "imanski_1", url: "akaid/imanski_sarti/1.html" },
                     { title: "2. imanski šart", id: "imanski_2", url: "akaid/imanski_sarti/2.html" },
@@ -43,22 +47,26 @@ const menuData = [
                     { title: "6. imanski šart", id: "imanski_6", url: "akaid/imanski_sarti/6.html" }
                 ]
             },
-            { title: "Islamski šarti", id: "islamski_sarti_akaid", url: "akaid/islamski_sarti.html" },
-            { title: "Kur'an", id: "akaid_kuran", url: "akaid/kuran.html" },
-            { title: "Hadis", id: "hadis", url: "akaid/hadis.html" },
-            { title: "Šerijat (ukratko)", id: "seriat", url: "akaid/seriat.html" },
+            { title: "Islamski šarti", id: "islamski_sarti_akaid", url: "akaid/islamski_sarti.html", icon: "fas fa-list-ul" },
+            { title: "Kur'an", id: "akaid_kuran", url: "akaid/kuran.html", icon: "fas fa-book" },
+            { title: "Hadis", id: "hadis", url: "akaid/hadis.html", icon: "fas fa-quote-right" },
+            { title: "Šerijat (ukratko)", id: "seriat", url: "akaid/seriat.html", icon: "fas fa-balance-scale" },
             { title: "Pitanja", id: "akaid_pitanja", url: "akaid/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
         title: "Ibadat",
         id: "ibadat",
+        url: "ibadat/index.html",
+        icon: "fas fa-pray",
+        comingSoon: true,
         children: [
-            { title: "Ettehijat", id: "ettehijat" },
-            { title: "Abdest", id: "abdest" },
+            { title: "Ettehijat", id: "ettehijat", icon: "fas fa-chair" },
+            { title: "Abdest", id: "abdest", icon: "fas fa-water" },
             {
                 title: "Uvjeti za namaz",
                 id: "uvjeti_namaz",
+                icon: "fas fa-clipboard-check",
                 children: [
                     { title: "1. uvjet za namaz", id: "uvjet_1" },
                     { title: "2. uvjet za namaz", id: "uvjet_2" },
@@ -79,12 +87,13 @@ const menuData = [
                     { title: "5. islamski šart", id: "islamski_5" }
                 ]
             },
-            { title: "Ezan i ikamet", id: "ezan" },
-            { title: "Gusul", id: "gusul" },
-            { title: "Tejemum", id: "tejemum" },
+            { title: "Ezan i ikamet", id: "ezan", icon: "fas fa-volume-up" },
+            { title: "Gusul", id: "gusul", icon: "fas fa-shower" },
+            { title: "Tejemum", id: "tejemum", icon: "fas fa-hands" },
             {
                 title: "Namazi",
                 id: "namazi",
+                icon: "fas fa-clock",
                 children: [
                     { title: "Sabah", id: "sabah" },
                     { title: "Podne", id: "podne" },
@@ -96,6 +105,7 @@ const menuData = [
             {
                 title: "Namaski Ruknovi",
                 id: "ruknovi",
+                icon: "fas fa-child",
                 children: [
                     { title: "Početni tekbir", id: "tekbir" },
                     { title: "Kijam", id: "kijam" },
@@ -105,11 +115,11 @@ const menuData = [
                     { title: "Posljednje sjedenje", id: "sjedenje" }
                 ]
             },
-            { title: "Islam i muslimani", id: "ibadat_islam" },
-            { title: "Ulazak u wc", id: "wc" },
-            { title: "Šta kvari namaz?", id: "kvari_namaz" },
-            { title: "Teravija", id: "teravija" },
-            { title: "Džemat", id: "dzemat" },
+            { title: "Islam i muslimani", id: "ibadat_islam", icon: "fas fa-users" },
+            { title: "Ulazak u wc", id: "wc", icon: "fas fa-restroom" },
+            { title: "Šta kvari namaz?", id: "kvari_namaz", icon: "fas fa-ban" },
+            { title: "Teravija", id: "teravija", icon: "fas fa-moon" },
+            { title: "Džemat", id: "dzemat", icon: "fas fa-users-rays" },
             { title: "Pitanja", id: "ibadat_pitanja", icon: "far fa-question-circle" }
         ]
     },
@@ -117,35 +127,36 @@ const menuData = [
         title: "Ahlak",
         id: "ahlak",
         url: "ahlak/index.html",
+        icon: "fas fa-heart",
         children: [
-            { title: "Islamski bonton", id: "bonton", url: "ahlak/bonton.html" },
-            { title: "Selam - Islamski pozdrav", id: "selam", url: "ahlak/selam.html" },
-            { title: "Desna strana", id: "desna_strana", url: "ahlak/desna_strana.html" },
-            { title: "Lična higijena i urednost", id: "higijena", url: "ahlak/higijena.html" },
-            { title: "Kuća: ulazak i izlazak", id: "kuca", url: "ahlak/kuca.html" },
-            { title: "Dova za kupatilo", id: "dova_kupatilo", url: "ahlak/dova_kupatilo.html" },
-            { title: "Ponašanje za sofrom", id: "sofra", url: "ahlak/sofra.html" },
-            { title: "Dužnosti prema roditeljima", id: "roditelji", url: "ahlak/roditelji.html" },
-            { title: "Laž, prevara i krađa", id: "laz", url: "ahlak/laz.html" },
-            { title: "Akšamsko vrijeme", id: "aksamsko_vrijeme", url: "ahlak/aksamsko_vrijeme.html" },
-            { title: "Braća i sestre", id: "braca_sestre", url: "ahlak/braca_sestre.html" },
-            { title: "Ramazan", id: "ramazan", url: "ahlak/ramazan.html" },
-            { title: "Bajrami", id: "bajrami", url: "ahlak/bajrami.html" },
-            { title: "Hidžretska godina", id: "hidzretska", url: "ahlak/hidzretska_godina.html" },
-            { title: "Dužnosti prema Allahu", id: "duznosti_allahu", url: "ahlak/duznosti_prema_allahu.html" },
-            { title: "Dužnosti prema sebi", id: "duznost_sebi", url: "ahlak/duznost_prema_sebi.html" },
-            { title: "Islamsko odjevanje", id: "odjevanje", url: "ahlak/odjevanje.html" },
-            { title: "Rad i milosrđe", id: "rad", url: "ahlak/rad.html" },
-            { title: "Zdravlje i život", id: "zdravlje", url: "ahlak/zdravlje.html" },
-            { title: "Odgoj i obrazovanje", id: "odgoj", url: "ahlak/odgoj.html" },
-            { title: "Islam i nauka", id: "nauka", url: "ahlak/nauka.html" },
-            { title: "Vjera i smisao života", id: "smisao", url: "ahlak/smisao.html" },
-            { title: "Halal i haram ishrana", id: "ishrana", url: "ahlak/ishrana.html" },
-            { title: "Islamska imena", id: "imena", url: "ahlak/islamska_imena.html" },
-            { title: "Dova poslije ezana", id: "dova_ezan", url: "ahlak/dova_ezan.html" },
-            { title: "Druženje", id: "druzenje", url: "ahlak/druzenje.html" },
-            { title: "Islamski kalendar", id: "kalendar", url: "ahlak/islamski_kalendar.html" },
-            { title: "Grijesi", id: "grijesi", url: "ahlak/grijesi.html" },
+            { title: "Islamski bonton", id: "bonton", url: "ahlak/bonton.html", icon: "fas fa-user-tie" },
+            { title: "Selam - Islamski pozdrav", id: "selam", url: "ahlak/selam.html", icon: "fas fa-handshake" },
+            { title: "Desna strana", id: "desna_strana", url: "ahlak/desna_strana.html", icon: "fas fa-hand-point-right" },
+            { title: "Lična higijena i urednost", id: "higijena", url: "ahlak/higijena.html", icon: "fas fa-pump-soap" },
+            { title: "Kuća: ulazak i izlazak", id: "kuca", url: "ahlak/kuca.html", icon: "fas fa-home" },
+            { title: "Dova za kupatilo", id: "dova_kupatilo", url: "ahlak/dova_kupatilo.html", icon: "fas fa-bath" },
+            { title: "Ponašanje za sofrom", id: "sofra", url: "ahlak/sofra.html", icon: "fas fa-utensils" },
+            { title: "Dužnosti prema roditeljima", id: "roditelji", url: "ahlak/roditelji.html", icon: "fas fa-user-friends" },
+            { title: "Laž, prevara i krađa", id: "laz", url: "ahlak/laz.html", icon: "fas fa-exclamation-triangle" },
+            { title: "Akšamsko vrijeme", id: "aksamsko_vrijeme", url: "ahlak/aksamsko_vrijeme.html", icon: "fas fa-cloud-sun" },
+            { title: "Braća i sestre", id: "braca_sestre", url: "ahlak/braca_sestre.html", icon: "fas fa-users" },
+            { title: "Ramazan", id: "ramazan", url: "ahlak/ramazan.html", icon: "fas fa-star-and-crescent" },
+            { title: "Bajrami", id: "bajrami", url: "ahlak/bajrami.html", icon: "fas fa-gift" },
+            { title: "Hidžretska godina", id: "hidzretska", url: "ahlak/hidzretska_godina.html", icon: "fas fa-calendar-week" },
+            { title: "Dužnosti prema Allahu", id: "duznosti_allahu", url: "ahlak/duznosti_prema_allahu.html", icon: "fas fa-praying-hands" },
+            { title: "Dužnosti prema sebi", id: "duznost_sebi", url: "ahlak/duznost_prema_sebi.html", icon: "fas fa-user-check" },
+            { title: "Islamsko odjevanje", id: "odjevanje", url: "ahlak/odjevanje.html", icon: "fas fa-tshirt" },
+            { title: "Rad i milosrđe", id: "rad", url: "ahlak/rad.html", icon: "fas fa-hammer" },
+            { title: "Zdravlje i život", id: "zdravlje", url: "ahlak/zdravlje.html", icon: "fas fa-heartbeat" },
+            { title: "Odgoj i obrazovanje", id: "odgoj", url: "ahlak/odgoj.html", icon: "fas fa-graduation-cap" },
+            { title: "Islam i nauka", id: "nauka", url: "ahlak/nauka.html", icon: "fas fa-atom" },
+            { title: "Vjera i smisao života", id: "smisao", url: "ahlak/smisao.html", icon: "fas fa-compass" },
+            { title: "Halal i haram ishrana", id: "ishrana", url: "ahlak/ishrana.html", icon: "fas fa-check-double" },
+            { title: "Islamska imena", id: "imena", url: "ahlak/islamska_imena.html", icon: "fas fa-id-card" },
+            { title: "Dova poslije ezana", id: "dova_ezan", url: "ahlak/dova_ezan.html", icon: "fas fa-volume-up" },
+            { title: "Druženje", id: "druzenje", url: "ahlak/druzenje.html", icon: "fas fa-user-plus" },
+            { title: "Islamski kalendar", id: "kalendar", url: "ahlak/islamski_kalendar.html", icon: "fas fa-calendar-alt" },
+            { title: "Grijesi", id: "grijesi", url: "ahlak/grijesi.html", icon: "fas fa-exclamation-triangle" },
             { title: "Pitanja", id: "ahlak_pitanja", url: "ahlak/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
@@ -153,26 +164,29 @@ const menuData = [
         title: "Historija islama",
         id: "historija",
         url: "historija/index.html",
+        icon: "fas fa-history",
         children: [
-            { title: "Adem, a.s.", id: "adem", url: "historija/adem.html" },
-            { title: "Nuh , a.s.", id: "nuh", url: "historija/nuh.html" },
-            { title: "Arabija", id: "arabija", url: "historija/arabija.html" },
-            { title: "Rođenje", id: "rodjenje", url: "historija/rodjenje.html" },
-            { title: "U Benu Said-u", id: "benu_said", url: "historija/benu_said.html" },
-            { title: "Siroče", id: "siroce", url: "historija/siroce.html" },
-            { title: "Ženidba", id: "zenidba", url: "historija/zenidba.html" },
-            { title: "Prva Objava", id: "prva_objava", url: "historija/prva_objava.html" },
-            { title: "Poslanikova Hidžra", id: "hidzra", url: "historija/hidzra.html" },
+            { title: "Adem, a.s.", id: "adem", url: "historija/adem.html", icon: "fas fa-user-tag" },
+            { title: "Nuh , a.s.", id: "nuh", url: "historija/nuh.html", icon: "fas fa-ship" },
+            { title: "Arabija", id: "arabija", url: "historija/arabija.html", icon: "fas fa-globe-asia" },
+            { title: "Rođenje", id: "rodjenje", url: "historija/rodjenje.html", icon: "fas fa-star" },
+            { title: "U Benu Said-u", id: "benu_said", url: "historija/benu_said.html", icon: "fas fa-map-marker-alt" },
+            { title: "Siroče", id: "siroce", url: "historija/siroce.html", icon: "fas fa-child" },
+            { title: "Ženidba", id: "zenidba", url: "historija/zenidba.html", icon: "fas fa-ring" },
+            { title: "Prva Objava", id: "prva_objava", url: "historija/prva_objava.html", icon: "fas fa-book-open" },
+            { title: "Poslanikova Hidžra", id: "hidzra", url: "historija/hidzra.html", icon: "fas fa-walking" },
             { title: "Pitanja", id: "historija_pitanja", url: "historija/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
         title: "Namazi (video)",
         id: "namazi_video",
+        icon: "fas fa-video",
         children: [
             {
                 title: "Sabah",
                 id: "video_sabah",
+                icon: "fas fa-sun",
                 children: [
                     { title: "Sunnet", id: "video_sabah_sunnet" },
                     { title: "Farz", id: "video_sabah_farz" }
@@ -181,6 +195,7 @@ const menuData = [
             {
                 title: "Podne",
                 id: "video_podne",
+                icon: "fas fa-sun",
                 children: [
                     { title: "Sunnet", id: "video_podne_sunnet" },
                     { title: "Farz", id: "video_podne_farz" },
@@ -190,6 +205,7 @@ const menuData = [
             {
                 title: "Ikindija",
                 id: "video_ikindija",
+                icon: "fas fa-cloud-sun",
                 children: [
                     { title: "Sunnet", id: "video_ikindija_sunnet" },
                     { title: "Farz", id: "video_ikindija_farz" }
@@ -198,6 +214,7 @@ const menuData = [
             {
                 title: "Akšam",
                 id: "video_aksam",
+                icon: "fas fa-cloud-moon",
                 children: [
                     { title: "Farz", id: "video_aksam_farz" },
                     { title: "Sunnet", id: "video_aksam_sunnet" }
@@ -206,6 +223,7 @@ const menuData = [
             {
                 title: "Jacija",
                 id: "video_jacija",
+                icon: "fas fa-moon",
                 children: [
                     { title: "Sunnet", id: "video_jacija_sunnet" },
                     { title: "Farz", id: "video_jacija_farz" },
@@ -216,6 +234,7 @@ const menuData = [
             {
                 title: "Teravija",
                 id: "video_teravija",
+                icon: "fas fa-mosque",
                 children: [
                     { title: "Sunnet", id: "video_teravija_sunnet" }
                 ]
@@ -262,14 +281,33 @@ function renderMenu(items, parentId = 'sidebar-menu') {
             // 1. Content Link (Title)
             const contentLink = document.createElement('a');
             const root = window.projectRoot || "";
-            if (item.url) {
+            const isImplemented = !!item.url && !item.comingSoon;
+
+            if (isImplemented) {
                 contentLink.href = root + item.url;
             } else {
-                contentLink.href = `${root}index.html?page=${item.id}`;
+                contentLink.href = "#";
+                contentLink.classList.add("text-muted");
+                contentLink.style.cursor = "default";
             }
-            contentLink.textContent = item.title;
+
+            let contentHtml = "";
+            if (item.icon) {
+                contentHtml += `<i class="${item.icon}" style="margin-right: 8px;"></i>`;
+            }
+            contentHtml += item.title;
+
+            if (!isImplemented) {
+                 contentHtml += ` <span class="badge rounded-pill bg-light text-secondary border ms-1" style="font-size: 0.65em; font-weight: normal;">Uskoro</span>`;
+            }
+            contentLink.innerHTML = contentHtml;
+
             contentLink.className = 'flex-grow-1 text-decoration-none';
             contentLink.style.paddingRight = '5px'; // Reduce padding to make room for toggle
+
+            if (!isImplemented) {
+                 contentLink.onclick = (e) => e.preventDefault();
+            }
             
             // 2. Toggle Button (Icon)
             const toggleLink = document.createElement('a');
@@ -305,23 +343,32 @@ function renderMenu(items, parentId = 'sidebar-menu') {
         } else {
             const a = document.createElement('a');
             const root = window.projectRoot || "";
+            const isImplemented = !!item.url && !item.comingSoon;
             
-            if (item.url) {
+            if (isImplemented) {
                 a.href = root + item.url;
             } else {
-                a.href = `${root}index.html?page=${item.id}`;
+                a.href = "#";
+                a.style.cursor = "default";
+                a.classList.add("text-muted");
             }
             
+            let contentHtml = "";
             if (item.icon) {
-                a.innerHTML = `<i class="${item.icon}" style="margin-right: 8px;"></i>${item.title}`;
-            } else {
-                a.textContent = item.title;
+                contentHtml += `<i class="${item.icon}" style="margin-right: 8px;"></i>`;
+            }
+            contentHtml += item.title;
+
+            if (!isImplemented) {
+                 contentHtml += ` <span class="badge rounded-pill bg-light text-secondary border ms-1" style="font-size: 0.65em; font-weight: normal;">Uskoro</span>`;
             }
 
+            a.innerHTML = contentHtml;
+
             a.onclick = (e) => {
-                // Optional: Handle SPA-like navigation here if desired
-                // e.preventDefault();
-                // loadContent(item.id);
+                if (!isImplemented) {
+                    e.preventDefault();
+                }
             };
             li.appendChild(a);
         }
