@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const btn = container.querySelector('button');
         
         if (audio && btn) {
+            // Store original button HTML
+            const originalBtnHtml = btn.innerHTML;
+
             // Add class for identification
             audio.classList.add('pronunciation-audio');
             
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Update UI on pause (covers manual pause, end, and programmatic pause)
             audio.addEventListener('pause', function() {
-                btn.innerHTML = '<i class="fas fa-volume-up me-2"></i> Poslušaj izgovor';
+                btn.innerHTML = originalBtnHtml;
                 btn.classList.replace('btn-success', 'btn-outline-success');
             });
         }

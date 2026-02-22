@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdest - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Abdest</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_02.mp3"></div>
+
+                                <p class="fw-bold">Šta je to abdest?</p>
+                                <p>Abdest je posebno vjersko pranje koje se uzima radi klanjanja namaza i učenja Kur'ana.</p>
+
+                                <p class="fw-bold">Kako se uzima abdest?</p>
+                                <p>Abdest se uzima čistom vodom i s Bismillom.</p>
+
+                                <p class="fw-bold">Kakav je propis uzimanje abdesta?</p>
+                                <p>Uzimanje abdesta može biti farz, vadžib ili mendub:</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-exclamation-circle text-success fa-lg mx-3"></i>
+                                        <span><strong>Farz (obavezno)</strong> je uzeti abdest radi obavljanja namaza i sedžde i tilaveta.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-exclamation-triangle text-success fa-lg mx-3"></i>
+                                        <span><strong>Vadžib (obavezno)</strong> je uzeti abdest radi obavljanja tavafa (obilaska oko Ka'be).</span>
+                                    </div>
+                                    <div class="p-2 rounded bg-light border-start border-success border-4 shadow-sm">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                            <span class="fw-bold">Mendub (lijepo) je abdest uzeti:</span>
+                                        </div>
+                                        <ul class="list-unstyled mt-2 ms-5 mb-0">
+                                            <li class="mb-2 d-flex align-items-center"><i class="fas fa-bed text-success me-3" style="width: 20px; text-align: center;"></i> pred spavanje,</li>
+                                            <li class="mb-2 d-flex align-items-center"><i class="fas fa-sun text-success me-3" style="width: 20px; text-align: center;"></i> poslije sna,</li>
+                                            <li class="mb-2 d-flex align-items-center"><i class="fas fa-sync-alt text-success me-3" style="width: 20px; text-align: center;"></i> kad god se abdest pokvari,</li>
+                                            <li class="mb-2 d-flex align-items-center"><i class="fas fa-comment-slash text-success me-3" style="width: 20px; text-align: center;"></i> poslije nedolična i bestidna govora, i</li>
+                                            <li class="mb-0 d-flex align-items-center"><i class="fas fa-exclamation-circle text-success me-3" style="width: 20px; text-align: center;"></i> iza svakog griješnog djela te prekomjernog i glasnog smijanja.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Šta peremo pri uzimanju abdesta?</p>
+                                <p>Pri uzimanju abdesta peremo:</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-hands-wash text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Operemo ruke do iza šaka (3 puta)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-lips text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Isperemo usta (3 puta)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-nose text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Isperemo nos (3 puta)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-face-smile text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Operemo lice (3 puta)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/arm.svg" class="mx-3" width="24" height="24" alt="arm">
+                                        <span class="ms-2">Operemo ruke do iza lakata, desnu pa lijevu (3 puta)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/head.svg" class="mx-3" width="24" height="24" alt="head">
+                                        <span class="ms-2">Potaremo mokrom rukom najmanje četvrtinu glave (1 put)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-ear-listen text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Potaremo mokrim rukama uši (1 put)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-user text-success fa-lg mx-3"></i>
+                                        <span class="ms-2">Potaremo mokrim rukama vrat (1 put)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/foot.svg" class="mx-3" width="24" height="24" alt="foot">
+                                        <span class="ms-2">Operemo noge do iza članaka, desnu pa lijevu (3 puta)</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koji su abdestki farzovi (šartovi)?</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-smile text-success fa-lg mx-3"></i>
+                                        <span>Lice umiti (od uha do uha i od kose do pod bradu).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/arm.svg" class="mx-3" width="24" height="24" alt="arm">
+                                        <span>Ruke oprati do iza lakata.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/head.svg" class="mx-3" width="24" height="24" alt="head">
+                                        <span>Potrati mokrom rukom najmanje četvrtinu glave (mesh).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <img src="../img/foot.svg" class="mx-3" width="24" height="24" alt="foot">
+                                        <span>Noge oprati do iza članaka i sve to činiti po redu.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Šta kvari abdest?</p>
+                                <div class="d-flex flex-column gap-2 mb-0">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-danger border-4 shadow-sm hover-card">
+                                        <i class="fas fa-toilet text-danger fa-lg mx-3"></i>
+                                        <span>Sve što izađe na prirodne otvore (prednji i zadnji).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-danger border-4 shadow-sm hover-card">
+                                        <i class="fas fa-bed text-danger fa-lg mx-3"></i>
+                                        <span>Duboki san u kojem se izgubi svijest.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-danger border-4 shadow-sm hover-card">
+                                        <i class="fas fa-hand-paper text-danger fa-lg mx-3"></i>
+                                        <span>Dodirivanje polnog organa (bez prekrivanja).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-danger border-4 shadow-sm hover-card">
+                                        <i class="fas fa-tint text-danger fa-lg mx-3"></i>
+                                        <span>Izlazak gnoja, sukrvice i krvi (osim kod žena u vrijeme istihade).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-danger border-4 shadow-sm hover-card">
+                                        <i class="fas fa-dizzy text-danger fa-lg mx-3"></i>
+                                        <span>Gubljenje svijesti, bez obzira da li se radilo o ludilu, padanju u nesvijest, pijanstvu ili gubljenju svijesti pod uticajem jakih lijekova.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dodatna objašnjenja (za veći uzrast) -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#objasnjenjaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="objasnjenjaCollapse">
+                            <span><i class="fas fa-info-circle me-2"></i> Dodatna objašnjenja (za veći uzrast) <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="objasnjenjaCollapse" class="collapse">
+                            <div class="card-body">
+                                <p class="fw-bold">Kada je obavezno uzeti abdest (farz)?</p>
+                                <p>Obavezno je uzeti abdest radi namaza i tavafa.</p>
+                                <p>Neki učenjaci smatraju da nije dozvoljeno dodirivati Mushaf bez abdesta, a kao dokaz za to uzimaju riječi Uzvišenog:</p>
+                                <div class="quote-box quote-quran">
+                                    <div class="d-flex">
+                                        <i class="fas fa-quran quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Dodirnuti ga smiju samo oni koji su čisti."</p>
+                                            <div class="quote-footer">— El-Vaki'a, 79.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Kur'an smije dotaknuti samo onaj ko je čist."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold mt-4">Kada je lijepo uzeti abdest (mustehab)?</p>
+                                <p>Mustehab je uzeti abdest:</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-book-reader text-success fa-lg mx-3"></i>
+                                        <span>Radi učenja Kur'ana i ezana.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-bed text-success fa-lg mx-3"></i>
+                                        <span>Pred spavanje.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-utensils text-success fa-lg mx-3"></i>
+                                        <span>Kad je čovjek džunub a hoće da jede, pije ili ponovo opći prije kupanja.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Abdest žene koja ima istihadu</p>
+                                <p>Fatima bint Ebi Hubejsa došla je Vjerovjesniku, s.a.v.s., i rekla:</p>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Ja sam žena koja ima istihadu i nisam čista. Da li da obavljam namaz?" Rekao joj je: "Ne. To je pranje i nije hajd. Nemoj klanjati u periodu tvoga hajda, zatim se okupaj i abdesti za svaki namaz, a potom klanjaj, makar ti krv kapala na tvoju prostirku."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Ona koja ima istihadu abdestit će se za svaki namaz."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-check text-success fa-lg mx-3"></i>
+                                        <span>Žena koja ima istihadu može spojiti da klanja dva namaza s jednim abdestom.</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Koliko namaza možemo klanjati s jednim abdestom?</p>
+                                <p>S jednim abdestom možemo klanjati više namaza, ukoliko nam se ne desi nešto što kvari abdest.</p>
+
+                                <p class="fw-bold">Šta je to mesh?</p>
+                                <p>Mesh je potiranje mokrom rukom po zavoju kada neki dio tijela zbog bolesti ili povrede ne možemo oprati.</p>
+                                <div class="quote-box quote-quran">
+                                    <div class="d-flex">
+                                        <i class="fas fa-quran quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"O vjernici, kada hoćete da namaz obavite, lica svoja i ruke svoje do iza lakta operite - a dio glava svojih potarite - i noge svoje do iza članaka."</p>
+                                            <div class="quote-footer">— El-Maide, 6.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Nikom od vas neće biti primljen namaz sve dok se ne abdesti."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold mt-4">Nabroj abdestke sunnete?</p>
+                                <div class="d-flex flex-column gap-2 mb-2">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Na početku proučiti Bismillu.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Oprati šake tri puta.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Madmada i istinšak (ispiranje usta/grla i nosa).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Rastavljanje brade prstima i rastavljanje prstiju pri pranju.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Potiranje ušiju nakon potiranja vrata.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Počinjanje s desnom stranom.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Kod pranja ruku i nogu oprati više nego što je potrebno.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Umjerenost u trošenju vode.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-star text-success fa-lg mx-3"></i>
+                                        <span>Učenje dove nakon abdesta: EŠHEDU EN LA ILAHE ILLALLAH VE ENNE MUHAMMEDEN ABDUHU VE RESULUHU</span>
+                                    </div>
+                                </div>
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Niko od vas ko u potpunosti obavi abdest, a potom prouči: Nema drugog boga osim Allaha i da je Muhammed Allahov rob i Njegov poslanik, a da mu se neće otvoriti osmera džennetska vrata, gdje će ući (u Džennet) s kojih god vrata želi."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-3 rounded-3 bg-light border border-success border-opacity-25 mt-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-lightbulb text-success me-2"></i>
+                                        <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti</h6>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>U toku abdesta dozvoljen je razgovor i u hadisima se to ne zabranjuje.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Nema nikakve osnove u hadisu za učenje posebnih dova pri pranju svakog dijela tijela.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Ako neko posumnja koliko je puta nešto oprao, uzet će da je manje oprao.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Kana ili knja ne utiče na ispravnost abdesta.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Dozvoljeno je zatražiti pomoć od drugoga pri uzimanju abdesta (tj. da ti neko poljeva).</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Dozvoljeno je nakon abdesta obrisati se čistim peškirom, a sunnet je ne brisati se.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Dozvoljeno je grijanje vode za abdest.</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-info-circle text-success me-3" style="width: 20px; text-align: center;"></i>
+                                        <span>Ako se na dijelovima tijela nađe nešto što sprječava dolazak vode na to mjesto, ili nešto što se mora oprati (npr. lak na noktima), abdest neće biti ispravan.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detaljan opis sa slikama i videom -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#detaljanOpisCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="detaljanOpisCollapse">
+                            <span><i class="fas fa-photo-video me-2"></i> Detaljan opis sa slikama i videom <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="detaljanOpisCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-12">
+                                        <div class="p-3 rounded-3 border bg-light d-flex align-items-center">
+                                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-info"></i>
+                                            </div>
+                                            <p class="mb-0">Pred samo uzimanje abdesta donesemo odluku da ćemo se, u ime Allaha a radi obavljanja namaza, abdestiti i proučiti Bismillu.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_01.jpg" alt="Abdest korak 1" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">1</span>
+                                                <div>Operemo ruke do iza šaka (3 puta)
+                                                    <div class="small text-muted mt-1">Treba voditi računa da voda dođe do svih dijelova tijela, te treba dobro trljati između prstiju.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_02.jpg" alt="Abdest korak 2" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">2</span>
+                                                <div>Isperemo usta, grlo i nos (3 puta)
+                                                    <div class="small text-muted mt-1">Desnom rukom ispiramo usta i grlo, a lijevom dobro ispiremo nos. Pravilno ispiranje nosa sprečava pojavu bolesti kao što su upale sinusa i krajnika.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_03.jpg" alt="Abdest korak 3" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">3</span>
+                                                <div>Operemo lice (3 puta)
+                                                    <div class="small text-muted mt-1">Lice se pere od uha do uha i od mjesta gdje niče kosa iznad čela pa do pod bradu. Pranje lica je farz kod abdesta i treba dobro voditi računa da se cijelo lice dobro opere.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_04.jpg" alt="Abdest korak 4" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">4</span>
+                                                <div>Operemo ruke do iza lakata (3 puta)
+                                                    <div class="small text-muted mt-1">Prvo se pere desna pa lijeva ruka. Ruka se pere do iznad lakta. Neki ne vode računa o laktovima te im laktovi ostanu suhi. Pranje ruku do iza lakata je farz i o tome treba voditi računa.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_05.jpg" alt="Abdest korak 5" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">5</span>
+                                                <div>Potaremo mokrom rukom četvrtinu glave (1 put)
+                                                    <div class="small text-muted mt-1">Potiranje glave je farz. Vrši se jednom. Mokrom rukom se potire četvrtina glave, a može i cijela. Prsti se rašire i samo provuku kroz kosu.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_06.jpg" alt="Abdest korak 6" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">6</span>
+                                                <div>Potaremo mokrim rukama uši (1 put)
+                                                    <div class="small text-muted mt-1">Potiranje ušiju se čini tako što se mali prsti stave u unutrašnjost ušiju, a palčevima se samo pređe preko vanjskog dijela ušiju.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_07.jpg" alt="Abdest korak 7" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">7</span>
+                                                <div>Potaremo mokrim rukama vrat (1 put)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <div class="p-3 rounded-3 border bg-light h-100">
+                                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden border bg-white mb-3 p-2">
+                                                <img src="img/abdest_08.jpg" alt="Abdest korak 8" class="w-100 h-100 object-fit-contain">
+                                            </div>
+                                            <div class="d-flex align-items-start">
+                                                <span class="badge bg-success rounded-pill me-2">8</span>
+                                                <div>Operemo noge do iza članaka (3 puta)
+                                                    <div class="small text-muted mt-1">Pranje nogu je farz. Prvo se pere desna pa lijeva noga.</div>
+                                                    <div class="small text-muted mt-2">Treba paziti:</div>
+                                                    <ul class="list-unstyled small text-muted mb-0 ms-3">
+                                                        <li><i class="fas fa-angle-right text-success me-2"></i> da ne ostane suho između prstiju,</li>
+                                                        <li><i class="fas fa-angle-right text-success me-2"></i> da se noge operu do iznad članaka, i</li>
+                                                        <li><i class="fas fa-angle-right text-success me-2"></i> da ne ostanu suhe pete.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mx-auto" style="max-width: 900px;">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden border w-100">
+                                        <iframe src="https://www.youtube.com/embed/v-bjS0xUnV0" title="Abdest - video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>

@@ -59,19 +59,19 @@ const menuData = [
         id: "ibadat",
         url: "ibadat/index.html",
         icon: "fas fa-pray",
-        comingSoon: true,
         children: [
-            { title: "Ettehijat", id: "ettehijat", icon: "fas fa-chair" },
-            { title: "Abdest", id: "abdest", icon: "fas fa-water" },
+            { title: "Ettehijat", id: "ettehijat", url: "ibadat/ettehijat.html", icon: "fas fa-chair" },
+            { title: "Abdest", id: "abdest", url: "ibadat/abdest.html", icon: "fas fa-water" },
             {
                 title: "Uvjeti za namaz",
                 id: "uvjeti_namaz",
+                url: "ibadat/uvjeti_za_namaz.html",
                 icon: "fas fa-clipboard-check",
                 children: [
-                    { title: "1. uvjet za namaz", id: "uvjet_1" },
-                    { title: "2. uvjet za namaz", id: "uvjet_2" },
-                    { title: "3. uvjet za namaz", id: "uvjet_3" },
-                    { title: "4. uvjet za namaz", id: "uvjet_4" },
+                    { title: "1. uvjet za namaz", id: "uvjet_1", url: "ibadat/uvjet_1.html" },
+                    { title: "2. uvjet za namaz", id: "uvjet_2", url: "ibadat/uvjet_2.html" },
+                    { title: "3. uvjet za namaz", id: "uvjet_3", url: "ibadat/uvjet_3.html" },
+                    { title: "4. uvjet za namaz", id: "uvjet_4", url: "ibadat/uvjet_4.html" },
                     { title: "5. uvjet za namaz", id: "uvjet_5" },
                     { title: "6. uvjet za namaz", id: "uvjet_6" }
                 ]

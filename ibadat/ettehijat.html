@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ettehijat - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Local FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Ettehijat</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lesson Card -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section (Full Lesson) -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_01.mp3"></div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        
+                                        <!-- Ettehijat -->
+                                        <h4 class="text-success border-bottom pb-2 mb-3">Ettehijat</h4>
+                                        <div class="text-center my-4 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                            <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                                ٱلتَّحِيَّاتُ لِلَّٰهِ وَٱلصَّلَوَاتُ وَٱلطَّيِّبَاتُ<br>
+                                                ٱلسَّلَامُ عَلَيْكَ أَيُّهَا ٱلنَّبِيُّ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ<br>
+                                                ٱلسَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ ٱللَّٰهِ ٱلصَّالِحِينَ<br>
+                                                أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ<br>
+                                                وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+                                            </p>
+                                            <p class="lead fst-italic" style="color: #2E7D32;">
+                                                Ettehijatu lillahi ve s salavatu ve ttajjibatu<br>
+                                                Esselamu '<span class="text-success fw-semibold">alejke</span> ejjuhennebijju ve rahmetullahi ve berekatuhu<br>
+                                                Esselamu '<span class="text-success fw-semibold">alejna</span> ve 'ala ibadillahi ssalihin<br>
+                                                Ešhedu en la ilahe illellah<br>
+                                                Ve ešhedu enne Muhammeden 'abduhu ve resuluhu
+                                            </p>
+                                            <p class="text-muted mt-3">
+                                                (Naše počasti, poštovanja i dobra djela pripadaju samo Allahu. Neka ti je pozdrav milost i Allahov blagoslov Božiji poslaniče! Neka je Božiji mir i blagoslov nama i svim dobrim Allahovim robovima. Svjedočim da nema boga osim Allaha i da je Muhamed božiji rob i Božiji poslanik.)
+                                            </p>
+
+                                            <!-- Player -->
+                                            <div class="mt-3 pronunciation-player-container d-flex justify-content-center">
+                                                <audio src="audio/ettehijat.mp3"></audio>
+                                                <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                    <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Salavati -->
+                                        <h4 class="text-success border-bottom pb-2 mb-3 mt-5">Salavati</h4>
+                                        <div class="text-center my-4 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                            <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                                ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ<br>
+                                                كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ<br>
+                                                إِنَّكَ حَمِيدٌ مَجِيدٌ<br><br>
+                                                ٱللَّٰهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ<br>
+                                                كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ<br>
+                                                إِنَّكَ حَمِيدٌ مَجِيدٌ
+                                            </p>
+                                            <p class="lead fst-italic" style="color: #2E7D32;">
+                                                Allahumme <span class="text-success fw-semibold">salli</span>' ala Muhammedin ve' ala ali Muhemmed<br>
+                                                Kema <span class="text-success fw-semibold">sallejte</span>' ala Ibrahime ve'ala ali Ibrahime<br>
+                                                Inneke hamidum medžid<br><br>
+                                                Allahumme <span class="text-success fw-semibold">barik</span>' ala Muhammedin ve' ala ali Muhemmed<br>
+                                                Kema <span class="text-success fw-semibold">barekte</span>' ala Ibrahime ve'ala ali Ibrahime<br>
+                                                Inneke hamidum medžid
+                                            </p>
+                                            <p class="text-muted mt-3">
+                                                (Bože moj, blagoslovi Muhameda i rod Muhamedov kao što si blagoslovio Ibrahima i rod Ibrahimov. Zaista si ti hvaljen i slavljen. Bože moj, obaspi blagodatima Muhameda i rod Muhamedov kao što si blagodatima obasuo Ibrahima i rod Ibrahimov. Zaista si ti hvaljen i slavljen.)
+                                            </p>
+
+                                            <!-- Player -->
+                                            <div class="mt-3 pronunciation-player-container d-flex justify-content-center">
+                                                <audio src="audio/salavati.mp3"></audio>
+                                                <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                    <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Dove prije selama-->
+                                        <h4 class="text-success border-bottom pb-2 mb-3 mt-5">Dove prije selama</h4>
+                                        <div class="text-center my-4 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                            <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                                ٱلسَّلَامُ رَبَّنَا آتِنَا فِي ٱلدُّنْيَا حَسَنَةً وَفِي ٱلْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ<br>
+                                                رَبَّنَا ٱغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ
+                                            </p>
+                                            <p class="lead fst-italic" style="color: #2E7D32;">
+                                                Allahumme Rabbena atina fiddunja haseneten ve fil 'ahireti haseneten vekina 'azabennar<br>
+                                                Rabena gfir li velivalidejje ve lil mu'minine jevme jekumul hisab 
+                                            </p>
+                                            <p class="text-muted mt-3">
+                                                (Gospodaru naš, daj nam dobro na ovom i na budućem svijetu i sačuvaj nas džehenemske patnje. Gospodaru naš, pomozi meni, mojim roditeljima i svim mu'minima na Sudnjem danu.)
+                                            </p>
+
+                                            <!-- Player -->
+                                            <div class="mt-3 pronunciation-player-container d-flex justify-content-center">
+                                                <audio src="audio/dove_prije_selama.mp3"></audio>
+                                                <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                    <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selam -->
+                                        <h4 class="text-success border-bottom pb-2 mb-3 mt-5">Selam</h4>
+                                        <div class="text-center my-4 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                            <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                                ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ<br>
+                                                ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ
+                                            </p>
+                                            <p class="lead fst-italic" style="color: #2E7D32;">
+                                                Es selamu alejkum ve rahmetullahi!<br>
+                                                Es selamu alejkum ve rahmetullahi!
+                                            </p>
+                                            <p class="text-muted mt-3">
+                                                (Neka je mir s vama i Allahova milost!)
+                                            </p>
+
+                                            <!-- Player -->
+                                            <div class="mt-3 pronunciation-player-container d-flex justify-content-center">
+                                                <audio src="audio/selami.mp3"></audio>
+                                                <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                    <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Dova poslije selama -->
+                                        <h4 class="text-success border-bottom pb-2 mb-3 mt-5">Dova poslije selama</h4>
+                                        <div class="text-center my-4 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                            <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 1.8; color: #000;">
+                                                ٱللَّٰهُمَّ أَنْتَ ٱلسَّلَامُ وَمِنْكَ ٱلسَّلَامُ<br>
+                                                تَبَارَكْتَ يَا ذَا ٱلْجَلَالِ وَٱلْإِكْرَامِ
+                                            </p>
+                                            <p class="lead fst-italic" style="color: #2E7D32;">
+                                                Allahume ente sselamu ve minke sselam,<br>
+                                                Tebarekte ja zel dželalive l ikram
+                                            </p>
+                                            <p class="text-muted mt-3">
+                                                (Bože! Ti si izvor sreće i spasa i od Tebe je svakome spas. Tebe veličamo i hvalimo, Gospodaru veličine i plemenitosti!)
+                                            </p>
+
+                                            <!-- Player -->
+                                            <div class="mt-3 pronunciation-player-container d-flex justify-content-center">
+                                                <audio src="audio/dove_poslije_selama.mp3"></audio>
+                                                <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                    <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+    <script src="../js/pronunciation-player.js"></script>
+</body>
+</html>
