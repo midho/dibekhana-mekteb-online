@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusul - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Gusul: vjersko kupanje</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_16.mp3"></div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2 text-success"></i> Šta je to gusul?</h5>
+                                        <p class="ps-4 border-start border-success border-3">
+                                            Gusul je obavezno vjersko kupanje koje je naređeno kada smo nečisti a preporučeno sunetom jednom sedmično i kada smo čisti.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2 text-success"></i> Kako se uzima gusul?</h5>
+                                        <div class="ps-4 border-start border-success border-3">
+                                            <p>Gusul se uzima čistom vodom. Prvo treba proučiti Bismillu, a zatim:</p>
+                                            
+                                            <div class="d-flex flex-column gap-2 mt-3 mb-2">
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-lips text-success fa-lg mx-3"></i>
+                                                    <span>Izaprati usta i grlo tri puta <strong>(obavezno-farz)</strong></span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-nose text-success fa-lg mx-3"></i>
+                                                    <span>Izaprati nos tri puta <strong>(obavezno-farz)</strong></span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-shower text-success fa-lg mx-3"></i>
+                                                    <span>Dobro oprati cijelo tijelo <strong>(obavezno-farz)</strong></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>
