@@ -72,8 +72,8 @@ const menuData = [
                     { title: "2. uvjet za namaz", id: "uvjet_2", url: "ibadat/uvjet_2.html" },
                     { title: "3. uvjet za namaz", id: "uvjet_3", url: "ibadat/uvjet_3.html" },
                     { title: "4. uvjet za namaz", id: "uvjet_4", url: "ibadat/uvjet_4.html" },
-                    { title: "5. uvjet za namaz", id: "uvjet_5" },
-                    { title: "6. uvjet za namaz", id: "uvjet_6" }
+                    { title: "5. uvjet za namaz", id: "uvjet_5", url: "ibadat/uvjet_5.html" },
+                    { title: "6. uvjet za namaz", id: "uvjet_6", url: "ibadat/uvjet_6.html" }
                 ]
             },
             {
@@ -87,9 +87,9 @@ const menuData = [
                     { title: "5. islamski šart", id: "islamski_5" }
                 ]
             },
-            { title: "Ezan i ikamet", id: "ezan", icon: "fas fa-volume-up" },
-            { title: "Gusul", id: "gusul", icon: "fas fa-shower" },
-            { title: "Tejemum", id: "tejemum", icon: "fas fa-hands" },
+            { title: "Ezan i ikamet", id: "ezan", url: "ibadat/ezan_ikamet.html", icon: "fas fa-volume-up" },
+            { title: "Gusul", id: "gusul", url: "ibadat/gusul.html", icon: "fas fa-shower" },
+            { title: "Tejemum", id: "tejemum", url: "ibadat/tejemum.html", icon: "fas fa-hands" },
             {
                 title: "Namazi",
                 id: "namazi",
@@ -115,7 +115,7 @@ const menuData = [
                     { title: "Posljednje sjedenje", id: "sjedenje" }
                 ]
             },
-            { title: "Islam i muslimani", id: "ibadat_islam", icon: "fas fa-users" },
+            { title: "Islam i muslimani", id: "ibadat_islam", url: "ibadat/islam_muslimani.html", icon: "fas fa-users" },
             { title: "Ulazak u wc", id: "wc", icon: "fas fa-restroom" },
             { title: "Šta kvari namaz?", id: "kvari_namaz", icon: "fas fa-ban" },
             { title: "Teravija", id: "teravija", icon: "fas fa-moon" },

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejemum - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Tejemum</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_17.mp3"></div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2 text-success"></i> Šta je tejemmum ?</h5>
+                                        <div class="ps-4 border-start border-success border-3">
+                                            <p>Tejemmum je simbolično čišćenje zemljom koje se vrši u slučaju:</p>
+                                            <div class="d-flex flex-column gap-2 mt-2 mb-2">
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-tint-slash text-success fa-lg mx-3"></i>
+                                                    <span>Kada je u namaskom vremenu nemoguće doći do vode.</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-tint text-success fa-lg mx-3"></i>
+                                                    <span>Kada je mala količina vode potrebnija za piće.</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-shower text-success fa-lg mx-3"></i>
+                                                    <span>Kada se u slučaju potrebe nije moguće okupati.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2 text-success"></i> Kako se uzima tejemmum ?</h5>
+                                        <div class="ps-4 border-start border-success border-3">
+                                            <p>Tejemmum se uzima tako što:</p>
+                                            <div class="d-flex flex-column gap-2 mt-2 mb-2">
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <img src="../img/person_speak.svg" class="mx-3" width="24" height="24" alt="speak">
+                                                    <span>Proučimo Bismilu <strong>(Bismillahi Rrahmani Rrahim)</strong>.</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <img src="../img/mountain.svg" class="mx-3" width="24" height="24" alt="mountain">
+                                                    <span>Dlanovima dotaknemo čistu suhu zemlju i potaremo lice.</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-hands text-success fa-lg mx-3"></i>
+                                                    <span>Ponovo dlanovima dotaknemo zemlju i potaremo ruke do iza lakata <strong>(lijevom desnu a desnom lijevu)</strong>.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-exchange-alt me-2 text-success"></i> Šta tejemmum zamjenjuje?</h5>
+                                        <p class="ps-4 border-start border-success border-3">
+                                            Tejemmum zamjenjuje <strong>abdest</strong> i <strong>gusul</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Priča: Amidžin tejemum -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#pricaCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="pricaCollapse">
+                            <span><i class="fas fa-book-reader me-2"></i> Amidžin tejemum <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="pricaCollapse" class="collapse">
+                            <div class="card-body">
+                                <div class="mb-4 ps-3 border-start border-success border-3">
+                                    <p class="mb-2">Jednog jutra Mehmed je sa svojim amidžom Hasanom krenuo u bašču. Amidža je okopavao povrće, a Mehmed je sakupljao korov koji je amidža izbacivao iz bašče. Dan je bio sunčan, amidža je želio što više uraditi posla tog dana, jer njegova bašča nije bila blizu kuće, pa mu nije bilo lahko često dolaziti. Posao još nije bio okončan, a začu se ezan sa obližnje munare. Amidža zastade, ostavi motiku i obrati se Mehmedu:</p>
+                                    <p class="mb-2">— Mehmede sine, ima li još vode, ili si je svu potrošio?</p>
+                                    <p class="mb-2">— Sve smo popili.</p>
+                                    <p class="mb-2">— Znam ja, znam, malo si dao i žednom paradajzu.</p>
+                                    <p class="mb-2">A onda amidža pomilova Mehmeda po kosi, prouči bismillu, zatim dlanovima dotaknu čistu suhu zemlju i potra rukama po licu. Ponovo dlanovima dotaknu zemlju, lijevom potra desnu ruku, a desnom lijevu do iza lakata i onda ode klanjati podne-namaz. Mehmed se čudio. Majka mu o ovome abdestu ništa nije govorila. Kada su krenuli kući, Mehmed amidžu obasu pitanjima...</p>
+                                </div>
+
+                                <div class="row g-4 mt-2">
+                                    <!-- Razgovor -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light border border-success border-opacity-25 rounded h-100">
+                                            <p class="fw-bold text-success mb-3"><i class="fas fa-comments me-2"></i> Razgovor</p>
+                                            <ol class="ps-3 mb-0">
+                                                <li class="mb-2">O kome se govori u ovoj kratkoj priči?</li>
+                                                <li class="mb-2">Šta su u bašči radili amidža i Mehmed?</li>
+                                                <li class="mb-3">
+                                                    Mehmed je vrijedan dječak. Nađi mjesto u priči kojim se potvrđuje ova dječakova osobina. (podcrtaj pogrešan odgovor)
+                                                    <ul class="list-unstyled ms-3 mt-2">
+                                                        <li>○ vrijedan radnik</li>
+                                                        <li>○ dobar vjernik</li>
+                                                        <li>○ ljutit i namrgođen</li>
+                                                        <li>○ dobar i nježan amidža</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mb-2">Šta je Mehmed naučio od svog amidže?</li>
+                                                <li class="mb-2">Objasni šta je tejemum.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Nauči i primijeni -->
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light border border-success border-opacity-25 rounded h-100">
+                                            <p class="fw-bold text-success mb-3"><i class="fas fa-check-circle me-2"></i> Nauči i primijeni</p>
+                                            <ul class="ps-3 mb-0 lh-lg">
+                                                <li class="mb-2">Tejemum je simbolično čišćenje zemljom.</li>
+                                                <li class="mb-2">Ovako se čistimo kad, u namaskom vaktu, ne možemo doći do vode, ili ako vode imamo malo, a ona nam je potrebna za piće.</li>
+                                                <li class="mb-2">Kad uzimaš tejemum prouči bismillu i srcem odluči da uzimaš tejemum radi klanjanja namaza i učenja Kur'ana.</li>
+                                                <li class="mb-2">Zatim dlanovima dotakni čistu suhu zemlju i potari rukama po licu.</li>
+                                                <li class="mb-2">Ponovo dotakni zemlju, lijevom potari desnu ruku, a desnom lijevu do iza lakata.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text-muted fst-italic small text-end mt-4 mb-0">
+                                    (Vjeronauka, za 2. razred osnovne škole, str. 63-64.)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>

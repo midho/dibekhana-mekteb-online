@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezan i ikamet - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Ezan i ikamet: poziv na namaz</h2>
+                </div>
+                
+                <div id="main-content">
+
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_15.mp3"></div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2"></i> Čime se oglašava početak namaskog vremena?</h5>
+                                        <p class="ps-4 border-start border-success border-3">
+                                            Početak namaskog vremena oglašava se <strong>ezanom</strong>.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2"></i> Šta je ezan?</h5>
+                                        <p class="ps-4 border-start border-success border-3">
+                                            Ezan je <strong>poziv na zajednički namaz u džematu</strong>.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2"></i> Ko je dužan učiti ezan, kako i kada?</h5>
+                                        <p class="ps-4 border-start border-success border-3">
+                                            Ezan su dužni učiti samo <strong>muškarci</strong> i to <strong>početkom svakog namaskog vremena</strong>, a uče ga malo jačim i razvučenim glasom.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2"></i> Ko je dužan učiti ikamet, kako i kada?</h5>
+                                        <div class="ps-4 border-start border-success border-3">
+                                            <p>Ikamet su dužna učiti <strong>muška lica</strong> i to <strong>pred nijet farz-namaza</strong>.</p>
+                                            <div class="alert alert-warning d-flex align-items-center mt-2 mb-0">
+                                                <i class="fas fa-info-circle fa-2x me-3"></i>
+                                                <div>Učenje ikameta je <strong>sunnet</strong>. Uči se kao i ezan, stojeći, samo nešto brže.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ezan -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#ezanCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="ezanCollapse">
+                            <span><i class="fas fa-volume-up me-2"></i> Ezan</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="ezanCollapse" class="collapse">
+                            <div class="card-body">
+
+                                <!-- Ezan text box -->
+                                <div class="text-center my-3 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                    <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 2; color: #000; direction: rtl;">
+                                        اَللّٰهُ أَكْبَرُ اَللّٰهُ أَكْبَرُ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        حَيَّ عَلَى الصَّلَاةِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        حَيَّ عَلَى الْفَلَاحِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        اَللّٰهُ أَكْبَرُ اَللّٰهُ أَكْبَرُ <span class="fs-5 text-muted" style="direction: ltr;">(1x)</span><br>
+                                        لَا إِلٰهَ إِلَّا اللّٰهُ <span class="fs-5 text-muted" style="direction: ltr;">(1x)</span>
+                                    </p>
+                                    <p class="lead fst-italic mb-2" style="color: #2E7D32;">
+                                        Allahu ekber, Allahu ekber <span class="fs-6 text-muted">(2x)</span><br>
+                                        Ešhedu en la ilahe illellah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Ešhedu enne Muhammeden resulullah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Hajje ale-s-salah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Hajje ale-l-felah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Allahu ekber, Allahu ekber <span class="fs-6 text-muted">(1x)</span><br>
+                                        La ilahe illellah <span class="fs-6 text-muted">(1x)</span>
+                                    </p>
+                                    <p class="text-muted fst-italic small mt-2 mb-3">
+                                        Bog je najveći, Bog je najveći! &bull;
+                                        Svjedočim da je samo Allah Bog! &bull;
+                                        Svjedočim da je Muhamed Allahov poslanik! &bull;
+                                        Dođite na namaz! &bull;
+                                        Dođite na spas! &bull;
+                                        Bog je najveći! &bull;
+                                        Nema boga osim Allaha!
+                                    </p>
+
+                                    <!-- Listen buttons -->
+                                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                        <div class="pronunciation-player-container">
+                                            <audio src="audio/ezan.mp3"></audio>
+                                            <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor 1
+                                            </button>
+                                        </div>
+                                        <div class="pronunciation-player-container">
+                                            <audio src="audio/ezan2.mp3"></audio>
+                                            <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                <i class="fas fa-volume-up me-2"></i> Poslušaj izgovor 2
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sabah addition -->
+                                <div class="p-3 bg-light border border-success border-opacity-25 rounded mb-3">
+                                    <p class="fw-bold text-success mb-2"><i class="fas fa-moon me-2"></i> Dodatak u sabahskom ezanu</p>
+                                    <p class="mb-1">Kod sabahskog ezana, poslije <em>Hajje ale-l-felah</em>, dodaje se:</p>
+                                    <p class="text-center fst-italic mb-1" style="font-size: 1.3rem; font-family: 'Amiri', serif; direction: rtl;">
+                                        الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ
+                                    </p>
+                                    <p class="text-center fst-italic mb-1" style="color: #2E7D32;">Es-salatu hajrun mine-n-newm! <span class="text-muted">(2x)</span></p>
+                                    <p class="text-center text-muted fst-italic small">"Bolje je klanjati nego spavati!"</p>
+                                </div>
+
+                                <!-- Between sunnet and farz -->
+                                <div class="p-3 bg-light border border-success border-opacity-25 rounded mb-3">
+                                    <p class="fw-bold text-success mb-2"><i class="fas fa-book me-2"></i> Između sunneta i farza</p>
+                                    <p class="mb-2">Između sunnet-namaza i farz-namaza lijepo je proučiti tri puta suru Ihlas (<em>Kul huwellahu ehad</em>), pa zatim ovaj kur'anski ajet:</p>
+                                    <p class="text-center fst-italic mb-1" style="color: #2E7D32;">
+                                        Subhane Rabbike Rabbi-l-'izzeti 'amma jesifun,<br>
+                                        we selamun 'ale-l-murseun,<br>
+                                        we-l-hamdu lillahi Rabbi-l-'alemin.
+                                    </p>
+                                    <p class="text-center text-muted small">(Es-Saffat, 180–182)</p>
+                                </div>
+
+                                <!-- How to follow the ezan -->
+                                <div class="p-3 bg-light border border-success border-opacity-25 rounded mb-3">
+                                    <p class="fw-bold text-success mb-2"><i class="fas fa-ear-listen me-2"></i> Kako pratiti učenje ezana?</p>
+                                    <p class="mb-2">Kada se ezan uči, treba, po mogućnosti, prekinuti svaki razgovor i rad te ponavljati za mujezinom.</p>
+                                    <p class="mb-1">Kod riječi <em>Hajje ale-s-salah</em> i <em>Hajje ale-l-felah</em> umjesto ponavljanja izgovaramo:</p>
+                                    <p class="text-center fst-italic mb-1" style="font-size: 1.2rem; font-family: 'Amiri', serif; direction: rtl;">
+                                        لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ الْعَلِيِّ الْعَظِيمِ
+                                    </p>
+                                    <p class="text-center fst-italic mb-1" style="color: #2E7D32;">La hawle vela kuwwete illa billahi-l-'alijji-l-'azim</p>
+                                    <p class="text-center text-muted fst-italic small">"Nema stanja, kretanja, niti snage, bez pomoći Allahove."</p>
+                                </div>
+
+                                <!-- Hadith -->
+                                <div class="quote-box quote-hadith">
+                                    <div class="d-flex">
+                                        <i class="fas fa-comment-dots quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Kada čujete da mujezin uči ezan, ponavljajte iste riječi za njim i donesite salavat na mene."</p>
+                                            <div class="quote-footer">— Hadis</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info d-flex align-items-start mt-3">
+                                    <i class="fas fa-info-circle fa-lg me-3 mt-1"></i>
+                                    <span>Poslije proučenog ezana prouči se posebna dova, a ko ne zna tu dovu, neka prouči Fatihu, jer Fatiha može zamijeniti svaku dovu.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ikamet -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#ikametCollapse" 
+                             aria-expanded="false" 
+                             aria-controls="ikametCollapse">
+                            <span><i class="fas fa-mosque me-2"></i> Ikamet</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="ikametCollapse" class="collapse">
+                            <div class="card-body">
+
+                                <p>Ikamet su dužna učiti <strong>muška lica</strong> i to pred nijet farz-namaza. Učenje ikameta je <strong>sunnet</strong>. Uči se kao i ezan, stojeći, samo nešto brže. Ikamet glasi ovako:</p>
+
+                                <!-- Ikamet text box -->
+                                <div class="text-center my-3 p-3 p-md-4 rounded-3 border border-success border-opacity-25 bg-light shadow-sm">
+                                    <p class="display-6 mb-3" style="font-family: 'Amiri', serif; line-height: 2; color: #000; direction: rtl;">
+                                        اَللّٰهُ أَكْبَرُ اَللّٰهُ أَكْبَرُ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        حَيَّ عَلَى الصَّلَاةِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        حَيَّ عَلَى الْفَلَاحِ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        قَدْ قَامَتِ الصَّلَاةُ <span class="fs-5 text-muted" style="direction: ltr;">(2x)</span><br>
+                                        اَللّٰهُ أَكْبَرُ اَللّٰهُ أَكْبَرُ <span class="fs-5 text-muted" style="direction: ltr;">(1x)</span><br>
+                                        لَا إِلٰهَ إِلَّا اللّٰهُ <span class="fs-5 text-muted" style="direction: ltr;">(1x)</span>
+                                    </p>
+                                    <p class="lead fst-italic mb-2" style="color: #2E7D32;">
+                                        Allahu ekber, Allahu ekber <span class="fs-6 text-muted">(2x)</span><br>
+                                        Ešhedu en la ilahe illellah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Ešhedu enne Muhammeden resulullah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Hajje ale-s-salah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Hajje ale-l-felah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Kad kametis-salah <span class="fs-6 text-muted">(2x)</span><br>
+                                        Allahu ekber, Allahu ekber <span class="fs-6 text-muted">(1x)</span><br>
+                                        La ilahe illellah <span class="fs-6 text-muted">(1x)</span>
+                                    </p>
+                                    <p class="text-muted fst-italic small mt-2 mb-3">
+                                        Bog je najveći, Bog je najveći! &bull;
+                                        Svjedočim da je samo Allah Bog! &bull;
+                                        Svjedočim da je Muhamed Allahov poslanik! &bull;
+                                        Dođite na namaz! &bull;
+                                        Dođite na spas! &bull;
+                                        Namaz počinje! &bull;
+                                        Bog je najveći! &bull;
+                                        Nema boga osim Allaha!
+                                    </p>
+
+                                    <!-- Listen button -->
+                                    <div class="d-flex justify-content-center">
+                                        <div class="pronunciation-player-container">
+                                            <audio src="audio/ikamet.mp3"></audio>
+                                            <button class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                                <i class="fas fa-volume-up me-2"></i> Poslušaj ikamet
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+    <script src="../js/pronunciation-player.js"></script>
+</body>
+</html>
