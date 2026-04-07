@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šta kvari namaz? - Dibekhana Mekteb</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar will be injected by js/menu.js -->
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Šta kvari namaz?</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_32.mp3"></div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <h5 class="fw-bold text-success"><i class="fas fa-question-circle me-2 text-success"></i> Šta kvari namaz?</h5>
+                                        <div class="ps-4 border-start border-success border-3">
+                                            <p class="mb-2">Ima mnogo stvari i stanja koja kvare namaz, tako da ga treba ponovo obaviti. Ovdje navodimo samo ono što se najčešće dešava. Tako, naprimjer, namaz će pokvariti sljedeće:</p>
+                                            <div class="d-flex flex-column gap-2 mt-0 mb-2">
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-tint-slash text-success fa-lg mx-3"></i>
+                                                    <span>ako izgubimo abdest,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-comment-slash text-success fa-lg mx-3"></i>
+                                                    <span>ako u namazu progovorimo,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-face-laugh text-success fa-lg mx-3"></i>
+                                                    <span>ako se u namazu nasmijemo toliko da nas čuje onaj ko se nalazi pored nas,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-face-sad-tear text-success fa-lg mx-3"></i>
+                                                    <span>ako u namazu zaplačemo osim ako je to iz straha od Allaha,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-people-arrows text-success fa-lg mx-3"></i>
+                                                    <span>ako muško i žensko klanjaju jedno pored drugog,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-tint text-success fa-lg mx-3"></i>
+                                                    <span>ako klanjamo s tejemumom pa u namazu saznamo da je došla voda,</span>
+                                                </div>
+                                                <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                                    <i class="fas fa-person-walking text-success fa-lg mx-3"></i>
+                                                    <span>ako u namazu radimo nešto zbog čega bi onaj ko nas posmatra pomislio da nismo u namazu.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>

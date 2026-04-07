@@ -117,9 +117,9 @@ const menuData = [
             },
             { title: "Islam i muslimani", id: "ibadat_islam", url: "ibadat/islam_muslimani.html", icon: "fas fa-users" },
             { title: "Ulazak u wc", id: "wc", url: "ibadat/ulazak_u_wc.html", icon: "fas fa-restroom" },
-            { title: "Šta kvari namaz?", id: "kvari_namaz", icon: "fas fa-ban" },
-            { title: "Teravija", id: "teravija", icon: "fas fa-moon" },
-            { title: "Džemat", id: "dzemat", icon: "fas fa-users-rays" },
+            { title: "Šta kvari namaz?", id: "kvari_namaz", url: "ibadat/kvari_namaz.html", icon: "fas fa-ban" },
+            { title: "Teravija", id: "teravija", url: "ibadat/teravija.html", icon: "fas fa-moon" },
+            { title: "Džemat", id: "dzemat", url: "ibadat/dzemat.html", icon: "fas fa-users-rays" },
             { title: "Pitanja", id: "ibadat_pitanja", icon: "far fa-question-circle" }
         ]
     },
