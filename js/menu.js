@@ -680,4 +680,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // Remove preload class after all DOM mutations are done, re-enabling transitions
+    requestAnimationFrame(() => document.body.classList.remove('preload'));
 });

@@ -22,12 +22,16 @@ body {
     align-items: stretch;
 }
 
+body.preload * {
+    transition: none !important;
+}
+
 #sidebar {
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
     background: var(--light-green);
     color: var(--text-dark);
-    transition: all 0.3s;
+    transition: margin-left 0.3s;
     border-right: 1px solid #c8e6c9;
     height: 100vh;
     position: sticky;
