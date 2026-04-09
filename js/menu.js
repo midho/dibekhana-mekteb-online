@@ -120,7 +120,7 @@ const menuData = [
             { title: "Šta kvari namaz?", id: "kvari_namaz", url: "ibadat/kvari_namaz.html", icon: "fas fa-ban" },
             { title: "Teravija", id: "teravija", url: "ibadat/teravija.html", icon: "fas fa-moon" },
             { title: "Džemat", id: "dzemat", url: "ibadat/dzemat.html", icon: "fas fa-users-rays" },
-            { title: "Pitanja", id: "ibadat_pitanja", icon: "far fa-question-circle" }
+            { title: "Pitanja", id: "ibadat_pitanja", url: "ibadat/pitanja.html", icon: "far fa-question-circle" }
         ]
     },
     {
