@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kur'an - Dibekhana Mekteb</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -12,11 +20,38 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+    <!-- Critical CSS (inline to prevent layout shift before style.css loads) -->
+    <style>
+        body.preload * { transition: none !important; }
+        #wrapper { display: flex; align-items: stretch; }
+        #sidebar {
+            min-width: 320px; max-width: 320px; background: #E8F5E9;
+            display: flex; flex-direction: column; height: 100vh;
+            position: sticky; top: 0; border-right: 1px solid #c8e6c9;
+        }
+        .sidebar-header {
+            padding: 22px 20px 20px 20px; background: #2E7D32; color: #fff;
+            flex-shrink: 0; min-height: 144px; display: flex; align-items: center;
+        }
+        #sidebar-content { flex-grow: 1; }
+        #content { width: 100%; padding: 20px; min-height: 100vh; }
+        @media (min-width: 992px) {
+            body.preload #sidebarCollapse { display: none; }
+        }
+        @media (max-width: 991px) {
+            #sidebar { margin-left: -320px; position: fixed; top: 0; left: 0; z-index: 999; }
+        }
+    </style>
 </head>
 <body class="preload">
 
-    <div id="wrapper">
-        <!-- Sidebar will be injected by js/menu.js -->
+    <div id="wrapper" style="display:flex">
+        <nav id="sidebar" style="min-width:320px;max-width:320px;background:#E8F5E9;display:flex;flex-direction:column;height:100vh;position:sticky;top:0">
+            <div class="sidebar-header" style="padding:22px 20px 20px 20px;background:#2E7D32;color:#fff;flex-shrink:0;min-height:144px;display:flex;align-items:center">
+                <h3 style="margin:0"><span style="display:flex;align-items:center;color:#fff"><span style="display:inline-block;width:100px;height:100px;flex-shrink:0;margin-right:.5rem"></span>Dibekhana Mekteb</span></h3>
+            </div>
+            <div id="sidebar-content" style="flex-grow:1;background:#E8F5E9"></div>
+        </nav>
 
         <!-- Page Content -->
         <div id="content">
@@ -45,17 +80,17 @@
                             <!-- Custom Audio Player Section -->
                             <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/akaid_lekcija_11.mp3"></div>
 
-                            <p class="fw-bold">Šta je to Kur'an?</p>
+                            <p class="fw-bold">ï¿½ta je to Kur'an?</p>
                             <p>Kur'an je posljednja Allahova objava upucena preko Muhammmeda, s.a.v.s., cijelom covjecanstvu.</p>
 
-                            <p class="fw-bold">Šta Kur'an sadrži?</p>
-                            <p>Kur'an sadrži Allahove mudrosti, propise o vjerovanju i ponašanju ljudi.</p>
+                            <p class="fw-bold">ï¿½ta Kur'an sadrï¿½i?</p>
+                            <p>Kur'an sadrï¿½i Allahove mudrosti, propise o vjerovanju i ponaï¿½anju ljudi.</p>
 
                             <p class="fw-bold">Na kojem jeziku je objavljen Kur'an?</p>
                             <p>Kur'an je objavljen na arapskom jeziku.</p>
 
-                            <p class="fw-bold">Šta su muslimani dužni prema Kur'anu?</p>
-                            <p>Muslimani su dužni:</p>
+                            <p class="fw-bold">ï¿½ta su muslimani duï¿½ni prema Kur'anu?</p>
+                            <p>Muslimani su duï¿½ni:</p>
                             <div class="d-flex flex-column gap-2 mb-4">
                                 <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
                                     <i class="fas fa-book-reader text-success fa-lg mx-3"></i>
@@ -63,7 +98,7 @@
                                 </div>
                                 <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
                                     <i class="fas fa-hands-holding-circle text-success fa-lg mx-3"></i>
-                                    <span>pridržavati se njegovih propisa i uputa.</span>
+                                    <span>pridrï¿½avati se njegovih propisa i uputa.</span>
                                 </div>
                             </div>                            </div>                        </div>
                     </div>
@@ -76,7 +111,7 @@
                              data-bs-target="#bonusCollapse" 
                              aria-expanded="false" 
                              aria-controls="bonusCollapse">
-                            <span><i class="fas fa-book-reader me-2"></i> Neki od pojmova vezanih za Kur'an (za viši uzrast) <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <span><i class="fas fa-book-reader me-2"></i> Neki od pojmova vezanih za Kur'an (za viï¿½i uzrast) <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div id="bonusCollapse" class="collapse">
@@ -94,15 +129,15 @@
                                         </tr>
                                         <tr>
                                             <th scope="row" class="text-success">Sura</th>
-                                            <td>Poglavlje Kur'ana. U Kur'anu ima 114 sura. Ajeti u Kur'anu nisu poredani redoslijedom kojim su objavljeni, nego po redoslijedu koji je objavom nareden. Muhammed, s.a.v.s, je govorio: "Upišite ovaj ajet ili suru iza tog i tog ili ispred tog i tog ajeta."</td>
+                                            <td>Poglavlje Kur'ana. U Kur'anu ima 114 sura. Ajeti u Kur'anu nisu poredani redoslijedom kojim su objavljeni, nego po redoslijedu koji je objavom nareden. Muhammed, s.a.v.s, je govorio: "Upiï¿½ite ovaj ajet ili suru iza tog i tog ili ispred tog i tog ajeta."</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row" class="text-success">Džuz</th>
-                                            <td>Dio necega, a kada se pomene u vezi s Kur'anom odnosi se na 20 kur'anskih stranica. Kur'an je sastavljen od 30 Džuzova.</td>
+                                            <th scope="row" class="text-success">Dï¿½uz</th>
+                                            <td>Dio necega, a kada se pomene u vezi s Kur'anom odnosi se na 20 kur'anskih stranica. Kur'an je sastavljen od 30 Dï¿½uzova.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row" class="text-success">Hizb</th>
-                                            <td>Pola Džuza, tj. 10 stranica i u Kur'anu ima 60 hizbova.</td>
+                                            <td>Pola Dï¿½uza, tj. 10 stranica i u Kur'anu ima 60 hizbova.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row" class="text-success">Rub'u</th>
@@ -113,25 +148,25 @@
                                             <td>Covjek koji tumaci Kur'an.</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row" class="text-success">Tedžvid</th>
+                                            <th scope="row" class="text-success">Tedï¿½vid</th>
                                             <td>Nauka koja se bavi pravilnim izgovorom harfova i ucenja Kur'ana.</td>
                                         </tr>
                                         <tr>
                                             <th scope="row" class="text-success">Kiraet</th>
-                                            <td>Nacin ucenja Kur'ana. Kur'an je objavljen na više narjecja arapskog jezika, odnosno na narjecjima najpoznatijih arapskih plemena kao što su Kurejš i Temim. Kiraeti su razlike u ucenju Kur'ana, bilo u izgovaranju pojedinih rijeci ili u razlicitosti Tedžvidskih pravila.</td>
+                                            <td>Nacin ucenja Kur'ana. Kur'an je objavljen na viï¿½e narjecja arapskog jezika, odnosno na narjecjima najpoznatijih arapskih plemena kao ï¿½to su Kurejï¿½ i Temim. Kiraeti su razlike u ucenju Kur'ana, bilo u izgovaranju pojedinih rijeci ili u razlicitosti Tedï¿½vidskih pravila.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
                             <h5 class="text-success mt-4 mb-3">Tefsir</h5>
-                            <p>U arapskom jeziku znaci pojašnjenje, komentar i objašnjenje, a u terminologiji oznacava nauku koja se bavi tumacenjem Kur'ana. Ova naucna disciplina se pojavila veoma rano jer Kur'an, ljepotom svoga izraza i mogucnosti da jedna te ista rijec ili pak ajet u sebi nose više znacenja koja nisu u potpunosti razumjeli svi ashabi iako su govorili jezikom Kur'ana i bili svjedoci njegovog objavljivanja i povoda objave.</p>
+                            <p>U arapskom jeziku znaci pojaï¿½njenje, komentar i objaï¿½njenje, a u terminologiji oznacava nauku koja se bavi tumacenjem Kur'ana. Ova naucna disciplina se pojavila veoma rano jer Kur'an, ljepotom svoga izraza i mogucnosti da jedna te ista rijec ili pak ajet u sebi nose viï¿½e znacenja koja nisu u potpunosti razumjeli svi ashabi iako su govorili jezikom Kur'ana i bili svjedoci njegovog objavljivanja i povoda objave.</p>
                             
-                            <p>Prvi mufessir kojem su se obracali bio je Allahov Poslanik koji im je Kur'an objašnjavao rijecima i postupcima. Nakon Poslanika, s.a.v.s, u poznavanju Kur'ana i njegovog tumacenja najviše se isticu cetvorica pravednih halifa: Ebu Bekr, Omer, Osman i Alija r.a., te Ibn Abbas, amidžic Allahovog Poslanika za kojeg je on molio Allaha: "Allahu, poduci ga propisima vjere i tumacenju Kur'ana''.</p>
+                            <p>Prvi mufessir kojem su se obracali bio je Allahov Poslanik koji im je Kur'an objaï¿½njavao rijecima i postupcima. Nakon Poslanika, s.a.v.s, u poznavanju Kur'ana i njegovog tumacenja najviï¿½e se isticu cetvorica pravednih halifa: Ebu Bekr, Omer, Osman i Alija r.a., te Ibn Abbas, amidï¿½ic Allahovog Poslanika za kojeg je on molio Allaha: "Allahu, poduci ga propisima vjere i tumacenju Kur'ana''.</p>
                             
-                            <p>Takode, Abdullah bin Mes'ud, Ubejj bin Ka'b, Zejd bin Sabit i mnogi drugi ashabi cija imena ne možemo pominjati zbog ogranicenosti prostora. U pocetku se ova nauka prenosila usmeno. Pojavom bilježenja i zapisivanja hadisa u zbirke ucenjaci hadisa prave posebna poglavlja u kojima navode one hadise koji pojašnjavaju kur'anske ajete. Prvi zasebni tefsiri Kur'ana, napisani su u trecem stoljecu poslije hidžre.</p>
+                            <p>Takode, Abdullah bin Mes'ud, Ubejj bin Ka'b, Zejd bin Sabit i mnogi drugi ashabi cija imena ne moï¿½emo pominjati zbog ogranicenosti prostora. U pocetku se ova nauka prenosila usmeno. Pojavom biljeï¿½enja i zapisivanja hadisa u zbirke ucenjaci hadisa prave posebna poglavlja u kojima navode one hadise koji pojaï¿½njavaju kur'anske ajete. Prvi zasebni tefsiri Kur'ana, napisani su u trecem stoljecu poslije hidï¿½re.</p>
                             
-                            <p>Najpoznatiji tefsiri su: Tefsir Ibn Džerira Et-Taberija, Tefsir Begavije, Tefsir Ibn Kesira, Tefsir Bejdavije, Tefsir Ševkanije i mnogi drugi tefsiri kojih ima na stotine i hiljade a koji se i dan danas pišu.</p>
+                            <p>Najpoznatiji tefsiri su: Tefsir Ibn Dï¿½erira Et-Taberija, Tefsir Begavije, Tefsir Ibn Kesira, Tefsir Bejdavije, Tefsir ï¿½evkanije i mnogi drugi tefsiri kojih ima na stotine i hiljade a koji se i dan danas piï¿½u.</p>
 
                             <p class="fw-bold mt-3">Svi ti tefsiri se mogu svrstati u dvije osnovne vrste:</p>
                             
@@ -141,14 +176,14 @@
                                         <i class="fas fa-scroll text-success fa-lg me-3"></i>
                                         <h5 class="mb-0 text-success">1. Tefsir El-Me'sur - Tradicionalni tefsir</h5>
                                     </div>
-                                    <p class="mb-0 ms-4 ps-2">Temelji se iskljucivo na tradiciji, odnosno tumacenju i izrekama Allahovog Poslanika, s.a.v.s, i izrekama njegovih ashaba. Najbolji primjer takvog tefsira je <strong>Tefsir Ibn Kesira</strong> koji je Kur'an protumacio na sljedeci nacin: Prvo je tumacio Kur'an Kur'anom. Ono što je ukratko spomenuto na jednom, pojašnjeno je na drugom mjestu. Ako nema ajeta koji objašnjavaju drugi ajeti, naveo je hadise koji govore na tu temu. Ako nije našao ni hadis o tome, naveo bi mišljenje ashaba, a ako ne bi ni to našao onda bi navodio svoje mišljenje.</p>
+                                    <p class="mb-0 ms-4 ps-2">Temelji se iskljucivo na tradiciji, odnosno tumacenju i izrekama Allahovog Poslanika, s.a.v.s, i izrekama njegovih ashaba. Najbolji primjer takvog tefsira je <strong>Tefsir Ibn Kesira</strong> koji je Kur'an protumacio na sljedeci nacin: Prvo je tumacio Kur'an Kur'anom. Ono ï¿½to je ukratko spomenuto na jednom, pojaï¿½njeno je na drugom mjestu. Ako nema ajeta koji objaï¿½njavaju drugi ajeti, naveo je hadise koji govore na tu temu. Ako nije naï¿½ao ni hadis o tome, naveo bi miï¿½ljenje ashaba, a ako ne bi ni to naï¿½ao onda bi navodio svoje miï¿½ljenje.</p>
                                 </div>
                                 <div class="p-3 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="fas fa-brain text-success fa-lg me-3"></i>
                                         <h5 class="mb-0 text-success">2. Racionalni tefsir (Tefsir bi-r-Re'ji)</h5>
                                     </div>
-                                    <p class="mb-0 ms-4 ps-2">Zasniva se više na onom što mufessir sam zakljuci nego na predajama. Primjer takvog tefsira je <strong>Tefsir Fahru-d-Dina Er-Razija</strong> kojeg je on nazvao "Mefatihu-l-Gajb" (Kljucevi skrivenog). Ova vrsta tefsira je pokudena.</p>
+                                    <p class="mb-0 ms-4 ps-2">Zasniva se viï¿½e na onom ï¿½to mufessir sam zakljuci nego na predajama. Primjer takvog tefsira je <strong>Tefsir Fahru-d-Dina Er-Razija</strong> kojeg je on nazvao "Mefatihu-l-Gajb" (Kljucevi skrivenog). Ova vrsta tefsira je pokudena.</p>
                                 </div>
                             </div>
 

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dužnosti prema sebi - Dibekhana Mekteb</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -12,11 +20,38 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+    <!-- Critical CSS (inline to prevent layout shift before style.css loads) -->
+    <style>
+        body.preload * { transition: none !important; }
+        #wrapper { display: flex; align-items: stretch; }
+        #sidebar {
+            min-width: 320px; max-width: 320px; background: #E8F5E9;
+            display: flex; flex-direction: column; height: 100vh;
+            position: sticky; top: 0; border-right: 1px solid #c8e6c9;
+        }
+        .sidebar-header {
+            padding: 22px 20px 20px 20px; background: #2E7D32; color: #fff;
+            flex-shrink: 0; min-height: 144px; display: flex; align-items: center;
+        }
+        #sidebar-content { flex-grow: 1; }
+        #content { width: 100%; padding: 20px; min-height: 100vh; }
+        @media (min-width: 992px) {
+            body.preload #sidebarCollapse { display: none; }
+        }
+        @media (max-width: 991px) {
+            #sidebar { margin-left: -320px; position: fixed; top: 0; left: 0; z-index: 999; }
+        }
+    </style>
 </head>
 <body class="preload">
 
-    <div id="wrapper">
-        <!-- Sidebar will be injected by js/menu.js -->
+    <div id="wrapper" style="display:flex">
+        <nav id="sidebar" style="min-width:320px;max-width:320px;background:#E8F5E9;display:flex;flex-direction:column;height:100vh;position:sticky;top:0">
+            <div class="sidebar-header" style="padding:22px 20px 20px 20px;background:#2E7D32;color:#fff;flex-shrink:0;min-height:144px;display:flex;align-items:center">
+                <h3 style="margin:0"><span style="display:flex;align-items:center;color:#fff"><span style="display:inline-block;width:100px;height:100px;flex-shrink:0;margin-right:.5rem"></span>Dibekhana Mekteb</span></h3>
+            </div>
+            <div id="sidebar-content" style="flex-grow:1;background:#E8F5E9"></div>
+        </nav>
 
         <!-- Page Content -->
         <div id="content">

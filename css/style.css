@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('../fontawesome/css/all.min.css');
+/* Google Fonts and FontAwesome loaded via <link> in HTML <head> to avoid @import waterfall */
 
 :root {
     --primary-green: #2E7D32;
@@ -20,10 +19,6 @@ body {
     display: flex;
     width: 100%;
     align-items: stretch;
-}
-
-body.preload * {
-    transition: none !important;
 }
 
 #sidebar {
@@ -132,7 +127,7 @@ ul ul ul a {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
-    transition: all 0.3s;
+    transition: margin-left 0.3s;
 }
 
 .navbar {

@@ -412,30 +412,34 @@ function initializeLayout() {
     const wrapper = document.getElementById('wrapper');
     if (!wrapper) return;
 
-    // 1. Inject Sidebar if missing
+    // 1. Get or create Sidebar
     let sidebar = document.getElementById('sidebar');
     if (!sidebar) {
         sidebar = document.createElement('nav');
         sidebar.id = 'sidebar';
-        
-        // Header
-        const header = document.createElement('div');
-        header.className = 'sidebar-header';
-        const root = window.projectRoot || "";
-        
-        // Use config if available, else fallback
-        const title = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.text : "Dibekhana Mekteb";
-        const url = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.url : "index.html";
+        wrapper.insertBefore(sidebar, wrapper.firstChild);
+    }
 
-        header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none d-flex align-items-center"><img src="${root}logo.png" alt="Logo" style="height: 100px;" class="me-2">${title}</a></h3>`;
-        sidebar.appendChild(header);
+    // 2. Replace or add Header (placeholder header has no logo, so always replace)
+    const root = window.projectRoot || "";
+    const title = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.text : "Dibekhana Mekteb";
+    const url = (typeof siteConfig !== 'undefined') ? siteConfig.sidebarHeader.url : "index.html";
 
-        // Content Container
+    const existingHeader = sidebar.querySelector('.sidebar-header');
+    const header = document.createElement('div');
+    header.className = 'sidebar-header';
+    header.innerHTML = `<h3><a href="${root}${url}" class="text-white text-decoration-none d-flex align-items-center"><img src="${root}logo.png" alt="Logo" style="height: 100px;" class="me-2">${title}</a></h3>`;
+    if (existingHeader) {
+        existingHeader.replaceWith(header);
+    } else {
+        sidebar.prepend(header);
+    }
+
+    // 3. Add Content Container if missing
+    if (!document.getElementById('sidebar-content')) {
         const contentDiv = document.createElement('div');
         contentDiv.id = 'sidebar-content';
         sidebar.appendChild(contentDiv);
-
-        wrapper.insertBefore(sidebar, wrapper.firstChild);
     }
 }
 

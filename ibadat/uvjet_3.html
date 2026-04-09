@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3. Uvjet za namaz - Dibekhana Mekteb</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -12,11 +20,38 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+    <!-- Critical CSS (inline to prevent layout shift before style.css loads) -->
+    <style>
+        body.preload * { transition: none !important; }
+        #wrapper { display: flex; align-items: stretch; }
+        #sidebar {
+            min-width: 320px; max-width: 320px; background: #E8F5E9;
+            display: flex; flex-direction: column; height: 100vh;
+            position: sticky; top: 0; border-right: 1px solid #c8e6c9;
+        }
+        .sidebar-header {
+            padding: 22px 20px 20px 20px; background: #2E7D32; color: #fff;
+            flex-shrink: 0; min-height: 144px; display: flex; align-items: center;
+        }
+        #sidebar-content { flex-grow: 1; }
+        #content { width: 100%; padding: 20px; min-height: 100vh; }
+        @media (min-width: 992px) {
+            body.preload #sidebarCollapse { display: none; }
+        }
+        @media (max-width: 991px) {
+            #sidebar { margin-left: -320px; position: fixed; top: 0; left: 0; z-index: 999; }
+        }
+    </style>
 </head>
 <body class="preload">
 
-    <div id="wrapper">
-        <!-- Sidebar will be injected by js/menu.js -->
+    <div id="wrapper" style="display:flex">
+        <nav id="sidebar" style="min-width:320px;max-width:320px;background:#E8F5E9;display:flex;flex-direction:column;height:100vh;position:sticky;top:0">
+            <div class="sidebar-header" style="padding:22px 20px 20px 20px;background:#2E7D32;color:#fff;flex-shrink:0;min-height:144px;display:flex;align-items:center">
+                <h3 style="margin:0"><span style="display:flex;align-items:center;color:#fff"><span style="display:inline-block;width:100px;height:100px;flex-shrink:0;margin-right:.5rem"></span>Dibekhana Mekteb</span></h3>
+            </div>
+            <div id="sidebar-content" style="flex-grow:1;background:#E8F5E9"></div>
+        </nav>
 
         <!-- Page Content -->
         <div id="content">
@@ -48,8 +83,8 @@
                                 <p class="fw-bold">Koji je treci uvjet za namaz?</p>
                                 <p>Treci uvjet za namaz je <strong>da budemo propisno obuceni.</strong></p>
 
-                                <p class="fw-bold">Šta to znaci?</p>
-                                <p>To znaci da žensko mora pokriti cijelo tijelo i kosu, osim lica i šaka, te nogu do clanaka, a muško da bude pristojno obuceno.</p>
+                                <p class="fw-bold">ï¿½ta to znaci?</p>
+                                <p>To znaci da ï¿½ensko mora pokriti cijelo tijelo i kosu, osim lica i ï¿½aka, te nogu do clanaka, a muï¿½ko da bude pristojno obuceno.</p>
 
                             </div>
                         </div>
@@ -69,29 +104,29 @@
                         <div id="propisnoCollapse" class="collapse">
                             <div class="card-body">
                                 <div class="mb-4 ps-3 border-start border-success border-3">
-                                    <p class="mb-2">Mehmed je bio nestrpljiv, ocito je ponovo htio majku nešto pitati. Majka je bila zauzeta poslovima, te nije ni primjecivala da je Mehmed pratio svaki njen pokret.</p>
-                                    <p class="mb-2">— Majko, rece Mehmed — ja cu uspavati sestru, a ti ceš mi objasniti ostale uvjete za namaz.</p>
-                                    <p class="mb-2">— Dobro, Mehmede, ti si stvarno uporan, a tako i treba, ti si mamin gazija.</p>
-                                    <p class="mb-2">— Za namaz se, Mehmede, moramo propisno obuci. Vidio si da ja pokrijem cijelo tijelo i kosu, osim lica, šaka i nogu do clanaka, a ti moraš samo biti pristojno obucen. Znaci, tako u šorcu ne možeš na namaz.</p>
-                                    <p class="mb-2">— Potom namaz moraš klanjati u propisanom vremenu, a pocetak tog vremena se oglašava ezanom.</p>
-                                    <p class="mb-2">— Okreneš se prema Kibli (Kabi u Meki) a onda zanijetiš, a to znaci srcem odluciš, da ceš klanjati odredeni namaz.</p>
-                                    <p class="mb-2">— Muškarci uce još ikamet pred nijet farz-namaza.</p>
-                                    <p class="mb-2">— To ceš ti s babom još utvrditi.</p>
-                                    <p class="mb-0">— Majko, molim te, sve mi pokaži. Hocu babu da iznenadim i obradujem. Ja u petak, ako Bog da, mislim s babom na džumu-namaz.</p>
+                                    <p class="mb-2">Mehmed je bio nestrpljiv, ocito je ponovo htio majku neï¿½to pitati. Majka je bila zauzeta poslovima, te nije ni primjecivala da je Mehmed pratio svaki njen pokret.</p>
+                                    <p class="mb-2">ï¿½ Majko, rece Mehmed ï¿½ ja cu uspavati sestru, a ti ceï¿½ mi objasniti ostale uvjete za namaz.</p>
+                                    <p class="mb-2">ï¿½ Dobro, Mehmede, ti si stvarno uporan, a tako i treba, ti si mamin gazija.</p>
+                                    <p class="mb-2">ï¿½ Za namaz se, Mehmede, moramo propisno obuci. Vidio si da ja pokrijem cijelo tijelo i kosu, osim lica, ï¿½aka i nogu do clanaka, a ti moraï¿½ samo biti pristojno obucen. Znaci, tako u ï¿½orcu ne moï¿½eï¿½ na namaz.</p>
+                                    <p class="mb-2">ï¿½ Potom namaz moraï¿½ klanjati u propisanom vremenu, a pocetak tog vremena se oglaï¿½ava ezanom.</p>
+                                    <p class="mb-2">ï¿½ Okreneï¿½ se prema Kibli (Kabi u Meki) a onda zanijetiï¿½, a to znaci srcem odluciï¿½, da ceï¿½ klanjati odredeni namaz.</p>
+                                    <p class="mb-2">ï¿½ Muï¿½karci uce joï¿½ ikamet pred nijet farz-namaza.</p>
+                                    <p class="mb-2">ï¿½ To ceï¿½ ti s babom joï¿½ utvrditi.</p>
+                                    <p class="mb-0">ï¿½ Majko, molim te, sve mi pokaï¿½i. Hocu babu da iznenadim i obradujem. Ja u petak, ako Bog da, mislim s babom na dï¿½umu-namaz.</p>
                                 </div>
 
                                 <!-- Razgovor -->
                                 <div class="mb-4 p-3 rounded bg-light border border-secondary border-opacity-25">
                                     <h6 class="fw-bold text-success mb-3"><i class="fas fa-comments me-2"></i>Razgovor:</h6>
-                                    <p class="mb-3">Mehmed ima želju da nauci sve namaske šarte. Zašto je majku odabrao da ga poducava?</p>
+                                    <p class="mb-3">Mehmed ima ï¿½elju da nauci sve namaske ï¿½arte. Zaï¿½to je majku odabrao da ga poducava?</p>
                                     
                                     <div class="form-check mb-2">
                                         <input class="form-check-input" type="radio" name="razgovorRadio" id="razgovor1">
-                                        <label class="form-check-label" for="razgovor1">1. Majka je nježna i blaga</label>
+                                        <label class="form-check-label" for="razgovor1">1. Majka je njeï¿½na i blaga</label>
                                     </div>
                                     <div class="form-check mb-2">
                                         <input class="form-check-input" type="radio" name="razgovorRadio" id="razgovor2">
-                                        <label class="form-check-label" for="razgovor2">2. Majka najbolje objašnjava</label>
+                                        <label class="form-check-label" for="razgovor2">2. Majka najbolje objaï¿½njava</label>
                                     </div>
                                     <div class="form-check mb-2">
                                         <input class="form-check-input" type="radio" name="razgovorRadio" id="razgovor3">
@@ -108,10 +143,10 @@
                                         <h6 class="mb-0 text-success fw-bold text-uppercase">Zapamti:</h6>
                                     </div>
                                     
-                                    <p class="fw-bold mb-1">Šta je majka navela kao treci uvjet za namaz?</p>
+                                    <p class="fw-bold mb-1">ï¿½ta je majka navela kao treci uvjet za namaz?</p>
                                     <ul class="mb-4">
-                                        <li>Žene se moraju propisno obuci.</li>
-                                        <li>Pokriti kosu, cijelo tijelo, osim lica, šaka i nogu do clanaka, a muškarci moraju biti pristojno obuceni.</li>
+                                        <li>ï¿½ene se moraju propisno obuci.</li>
+                                        <li>Pokriti kosu, cijelo tijelo, osim lica, ï¿½aka i nogu do clanaka, a muï¿½karci moraju biti pristojno obuceni.</li>
                                     </ul>
 
                                     <p class="mb-1"><strong class="text-success">Cetvrti uvjet za namaz:</strong> Klanjati u odredenom namaskom vremenu.</p>
@@ -121,16 +156,16 @@
 
                                     <p class="mb-3"><strong class="text-success">Peti uvjet za namaz:</strong> Okrenuti se licem i prsima prema Kibli.</p>
                                     
-                                    <p class="mb-4"><strong class="text-success">Šesti uvjet za namaz:</strong> Nijet uciniti, znaci srcem odluciti da cemo klanjati odredeni namaz.</p>
+                                    <p class="mb-4"><strong class="text-success">ï¿½esti uvjet za namaz:</strong> Nijet uciniti, znaci srcem odluciti da cemo klanjati odredeni namaz.</p>
 
                                     <div class="d-flex align-items-start mt-3 pt-3 border-top border-success border-opacity-25">
                                         <i class="fas fa-volume-up text-success mt-1 me-3"></i>
-                                        <p class="mb-0">Ikamet glasi kao i ezan, samo što se kod ikameta, poslije rijeci „HAJJE 'ALE-L-FELAH“, dodaje „KAD KAMETI-S-SALAH, KAD KAMETI-S-SALAH“.</p>
+                                        <p class="mb-0">Ikamet glasi kao i ezan, samo ï¿½to se kod ikameta, poslije rijeci ï¿½HAJJE 'ALE-L-FELAHï¿½, dodaje ï¿½KAD KAMETI-S-SALAH, KAD KAMETI-S-SALAHï¿½.</p>
                                     </div>
                                 </div>
 
                                 <div class="mt-3 text-end text-muted small fst-italic">
-                                    <small>(Vjeronauka, za 2. razred osnovne škole, str. 65-66.)</small>
+                                    <small>(Vjeronauka, za 2. razred osnovne ï¿½kole, str. 65-66.)</small>
                                 </div>
                             </div>
                         </div>
