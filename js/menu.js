@@ -79,12 +79,14 @@ const menuData = [
             {
                 title: "Islamski šarti",
                 id: "islamski_sarti_ibadat",
+                icon: "fas fa-list-ul",
+                url: "ibadat/islamski_sarti.html",
                 children: [
-                    { title: "1. islamski šart", id: "islamski_1" },
-                    { title: "2. islamski šart", id: "islamski_2" },
-                    { title: "3. islamski šart", id: "islamski_3" },
-                    { title: "4. islamski šart", id: "islamski_4" },
-                    { title: "5. islamski šart", id: "islamski_5" }
+                    { title: "1. islamski šart", id: "islamski_1", url: "ibadat/islamski_sart_1.html", icon: "fas fa-hand-point-up" },
+                    { title: "2. islamski šart", id: "islamski_2", url: "ibadat/islamski_sart_2.html", icon: "fas fa-person-praying" },
+                    { title: "3. islamski šart", id: "islamski_3", url: "ibadat/islamski_sart_3.html", icon: "fas fa-moon" },
+                    { title: "4. islamski šart", id: "islamski_4", url: "ibadat/islamski_sart_4.html", icon: "fas fa-hand-holding-heart" },
+                    { title: "5. islamski šart", id: "islamski_5", url: "ibadat/islamski_sart_5.html", icon: "fas fa-kaaba" }
                 ]
             },
             { title: "Ezan i ikamet", id: "ezan", url: "ibadat/ezan_ikamet.html", icon: "fas fa-volume-up" },

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamski šarti - Dibekhana Mekteb</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+    <!-- Critical CSS (inline to prevent layout shift before style.css loads) -->
+    <style>
+        body.preload * { transition: none !important; }
+        #wrapper { display: flex; align-items: stretch; }
+        #sidebar {
+            min-width: 320px; max-width: 320px; background: #E8F5E9;
+            display: flex; flex-direction: column; height: 100vh;
+            position: sticky; top: 0; border-right: 1px solid #c8e6c9;
+        }
+        .sidebar-header {
+            padding: 22px 20px 20px 20px; background: #2E7D32; color: #fff;
+            flex-shrink: 0; min-height: 144px; display: flex; align-items: center;
+        }
+        #sidebar-content { flex-grow: 1; }
+        #content { width: 100%; padding: 20px; min-height: 100vh; }
+        @media (min-width: 992px) {
+            body.preload #sidebarCollapse { display: none; }
+        }
+        @media (max-width: 991px) {
+            #sidebar { margin-left: -320px; position: fixed; top: 0; left: 0; z-index: 999; }
+        }
+    </style>
+</head>
+<body class="preload">
+
+    <div id="wrapper" style="display:flex">
+        <nav id="sidebar" style="min-width:320px;max-width:320px;background:#E8F5E9;display:flex;flex-direction:column;height:100vh;position:sticky;top:0">
+            <div class="sidebar-header" style="padding:22px 20px 20px 20px;background:#2E7D32;color:#fff;flex-shrink:0;min-height:144px;display:flex;align-items:center">
+                <h3 style="margin:0"><span style="display:flex;align-items:center;color:#fff"><span style="display:inline-block;width:100px;height:100px;flex-shrink:0;margin-right:.5rem"></span>Dibekhana Mekteb</span></h3>
+            </div>
+            <div id="sidebar-content" style="flex-grow:1;background:#E8F5E9"></div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">Islamski šarti</h2>
+                </div>
+
+                <div id="main-content">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <i class="fas fa-list-ul me-2"></i> Islamski šarti
+                        </div>
+                        <div class="card-body">
+                            <p class="fw-bold mb-2">Islamskih šarta ima pet. To su glavne islamske dužnosti koje je svaki musliman dužan poznavati i izvršavati.</p>
+                            <div class="d-flex flex-column gap-2 mt-3">
+                                <a href="islamski_sart_1.html" class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card text-decoration-none text-dark">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">1.</div>
+                                    <i class="fas fa-hand-point-up text-success fa-lg me-3"></i>
+                                    <span>Očitovati pripadnost islamu <em>(kelime i šehadet)</em></span>
+                                </a>
+                                <a href="islamski_sart_2.html" class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card text-decoration-none text-dark">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">2.</div>
+                                    <i class="fas fa-person-praying text-success fa-lg me-3"></i>
+                                    <span>Klanjati propisane namaze</span>
+                                </a>
+                                <a href="islamski_sart_3.html" class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card text-decoration-none text-dark">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">3.</div>
+                                    <i class="fas fa-moon text-success fa-lg me-3"></i>
+                                    <span>Postiti mjesec ramazan</span>
+                                </a>
+                                <a href="islamski_sart_4.html" class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card text-decoration-none text-dark">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">4.</div>
+                                    <i class="fas fa-hand-holding-heart text-success fa-lg me-3"></i>
+                                    <span>Zekat davati</span>
+                                </a>
+                                <a href="islamski_sart_5.html" class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card text-decoration-none text-dark">
+                                    <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">5.</div>
+                                    <i class="fas fa-kaaba text-success fa-lg me-3"></i>
+                                    <span>Hadž obaviti</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>

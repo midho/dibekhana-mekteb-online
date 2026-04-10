@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Islamski šart - Dibekhana Mekteb</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico">
+    <!-- Critical CSS (inline to prevent layout shift before style.css loads) -->
+    <style>
+        body.preload * { transition: none !important; }
+        #wrapper { display: flex; align-items: stretch; }
+        #sidebar {
+            min-width: 320px; max-width: 320px; background: #E8F5E9;
+            display: flex; flex-direction: column; height: 100vh;
+            position: sticky; top: 0; border-right: 1px solid #c8e6c9;
+        }
+        .sidebar-header {
+            padding: 22px 20px 20px 20px; background: #2E7D32; color: #fff;
+            flex-shrink: 0; min-height: 144px; display: flex; align-items: center;
+        }
+        #sidebar-content { flex-grow: 1; }
+        #content { width: 100%; padding: 20px; min-height: 100vh; }
+        @media (min-width: 992px) {
+            body.preload #sidebarCollapse { display: none; }
+        }
+        @media (max-width: 991px) {
+            #sidebar { margin-left: -320px; position: fixed; top: 0; left: 0; z-index: 999; }
+        }
+    </style>
+</head>
+<body class="preload">
+
+    <div id="wrapper" style="display:flex">
+        <nav id="sidebar" style="min-width:320px;max-width:320px;background:#E8F5E9;display:flex;flex-direction:column;height:100vh;position:sticky;top:0">
+            <div class="sidebar-header" style="padding:22px 20px 20px 20px;background:#2E7D32;color:#fff;flex-shrink:0;min-height:144px;display:flex;align-items:center">
+                <h3 style="margin:0"><span style="display:flex;align-items:center;color:#fff"><span style="display:inline-block;width:100px;height:100px;flex-shrink:0;margin-right:.5rem"></span>Dibekhana Mekteb</span></h3>
+            </div>
+            <div id="sidebar-content" style="flex-grow:1;background:#E8F5E9"></div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid p-4">
+                <div class="d-flex align-items-center mb-4 pb-2 border-bottom" style="border-color: #4CAF50 !important;">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="content-title" class="m-0" style="color: #2E7D32;">5. Islamski šart - Hadž obaviti</h2>
+                </div>
+                
+                <div id="main-content">
+                    <!-- Lekcija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center" 
+                             style="cursor: pointer;" 
+                             data-bs-toggle="collapse" 
+                             data-bs-target="#lekcijaCollapse" 
+                             aria-expanded="true" 
+                             aria-controls="lekcijaCollapse">
+                            <span><i class="fas fa-book-open me-2"></i> Lekcija</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="lekcijaCollapse" class="collapse show">
+                            <div class="card-body">
+                                <!-- Custom Audio Player Section -->
+                                <div class="float-lg-end ms-lg-3 mb-3 audio-player-wrapper lesson-audio-player" data-src="audio/ibadat_lekcija_14.mp3"></div>
+
+                                <p class="fw-bold">Koji je peti islamski šart?</p>
+                                <p>Peti islamski šart je: <span class="fw-semibold">hadž obaviti</span>. To je stroga Allahova odredba koju je svaki musliman dužan obaviti kad stekne određene uslove.</p>
+
+                                <p class="fw-bold">Šta je to hadž?</p>
+                                <p>Hadž je posjeta Ka'bi u Meki, nešto prije i u vrijeme Kurban-bajrama.</p>
+
+                                <p class="fw-bold">Ko je dužan obaviti hadž?</p>
+                                <p>Hadž su dužni obaviti, <span class="fw-semibold">jednom u životu</span>, svi zdravi, pametni i imućni muslimani i muslimanke.</p>
+
+                                <p class="fw-bold">Koliko farzova ima hadž?</p>
+                                <p>Hadž ima tri farza (obavezne radnje), i to:</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">1.</div>
+                                        <span>Ihrame obući i nijet učiniti,</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">2.</div>
+                                        <span>boraviti na Arefatu uoči Kurban-bajrama, i</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <div class="fw-bold text-success fs-5 mx-3" style="min-width: 20px;">3.</div>
+                                        <span>tavaf oko Ka'be učiniti (obići Ka'bu 7 puta).</span>
+                                    </div>
+                                </div>
+
+                                <p class="fw-bold">Šta je hadžija dužan izvršiti prije odlaska na hadž?</p>
+                                <p>Hadžija je dužan, prije odlaska na hadž:</p>
+                                <div class="d-flex flex-column gap-2 mb-3">
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-handshake text-success fa-lg mx-3"></i>
+                                        <span>izmiriti dugove, ako ih ima,</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-house-user text-success fa-lg mx-3"></i>
+                                        <span>obezbijediti svoju porodicu, i</span>
+                                    </div>
+                                    <div class="d-flex align-items-center p-2 rounded bg-light border-start border-success border-4 shadow-sm hover-card">
+                                        <i class="fas fa-heart text-success fa-lg mx-3"></i>
+                                        <span>pokajati se za grijehe.</span>
+                                    </div>
+                                </div>
+
+                                <p>Hadžija se kod Ka'be, na Arefatu i na drugim mjestima koje hodočasti u vrijeme hadža obraća Allahu, dž.š., i moli Ga za sreću i napredak svoje zajednice.</p>
+
+                                <div class="quote-box quote-quran">
+                                    <div class="d-flex">
+                                        <i class="fas fa-quran quote-icon"></i>
+                                        <div>
+                                            <p class="quote-text">"Ljudi su dužni, u ime Allaha, ako su u stanju, hodočastiti Ka'bu."</p>
+                                            <div class="quote-footer">– Ali Imran, 97.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ilahija -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center"
+                             style="cursor: pointer;"
+                             data-bs-toggle="collapse"
+                             data-bs-target="#ilahijaCollapse"
+                             aria-expanded="false"
+                             aria-controls="ilahijaCollapse">
+                            <span><i class="fas fa-feather-alt me-2"></i> Lebbejkellah <small class="ms-2 text-white-50 toggle-hint">(Klikni za prikaz)</small></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div id="ilahijaCollapse" class="collapse">
+                            <div class="card-body text-center fst-italic">
+
+                                <p>
+                                    Sva bogatstva ovog svijeta<br>
+                                    U jednom bi času dao,<br>
+                                    Kad bih Meku ugledao,<br>
+                                    Pored Ka'be kad bih stao.
+                                </p>
+                                <p class="fw-semibold">
+                                    <span class="fw-normal text-muted small">Refren:</span><br>
+                                    Allah, Allah ja Allah<br>
+                                    Daj da vidim Bejtullah.
+                                </p>
+                                <p>
+                                    U Bejtullah kad bih ušo<br>
+                                    Na sedždu bih Rabbu pao,<br>
+                                    Sa suzama, u zikru,<br>
+                                    Vječito bih tu ostao.
+                                </p>
+                                <p class="fw-semibold text-muted">Refren</p>
+                                <p>
+                                    Na Arefat kad bih stao,<br>
+                                    U dovu bih stopio se,<br>
+                                    U zanosu, do vječnosti,<br>
+                                    Svome Rabbu molio se.
+                                </p>
+                                <p class="fw-semibold text-muted">Refren</p>
+                                <p>
+                                    Kad bih Zemzem vode pihn'o,<br>
+                                    Teret duše ja bih skin'o,<br>
+                                    Lebbejke-l-lah srce zbori,<br>
+                                    Hvala Rabbu što me stvori.
+                                </p>
+                                <p class="fw-semibold text-muted">Refren</p>
+                                <div class="mt-3 text-end text-muted small fst-italic">
+                                    <small>— Mahmut Kurtović</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Define project root for menu.js -->
+    <script>
+        window.projectRoot = "../";
+    </script>
+    <!-- Config JS -->
+    <script src="../js/config.js"></script>
+    <!-- Menu Data and Logic -->
+    <script src="../js/menu.js"></script>
+    
+    <!-- Audio Player Logic -->
+    <script src="../js/lesson-player.js"></script>
+</body>
+</html>
